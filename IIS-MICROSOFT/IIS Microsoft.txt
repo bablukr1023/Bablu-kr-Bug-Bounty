@@ -1,0 +1,121 @@
+IIS Microsoft 
+========
+
+
+go install github.com/bitquark/shortscan/cmd/shortscan@latest
+
+discovering , tool ,wordlist for fuzzing , testing , tips 
+
+
+discovering
+
+ 1. nucle template check IIS working    -----   nuclei-template/fuzzing/iis-shortname.ymal   
+
+wget https://github.com/projectdiscovery/nuclei-templates/blob/d6636f9169920d3ccefc692bc1a6136e2deb9205/fuzzing/iis-shortname.yaml
+nuclei -l livesubdomin.txt -t /root/nuclei-templates/http/fuzzing/iis-shortname.yaml -v 
+
+
+ 2. wapplayzer  web extenson
+
+
+3. cat allsubdomai.txt | httpx -sc -td -title -fhr -location -pa 
+
+cat allsubdomin.txt | httpx -sc -td -favicon -server -tech-detect -cname -probe --title       
+
+
+ 4. shodan  http.title:"IIS"  --- Ssl:"company name" http.title:"IIS"
+
+ Host dork 
+
+ Ssl.cert.subject.CN:"parabol.co" http.title:"IIS"
+
+ 5. googlr dork 
+
+
+intitle:"IIS Windows Server" site:*.mett.nl
+
+
+word li
+
+tool for testing 
+
+1. IIS Tilde Enumerations (Burp Extension)
+
+2.  Shortscan tool GitHub 
+
+3. JetBrains dotpeek 
+
+4. visual studio code
+
+5. ffuf  web directory burt forcer 
+
+
+wordlist 
+
+wget https://raw.githubusercontent.com/orwagodfather/WordList/main/iis.txt
+
+
+
+
+testing 
+
+Shortscan basic usage 
+
+a
+
+shortscan https://company.com/admin  -F
+
+shortscan https://company.com/admin/backup
+
+
+burp extension IIs tildle Enumeration 
+
+copy the target url nad scan
+
+
+fuzzing ffuf 
+
+
+ffuf -w iis.txt -u https://bsideahmedabad.in/FUZZ
+
+ffuf -w iis.txt -u https://bsideahmedabad.in/shortnameFUZZ
+
+
+shortname-FUZZ   ,  shortname_FUZZ
+
+
+tips to complete the shortname and get a valid Dir /File
+
+Identified directory
+
+DS_STO-1
+
+
+Identified file 
+
+DESKTOP-1.zip
+
+
+1 ffuf eg
+
+ffuf -w iis.txt -u https://com./IIS/DS_STO-FUZZ
+
+ffuf -w iis.txt -u https://com./IIS/DESKTOPFUZZ.zip
+
+ffuf -w iis.txt -u https://com./IIS/DESKTOP-FUZZ.zip
+
+ffuf -w iis.txt -u https://com./IIS/DESKTOP_FUZZ.zip
+
+ffuf -w iis.txt -u https://com./IIS/DESKTOP%20FUZZ.zip
+
+
+
+Example for criticl bug 
+
+
+1. Full source backup 
+
+admin~1.zip  wih previous tips found admin_backup.zip
+
+
+what i go  - credentials in source file   machine key   valid unauth upload endpoint  upload a shall tp rce
