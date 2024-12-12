@@ -1,0 +1,44 @@
+wifi  tpink driver
+==========
+
+
+    Update the package information :
+
+    sudo apt update
+
+    Install dkms and git :
+
+    sudo apt install dkms git
+
+    Install Build Dependencies :
+
+    sudo apt install build-essential libelf-dev linux-headers-$(uname -r)
+
+    Download the Driver files using git :
+
+    git clone https://github.com/aircrack-ng/rtl8812au.git
+
+    Navigate to the Downloaded directory :
+
+    cd rtl88*
+
+    Install the Driver
+
+    sudo make dkms_install
+
+    cat /etc/apt/sources.list   gedit sources.list  add    deb http://http.kali.org/kali kali-rolling main non-free contrib
+
+
+     sudo apt update & sudo apt install dkms git & sudo apt install build-essential libelf-dev linux-headers-$(uname -r) & git clone https://github.com/aircrack-ng/rtl8812au.git & cd rtl88* & sudo make dkms_install
+
+ifconfig wlan0 down
+
+
+
+iwconfig wlan0 mode monitor
+
+
+ifconfig wlan0 up 
+
+
+airmon-ng start wlan0
