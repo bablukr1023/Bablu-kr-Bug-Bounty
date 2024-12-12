@@ -1,0 +1,146 @@
+Quick tip
+======
+
+
+- /robots.txt -> 404 Not Found
+- /robots.txt.dist -> Downloaded
+
+medium writeps unlock preiu
+https://readmedium.com/how-i-found-open-redirect-using-virus-total-460d721b9596    jusy simle usge
+
+
+₹ coode alt+8377 ₹
+https://www.imperva.com/learn/application-security/parameter-tampering/
+find always login page withe help wayback and urelscan all subdomain
+http://52.53.54.32/solr/#/
+nuclei -u https://evenement.attens.nl -t /root/nuclei-templates -rl 15 -bs 3 -c 10   rate limit
+
+site:xyw.com "login"
+
+
+https://picwish.com/white-background 
+
+cut -c31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 cut.txt
+200 OK
+301 Moved Permanently
+302 Found
+401 Unauthorized
+403 Forbidden
+
+https://github.com/Cyber-Guy1/Subdomainer  domain find
+
+https://github.com/Cyber-Guy1/domainCollector
+
+https://github.com/iamthefrogy/frogy
+
+https://github.com/yogeshojha/rengine
+
+https://github.com/six2dez/reconftw 
+
+https://medium.com/@HX007/subdomain-fuzzing-worth-35k-bounty-daebcb56d9bc
+
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+  <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
+  <script type="text/javascript">
+    alert("Rajeev kumar");
+  </script>
+</svg>
+
+
+json data fiter 
+
+
+nano f.py  enter press 
+
+import json
+
+filename = input ("Enter filename: ")
+
+with open(filename,'r') as file:
+        #json_data = file.read()
+        #print(json_data)
+        final_data = json.load(file)
+
+data =final_data['results']
+
+for url in data:
+         print(url['url'])
+
+
+
+python3 f.py  write filename
+
+
+
+ nmcli networking on     --  kali netwok reset
+
+
+
+.*\.test\.com$
+                                                               
+.\.mondat\.com$
+
+
+.\.mondat\.com$
+.\.atg\.se$
+  burpsuit
+
+awk '{print $1, $2 }'
+
+
+
+dark web search engine
+
+Ahmia
+Into The Dark Web
+Haystak
+Torch
+Venus
+LibreY
+SearXNG 
+Deep Search
+Torgle
+Searx
+
+
+
+
+https://pics.io/photo-metadata-viewer       best website   search google map    28°29'17.2"N 77°05'19.8"E   show crocet location
+
+GPSPosition	+28.4881072778, +77.0888330833
+
+
+
+
+GPSLatitudeRef	North
+GPSLatitude	+28.4881072778 
+GPSLongitudeRef	East
+GPSLongitude	+77.0888330833
+
+
+2. 
+GPS Latitude
+    28 deg 29' 17.19" N
+GPS Longitude
+    77 deg 5' 19.80" E
+Circle Of Confusion
+    0.004 mm
+Field Of View
+    69.4 deg
+Focal Length
+    3.8 mm (35 mm equivalent: 26.0 mm)
+GPS Position
+    +28 deg 29'17.19" N, +77 deg 5'19.80"E
+
+
+modiphy this
+
+ 28°29'17.19"N 77°5'19.80"E
+
+ 25°26'25.49"N, 85°5'4.35"E
+
+
+
