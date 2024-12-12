@@ -1,0 +1,40 @@
+find original ip
+==========
+
+
+amazon cloud front waf
+
+1.check shordan extension ip
+
+2. ping www.uzleuven.be window   3.164.182.27
+
+3. dnsrecon -d www.uzleuven.be
+
+4.wafw00f tool find which waf
+
+5. Ssl.cert.subject.CN:"www.uzleuven.be" 200       shordon  find favicon hash
+
+6. nmap --script ssl-cert -p 34.49.244.50
+
+7.https://favicons.teamtailor-cdn.com/ put url   favicon.ico ,     and  https://favicon-hash.kmsec.uk/ ,and search shordan and virustotol and censys
+
+
+8. https://viewdns.info  ip history domain name
+
+
+
+9.https://mxtoolbox.com/  spf record lookup
+
+
+
+10.https://securitytrails.com/
+
+
+11. censys  check product  next.js  (uzleuven.be) and services.software.product=`ASP.NET`
+
+
+12.https://en.fofa.info  and filte hash
+
+13. https://www.zoomeye.hk/  favicon hash  
+
+14. https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4&domain=aholddelhaize.com  enter  domain name

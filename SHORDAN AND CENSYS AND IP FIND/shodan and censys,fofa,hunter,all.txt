@@ -1,0 +1,347 @@
+shodan
+=====
+
+
+hostname:"*.naturalis.nl"
+Ssl:" "   find all domain and ip
+Ssl.cert.subject.CN:"mett.nl"
+Ssl.cert.subject.CN:"duocircle.com" -http.title:"403 Forbidden" -Ssl.cert.subject.CN:"duocircle.com.in"    remove item - singh and 
+hostname:"deezer.com" -ip:"54.149.101.148" -ip:"54.201.57.244" -ip:"185.159.107.205" -ip:"54.179.123.213" -ip:"54.216.88.129"
+ https://web.archive.org/cdx/search/cdx?url=*.send.duocircle.com&fl=original&collapse=urlkey
+https://www.shodan.io/search?query=Ssl.cert.subject.CN%3A%22duocircle.com%22+403
+ http.favicon.hash:892516249
+ https://www.shodan.io/search/facet?query=hostname%3A%22attens.nl%22&facet=ip  search in toolbar find all ip
+some time dont waf ip and domain with waf show
+cat cdn.txt | grep "."  | sort | uniq | httpx -ports 80,443,8080,8888,8000 | tee -a ip.txt
+ hostname:"uzleuven.be" 403
+ssl:audimarin.com http.status:200
+1. http://ssl.cert.subject.CN:"*.lexzur.com" http.title:"index of/"
+2. http://ssl.cert.subject.CN:"*.target.com" http.title:"gitlab"
+3.http://ssl.cert.subject.CN:"*. http://target.com" http.title:"gitlab"
+4. http://ssl.cert.subject.CN:"*.target.com" "230 login successful" port:"21"
+5. http://ssl.cert.subject.CN:"*. http://target.com" +200 http.title:"Admin"
+shodan download --limit 200 myresul.json.gz 'http.favicon.hash:892516249'       all ip found            
+shodan parse --fields ip_str,port --separator " " myresul.json.gz | awk '{print$1":"$2}' | httpx
+- Shodan query:
+
+org:"Intigriti"
+- On Shodan, we can use:
+
+asn:AS1234
+- On Shodan, our query would look like the following:
+
+http.status:200 org:"Intigriti"
+- On Shodan:
+
+ssl.cert.subject.CN:"intigriti.com"
+- Shodan:
+
+http.favicon.hash:<favicon_hash>
+- On Shodan, we can use the following query:
+
+http.html:"© copyright <company>"
+- On Shodan, we can make use of the following operator:
+
+org:<company> http.component:php
+- On Shodan, we can make use of the "cert.expired" search filter:
+
+org:<company> ssl.cert.expired: true
+
+- On Shodan:
+
+org:<company> http.title:Login,Log in,Register,Signin, Sign in, Sign up
+
+- Shodan:
+
+org:<company> http.title:"Index of"
+-- Shodan:
+
+org:<company> http.component:php
+
+-- Shodan:
+
+org:<company> http.status:200,404 -port:80 -port:443 -port:8080 -port:8443
+
+- Via Shodan:
+
+org:<company> http.status:301,302,303
+
+- On Shodan, we can make a simple keyword search:
+
+org:<company> product:jenkins
+
+
+
+
+
+
+
+
+censys 
+======
+
+
+services.tls.certificate.names:"sqills.com" and admin   admin  grep system
+
+services.tls.certificate.names:"sqills.com" AND services.software.product:"PHP"
+
+rapyd.net and services.http.response.status_code: 301 and not labels=`ipv6`
+
+services.http.response.favicons.hashes:<favicon_hash>
+
+me senting me 100 item show   
+
+((flickr.com)) and not labels=`ipv6`   negative marks  and not  use not
+
+services.http.response.html_title: "Index of /"
+
+services.http.response.body_hash="sha1:1a279f5df4103743b823ec2a6a08436fdf63fe30"
+
+services.port: {22, 23, 24, 25}
+
+ip: [1.12.0.0 to 1.15.255.255]
+
+
+services.software: (vendor: Microsoft and product: IIS )
+
+all copy and save cdn.txt
+
+cat cdn.txt | cut -d "?" -f1 | sort | uniq
+
+(datacamp.com) and services.http.response.status_code: 200  
+200 OK
+301 Moved Permanently
+302 Found
+401 Unauthorized
+403 Forbidden
+
+cat cdn.txt | cut -d "?" -f1 | cut -d "/" -f5 | cut -d "+" -f1| grep -E "." | sort| uniq | grep -E "([0-9])" | sort| uniq | httpx-toolkit -ports 80,443,8080,8888,8000 | tee -a ip.txt
+
+cat cdn.txt | cut -d "?" -f1 | cut -d "/" -f5| sort | uniq | grep "oda.com" |cut -d "+"  -f2 |  sort| uniq | httpx-toolkit -ports 80,443,8080,8888,8000 | tee -a domain.txt 
+ 
+
+cat cdn.txt | cut -d "?" -f1  | sort | uniq | cut -d "/" -f5 | grep "." | sort| uniq | httpx -ports 80,443,8080,8888,8000 | tee -a ip.txt
+
+autonomous_system.organization:"Intigriti"
+
+autonomous_system.asn: AS1234
+
+services.http.response.status_code:200 AND autonomous_system.organization: "Intigriti"
+
+services.tls.certificate.names:"intigriti.com"
+
+services.http.response.favicons.hashes:<favicon_hash>
+
+services.http.response.body:"© copyright <company>"
+
+
+On Censys, we could run the following query:
+
+autonomous_system.organization:"<company>" AND services.software.product:"PHP"
+
+On Censys, we can use the following:
+
+autonomous_system.organization:"<company>" AND services.tls.certificate.parsed.validity_period.not_after: 2024-11-17
+
+The comma character in the "http.title" value acts as an OR operator and will allow us to match against multiple values.
+
+autonomous_system.organization:"<company>" AND services.http.response.html_title: {"Login", "Log in", "Register", "Signin", "Sign in", "Sign up"}
+
+autonomous_system.organization:"<company>" AND services.http.response.html_title: "Index of *"
+
+autonomous_system.organization:"<company>" AND services.software.product: "PHP"
+
+autonomous_system.organization:"<company>" AND services: (service_name: HTTP and not port: {80, 443, 8080, 8443})
+
+autonomous_system.organization:"<company>" AND services.http.response.status_code: [300 to 399]
+
+rapyd.net and services.http.response.status_code: 200
+
+Via Censys, we can make use of the software.vendor filter:
+
+autonomous_system.organization:"<company>" AND services.software.vendor: jenkins
+
+
+
+
+
+
+
+hunter.io
+======
+
+domain="aholddelhaize.com" and header.status_code=="200" and domain="working-at-aholddelhaize.com"
+
+domain="aholddelhaize.com" and domain!=="working-at-aholddelhaize.com"   use negative   hunter.io
+
+domain="aholddelhaize.com" and domain!=="working-at-aholddelhaize.com" and domain!=="communityroom-dev.aholddelhaize.com" and domain!=="yeswescan.external.dl.eu.aholddelhaize.com" and domain!=="www-staging-acc.aholddelhaize.com" and domain!=="www-staging-acc.aholddelhaize.com" and domain!=="dj4a-test-acc-portal.external.dl.eu.aholddelhaize.com" and domain!=="www-acc.aholddelhaize.com" and domain!=="www-acc.aholddelhaize.com" and domain!=="www-staging-acc.aholddelhaize.com" and domain!=="careers.aholddelhaize.com" and domain!==" apps-acc.aholddelhaize.com"
+
+https://api.hunter.how/search?api-key=a46f3d726e86b5104605e865956f2924dbb1c2021d64c16f7396ad03d5b268b2&query=ZG9tYWluPSJjb250ZW50c3F1YXJlLmNvbSI=&page=1&page_size=1000&start_time=2024-01-01&end_time=2024-06-01  6 month intervel   and page change change state time and date query based 64
+
+22372d79e79cdc4d628f53d0d64d80a877c70ec4f567c313295f25e50f18c9a5   api key  and page change 
+
+cat cdn.txt | grep "." | sort | uniq | awk '{print $2}' | cut -d '"' -f2 | sort | uniq | httpx -ports 80,443,8080,8888,8000 | tee -a ip.txt
+
+
+
+
+
+https://en.fofa.info..   fofa
+============
+
+
+
+https://github.com/FofaInfo/Awesome-FOFA?tab=readme-ov-file
+host="test.baidu.com"
+host*="test*.baidu.com"
+host*="*test*.baidu.com"
+host*="test?.baidu.com"
+host*="?????.baidu.com"
+host*="test*.baidu.com.*"
+host*="*test*"
+banner="mysql version"
+banner="mysql version" && banner*="5.?.*"
+protocol*="snmp*"
+cloud_name*="Cloud*"
+domain="fofa.info" && port*="????" ppQWsKO.png
+
+
+domain="aholddelhaize.com" && protocol="https" && status_code="200" 
+  find hashes click website body
+body_hash="-2038262765"   body_hash="-2038262765" body_hash: -2038262765
+
+domain="aholddelhaize.com" && domain!="aholddelhaize.com"
+domain="contentsquare.com" && ip!="34.227.43.10"
+
+(domain="datacamp.com") && after="2021-12-01" && before="2022-01-03" && port="80"
+
+host="dpgmedia.nl" && after="2012-01-01" && before="2020-12-31"   always check all ip -----------------------------------------     
+
+domain="aholddelhaize.com" && host!="lunchbox-qa.aholddelhaize.com"     negative   6 page access    page 50 down senting   date change in stting  2024-10-03-2024-10-03
+
+
+use ALL select subdomain ad search shordan and copy and paste notepad.
+
+and always chek date wise data  2014-2024
+
+https://en.fofa.info/api/v1/search/all?&key=3dc41368292f81344a32b9c0087ac3ef&qbase64=aG9zdD0iYmlnY29tbWVyY2UuY29tIg==
+https://en.fofa.info/api/v1/search/all?&key=3dc41368292f81344a32b9c0087ac3ef&qbase64=aG9zdD0idXpsZXV2ZW4uYmUi
+
+
+
+
+
+
+https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4&domain=verkiezingen.dpgmedia.nl
+
+0c8de1aadaab08a33168f9b53a7f3169f236589631aa148b22a0aaf3c3f5b518  key virustotal
+
+c836766756496535fd900d9c7b2a73b1f2cc711c4bf8a9470c8988abc1514055  key virustotal
+
+
+
+
+
+zoome eye 
+======
+
+
+site:"aholddelhaize.com" -hostname:ahlp1639.aholddelhaize.com
+
+
+site:"aholddelhaize.com" -site:"ahlp1639.aholddelhaize.com"   both possible    page 50 down senting
+
+ssl:"deezer.com" -ip:"34.149.250.111" -ip:"72.21.92.57" -ip:"185.159.107.188"   negative
+
+
+ssl:"deezer.com" +after:"2024-01-01" +before:"2025-01-01"
+
+ssl:"deezer.com" +after:"2024-07-07" +before:"2024-07-12"
+
+ssl:"deezer.com" +after:"2017-01-01" +before:"2025-01-01"  find all ip      trick date change   20 add words
+
+ssl:"deezer.com" +after:"2024-07-06" +before:"2024-07-07" -site:"assets.deezer.com" -site:"backstage.deezer.com" 
+
++ status_code:"200" 
+https://www.zoomeye.hk/searchResult?/vtapi/v2/domain/report?apikey=33C9580a-b0e1-2dac8-44c7-b5d2e330161&q=site%3A"bigcommerce.com"&page=1&pageSize=100
+
+
+
+
+https://quake.360.net/
+============
+
+domain: "acceptmission.com" AND NOT (domain: flatnuke.acceptmission.com)   negative seting me ip and domain next  select  all page selected
+ 
+
+https://www.criminalip.io/    3 page access 
+
+
+
+https://app.netlas.io
+https://securitytrails.com/app/account   access all page setting group and ip and domain   and size 1000
+
+https://app.netlas.io/responses/stats/?facets=ip%2Cdomain&indices=&q=bigcommerce.com&size=1000
+
+
+https://app.netlas.io/responses/stats/?facets=ip&indices=&q=bigcommerce.com&size=200
+
+https://hunter.qianxin.com/
+
+
+
+
+
+god father tool virustotal
+
+
+
+
+ if [ $api_key_index -eq 1 ]; then
+    api_key="70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4"
+  elif [ $api_key_index -eq 2 ]; then
+    api_key="0c8de1aadaab08a33168f9b53a7f3169f236589631aa148b22a0aaf3c3f5b518"
+  else
+    api_key="c836766756496535fd900d9c7b2a73b1f2cc711c4bf8a9470c8988abc1514055"
+  fi
+  
+
+./orwa.sh subdomain.txt | tee results.txt 
+
+cat results.txt | egrep 'http|https' > endpoints.txt
+
+
+
+tips find wayback and virustotl urelscan 
+
+waybackurls http://domain.com| grep - -color -E "1.xls | \\. xml | \\.xlsx | \\.json | \\. pdf | \\.sql | \\. doc| \\.docx | \\. pptx| \\.txt| \\.zip| \\.tar.gz| \\.tgz| \\.bak| \\.7z| \\.rar"
+
+
+
+.ZIP / .7z / .exe / .tar / .gz / .dii / .iso / token= / apikey= / / resetpassword / registration / .com: / @ / code= / .aspx / .ashx / .php / .jsp /.cgi / .xml /.txt / .xhtml
+
+
+
+
+https://www.shodan.io/search?query=ssl%3A%22*.rss.dpgmedia.nl%22
+https://search.censys.io/search?resource=hosts&sort=RELEVANCE&per_page=25&virtual_hosts=EXCLUDE&q=rss.dpgmedia.nl
+https://www.zoomeye.hk/searchResult?q=site%3A%22rss.dpgmedia.nl%22
+https://www.criminalip.io/
+https://hunter.how/list?searchValue=domain%3D%22rss.dpgmedia.nl%22&timestamp=1729310845993
+https://quake.360.net/quake/#/searchResult?searchVal=domain%3A%20%22rss.dpgmedia.nl%22&selectIndex=quake_service&ignore_cache=false&timeRange=&timeRange=&latest=true&t=1729310854203
+https://en.fofa.info/result?qbase64=aG9zdD0icnNzLmRwZ21lZGlhLm5sbCI%3D
+https://securitytrails.com/domain/rss.dpgmedia.nl/dns
+https://app.netlas.io/responses/?q=rss.dpgmedia.nl&page=1&indices=
+https://viewdns.info/iphistory/?domain=rss.dpgmedia.nl
+https://web.archive.org/cdx/search/cdx?url=*.grow.bigcommerce.com&fl=original&collapse=urlkey
+
+https://otx.alienvault.com/api/v1/indicators/hostname/grow.bigcommerce.com/url_list?limit=500%27
+
+https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4&domain=login.dpgmedia.nl
+
+https://urlscan.io/api/v1/search/?q=grow.bigcommerce.com
+
+
+
+
+
