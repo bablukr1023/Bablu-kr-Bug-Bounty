@@ -1,0 +1,9 @@
+wpscan 
+======
+
+
+wpscan api key --api-token  QRc2y3VbXODgLLRDQXDurbhFLaD0q1nxGRlE6Xc2SXI
+
+ wpscan --url https://www.exirio.com -e u --api-token  QRc2y3VbXODgLLRDQXDurbhFLaD0q1nxGRlE6Xc2SXI
+
+ wpscan --url https://archives-test.naturalis.nl/ -e - u,ap,cbe,dbe  --api-token  QRc2y3VbXODgLLRDQXDurbhFLaD0q1nxGRlE6Xc2SXI
