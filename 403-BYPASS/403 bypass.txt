@@ -1,6 +1,7 @@
 403 bypass
 =========
 
+httpx -l livesubdomin.txt -path "//evil.com" -sc -mc 302  
 
 GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH, INVENTED, HACK
 nahamsec 403 bypass 
