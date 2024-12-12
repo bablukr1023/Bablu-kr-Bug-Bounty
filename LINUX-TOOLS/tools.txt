@@ -1,0 +1,234 @@
+tools
+=====
+
+
+https://github.com/vincentcox/bypass-firewalls-by-DNS-history.git
+find original ip tool
+
+bash bypass-firewalls-by-DNS-history.sh -d example.com
+
+    -d --domain: domain to bypass
+    -o --outputfile: output file with IP's
+    -l --listsubdomains: list with subdomains for extra coverage
+    -a --checkall: Check all subdomains for a WAF bypass
+
+
+apt install jq.
+
+
+
+git clone https://github.com/r0oth3x49/ghauri.git
+cd to ghauri directory.
+install requirements: python3 -m pip install --upgrade -r requirements.txt
+run: python3 setup.py install or python3 -m pip install -e .
+you will be able to access and run the ghauri with simple ghauri --help command.
+OR
+
+Follow this installation guideline if facing an installation issue.
+Download Ghauri
+You can download the latest version of Ghauri by cloning the GitHub repository.
+
+
+
+
+
+
+                                                                             Gf Pattern
+
+git clone go install github.com/tomnomnom/gf@latest
+
+
+git clone https://github.com/1ndianl33t/Gf-Patterns
+
+crate directory mkdir .gf
+
+
+1. cd /root/go/bin/ 
+2. cp gf /usr/bin
+3. cd /root/go/pkg/mod/github.com/tomnomnom/gf@v0.0.0-20200618134122-dcd4c361f9f5/examples
+4. cp * /home/rajeev/.gf
+
+5. adinational patterns 
+
+6. cd /home/rajeev/Gf-Patterns
+7. cp * /home/rajeev/.gf
+
+
+
+google-chrome --version  install   screenshort
+  
+
+
+
+wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
+
+unzip aquatone_linux_amd64_1.7.0.zip
+
+mv aquatone /usr/bin
+
+./aquatone --help
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get install -f  
+google-chrome --version
+
+
+
+
+Instructions to Install urldedupe on Kali Linux.
+
+▶ Run : git clone https://github.com/ameenmaali/urldedupe.git
+▶ Run : cd urldedupe
+▶ Run : cmake CMakeLists.txt
+▶ Run : make
+▶ Run : cp urldedupe /usr/bin/
+▶ Run (Check) : urldedupe -V or urldedupe -h
+▶ Run (Usage) : cat urls.txt | urldedupe
+
+apt install nuclei 
+
+apt-get install nuclei
+
+nuclei  enter
+
+cd /root/nuclei-templates
+
+ git clone https://github.com/s0md3v/Breacher.git && cd Breacher  && chmod +x breacher.py -----find admin panel
+
+git clone  https://github.com/EnableSecurity/wafw00f.git && cd wafw00f  && python setup.py install
+
+
+git clone https://github.com/michenriksen/aquatone.git   
+
+
+
+
+git clone https://github.com/GerbenJavado/LinkFinder.git
+$ cd LinkFinder
+$ python setup.py install
+
+Dependencies
+
+LinkFinder depends on the argparse and jsbeautifier Python modules. These dependencies can all be installed using pip.
+
+$ pip3 install -r requirements.txt
+
+
+
+apt install golang && apt install subfinder && apt install assetfinder && apt install nuclei && apt install naabu && apt install amass && apt install subjack && apt install censys &&  apt install httpx-toolkit &&  apt install httprobe && apt install ffuf && apt install dirsearch && apt install sublist3r && pip3 install arjun && pip3 install uro && pip3 install waymore && pip3 install uro  && pip install xnLinkFinder && pip install dedupe
+
+
+
+go install -v github.com/owasp-amass/oam-tools/cmd/...@master && go install -v github.com/owasp-amass/oam-tools/cmd/TOOL_NAME@master && go install -v github.com/owasp-amass/oam-tools/cmd/oam_subs@master
+
+use first command - amass enum -d indeed.com 
+
+second command -    oam_subs -names -d indeed.com 
+
+git clone https://github.com/devanshbatham/openredirex && cd openredirex && chmod +x setup.sh
+
+cd openredirex
+sudo chmod +x setup.sh
+./setup.sh
+
+apt install golang && go install github.com/projectdiscovery/katana/cmd/katana@latest && go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest && go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest && go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest && go install github.com/projectdiscovery/asnmap/cmd/asnmap@latest && go install -v github.com/LukaSikic/subzy@latest && go install github.com/takshal/freq@latest && go install github.com/hakluke/hakrawler@latest && go install github.com/tomnomnom/qsreplace@latest && go install github.com/tomnomnom/waybackurls@latest && go install github.com/lc/gau/v2/cmd/gau@latest && go install github.com/jaeles-project/gospider@latest && go install github.com/MrEmpy/mantra@latest && go install github.com/Emoe/kxss@latest && go install github.com/tomnomnom/unfurl@latest && go install github.com/hahwul/dalfox/v2@latest && go install github.com/tomnomnom/unfurl@latest && go install -v github.com/owasp-amass/oam-tools/cmd/oam_subs@master && go install github.com/KathanP19/Gxss@latest && go install github.com/Emoe/kxss@latest && go install -u github.com/tomnomnom/gf@latest && go install -v github.com/tomnomnom/anew@latest && go install github.com/jaeles-project/gospider@latest && go install github.com/trap-bytes/hauditor@latest && go install github.com/tomnomnom/unfurl@latest && go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest && go install github.com/tomnomnom/httprobe@latest && go install github.com/tomnomnom/assetfinder@latest &&  go install github.com/tomnomnom/gf@latest && go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest && go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest && go install github.com/tomnomnom/httprobe@latest && go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest && go install github.com/bitquark/shortscan/cmd/shortscan@latest && go install github.com/trap-bytes/hauditor@latest && go install github.com/OJ/gobuster/v3@latest
+
+
+go install github.com/hakluke/hakrawler@latest && go install github.com/lc/gau/v2/cmd/gau@latest 
+
+
+all command
+
+apt install golang & apt install subfinder & apt install assetfinder & apt install nuclei & apt install naabu & apt install amass & apt install subjack & apt install censys &  apt install httpx-toolkit &  apt install httprobe & apt install ffuf & apt install dirsearch & apt install sublist3r & pip3 install arjun & pip3 install uro & pip3 install waymore & pip3 install uro  & pip install xnLinkFinder & pip install dedupe & apt install golang & go install github.com/projectdiscovery/katana/cmd/katana@latest & go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest & go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest & go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest & go install github.com/projectdiscovery/asnmap/cmd/asnmap@latest & go install -v github.com/LukaSikic/subzy@latest & go install github.com/takshal/freq@latest & go install github.com/hakluke/hakrawler@latest & go install github.com/tomnomnom/qsreplace@latest & go install github.com/tomnomnom/waybackurls@latest & go install github.com/lc/gau/v2/cmd/gau@latest & go install github.com/jaeles-project/gospider@latest & go install github.com/MrEmpy/mantra@latest & go install github.com/Emoe/kxss@latest & go install github.com/tomnomnom/unfurl@latest & go install github.com/hahwul/dalfox/v2@latest & go install github.com/tomnomnom/unfurl@latest & go install -v github.com/owasp-amass/oam-tools/cmd/oam_subs@master & go install github.com/KathanP19/Gxss@latest & go install github.com/Emoe/kxss@latest & go install -u github.com/tomnomnom/gf@latest & go install -v github.com/tomnomnom/anew@latest & go install github.com/jaeles-project/gospider@latest & go install github.com/trap-bytes/hauditor@latest & go install github.com/tomnomnom/unfurl@latest & go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest & go install github.com/tomnomnom/httprobe@latest & go install github.com/tomnomnom/assetfinder@latest &  go install github.com/tomnomnom/gf@latest & go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest & go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest & go install github.com/tomnomnom/httprobe@latest & go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest & go install github.com/bitquark/shortscan/cmd/shortscan@latest & go install github.com/trap-bytes/hauditor@latest & go install github.com/bp0lr/gauplus@latest
+
+
+
+gf all partens   https://github.com/1ndianl33t/Gf-Patterns.git
+
+
+ go install github.com/tomnomnom/gf@latest
+
+
+ mv Gxss anew asnmap assetfinder dalfox dnsx freq gau gf gospider hakrawler hauditor httprobe httpx katana kxss mantra nuclei oam_subs oam_track oam_viz qsreplace shortscan shuffledns subfinder subzy uncover unfurl waybackurls /usr/bin
+
+
+
+
+
+cat xyz.com | unful -u paths>paths.txt
+
+sed's#/#\n#g' paths.txt | sourt -u
+
+
+ git clone https://github.com/aboul3la/Sublist3r.git &&  cd Sublist3r &&  pip install -r requirements.txt && 
+
+ git clone https://github.com/0xKayala/ParamSpider && cd ParamSpider && pip3 install -r requirements.txt && chmod +x paramspider.py
+
+
+sudo apt update && sudo apt install -y feroxbuster
+
+
+
+ cd /root/go/bin 
+
+ cp asnmap dnsx freq gau gospider hakrawler katana mantra qsreplace shuffledns subzy uncover waybackurls /usr/bin
+
+
+
+
+wget -O bhedak https://raw.githubusercontent.com/R0X4R/bhedak/main/bhedak.py -q && chmod +x bhedak && cp bhedak /usr/bin/
+
+
+
+curl -LO https://github.com/findomain/findomain/releases/latest/download/findomain-linux-i386.zip && unzip findomain-linux-i386.zip && chmod +x findomain && cp findomain /usr/bin/
+
+
+git clone https://github.com/iamj0ker/bypass-403 && cd bypass-403 && chmod +x bypass-403.sh &&  apt install figlet && apt install jq
+
+
+git clone https://github.com/ozguralp/gmapsapiscanner.git && git clone https://github.com/Dheerajmadhukar/4-ZERO-3.git 
+
+
+git clone https://github.com/m4ll0k/SecretFinder.git secretfinder && cd secretfinder && pip install -r requirements.txt && chmod +x SecretFinder.py && ..
+
+
+git clone https://github.com/snwlol/crt.sh.git && cd crt.sh && chmod a+x crt.sh && cp crt.sh /usr/bin
+ 
+git clone https://github.com/r0oth3x49/ghauri.git
+
+git clone https://github.com/s0md3v/XSStrike.git
+
+java bookmark
+
+javascript:(function(){var scripts=document.getElementsByTagName("script"),regex=/(?<=(\"|\'|\`))\/[a-zA-Z0-9_?&=\/\-\#\.]*(?=(\"|\'|\`))/g;const%20results=new%20Set;for(var%20i=0;i<scripts.length;i++){var%20t=scripts[i].src;""!=t&&fetch(t).then(function(t){return%20t.text()}).then(function(t){var%20e=t.matchAll(regex);for(let%20r%20of%20e)results.add(r[0])}).catch(function(t){console.log("An%20error%20occurred:%20",t)})}var%20pageContent=document.documentElement.outerHTML,matches=pageContent.matchAll(regex);for(const%20match%20of%20matches)results.add(match[0]);function%20writeResults(){results.forEach(function(t){document.write(t+"<br>")})}setTimeout(writeResults,3e3);})();
+
+
+
+crt.sh mydukaan.io | tee -a crtshsub.txt && subfinder -d mydukaan.io -all -v -o subfindersub.txt && assetfinder -subs-only mydukaan.io | tee -a assetfindersub.txt  && findomain -t mydukaan.io |tee -a findomainsub.txt  
+
+python3 sublist3r.py -d mydukaan.io -b -o /home/rajeev/subli.txt    ,,,  python3 sublist3r.py -d mydukaan.io  -o /home/rajeev/subli.txt
+
+
+
+
+apt update 
+cd /etc/apt
+gedit sourcelist
+ apt install golang && apt install subfinder && apt install assetfinder &&  apt install httpx-toolkit &&  apt install httprobe && apt install ffuf && apt install dirsearch && apt install sublist3r && pip3 install arjun && pip3 install uro && go install github.com/projectdiscovery/katana/cmd/katana@latest && go install github.com/hakluke/hakrawler@latest && go install github.com/tomnomnom/waybackurls@latest && go install github.com/lc/gau/v2/cmd/gau@latest && go install github.com/tomnomnom/httprobe@latest
+
+git clone https://github.com/aboul3la/Sublist3r.git &&  cd Sublist3r &&  pip install -r requirements.txt
+
+curl -LO https://github.com/findomain/findomain/releases/latest/download/findomain-linux-i386.zip && unzip findomain-linux-i386.zip && chmod +x findomain && cp findomain /usr/bin/
+
+git clone https://github.com/iamj0ker/bypass-403 && cd bypass-403 && chmod +x bypass-403.sh &&  apt install figlet && apt install jq
+
+git clone https://github.com/ozguralp/gmapsapiscanner.git && git clone https://github.com/Dheerajmadhukar/4-ZERO-3.git 
+
+git clone https://github.com/snwlol/crt.sh.git && cd crt.sh && chmod a+x crt.sh && cp crt.sh /usr/bin
+
+git clone https://github.com/GerbenJavado/LinkFinder.git
+$ cd LinkFinder
+$ python setup.py install
+
+
