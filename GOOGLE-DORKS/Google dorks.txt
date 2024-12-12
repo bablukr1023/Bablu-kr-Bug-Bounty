@@ -1,0 +1,477 @@
+ Google dorks:
+=============
+
+
+List of the 10 best search engines in 2024, ranked by popularity.
+
+    Google
+    Microsoft Bing
+    Yahoo
+    Baidu
+    Yandex
+    DuckDuckGo
+    Ask.com
+    Ecosia
+    Aol.com
+    Internet Archive
+
+
+#things I tried searching
+site:domain.com ext:pdf
+site:domain.com ext:pdf "CONFIDENTIAL"
+site:domain.com ext:pdf "STRICTLY CONFIDENTIAL"
+site:domain.com ext:pdf "HIGHLY CONFIDENTIAL"
+site:domain.com ext:pdf "PRIVATE"
+site:domain.com ext:pdf "PRIVATE AND CONFIDENTIAL"
+site:domain.com ext:pdf "PRIVATE AND SENSITIVE"
+site:domain.com ext:pdf "COMPANY SENSITIVE"
+
+
+bing, duckduckgo, yahoo, yandex, ..etc.
+
+site:domain.com inurl:view inurl:private ext:pdf
+site:domain.com inurl:upload ext:pdf
+site:domain.com inurl:uploads ext:pdf
+site:domain.com inurl:internal ext:pdf
+site:domain.com inurl:storage ext:pdf
+site:domain.com inurl:download ext:pdf
+site:domain.com inurl:webview ext:pdf
+site:domain.com inurl:content ext:pdf
+site:domain.com inurl:_data ext:pdf
+
+site:domain.com inurl:<keyword> ext:pdf -docs -doc -documentation -form -draft -application -sample -template -public
+
+
+
+
+
+
+    PHP extension w/ parameters
+    site:oda.com ext:php inurl:?
+
+    API Endpoints
+    site:oda.com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
+
+    Juicy Extensions
+    site:oda.com ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:json
+
+    High % inurl keywords
+    inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:oda.com
+
+    Server Errors
+    inurl:"error" | intitle:"exception" | intitle:"failure" | intitle:"server at" | inurl:exception | "database error" | "SQL syntax" | "undefined index" | "unhandled exception" | "stack trace" site:oda.com
+
+    XSS prone parameters
+    inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:oda.com
+
+    Open Redirect prone parameters
+    inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:oda.com
+
+    SQLi Prone Parameters
+    inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:oda.com
+
+    SSRF Prone Parameters
+    inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain= | inurl:page= inurl:& site:oda.com
+
+    LFI Prone Parameters
+    inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:oda.com
+
+    RCE Prone Parameters
+    inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read= | inurl:ping= inurl:& site:oda.com
+
+    File upload endpoints
+    site:oda.com ”choose file”
+
+    API Docs
+    inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:oda.com
+
+    Login Pages
+    inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure site:oda.com
+
+    Test Environments
+    inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo site:oda.com
+
+    Sensitive Documents
+    site:oda.com ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” | intext:“do not distribute”
+
+    Sensitive Parameters
+    inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:oda.com
+
+    Adobe Experience Manager (AEM)
+    inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de site:oda.com
+
+    Disclosed XSS and Open Redirects
+    site:openbugbounty.org inurl:reports intext:"oda.com"
+
+    Google Groups
+    site:groups.google.com "oda.com"
+
+    Code Leaks
+    site:pastebin.com "oda.com"
+    site:jsfiddle.net "oda.com"
+    site:codebeautify.org "oda.com"
+    site:codepen.io "oda.com"
+
+    Cloud Storage
+    site:s3.amazonaws.com "oda.com"
+    site:blob.core.windows.net "oda.com"
+    site:googleapis.com "oda.com"
+    site:drive.google.com "oda.com"
+    site:dev.azure.com "oda.com"
+    site:onedrive.live.com "oda.com"
+    site:digitaloceanspaces.com "oda.com"
+    site:sharepoint.com "oda.com"
+    site:s3-external-1.amazonaws.com "oda.com"
+    site:s3.dualstack.us-east-1.amazonaws.com "oda.com"
+    site:dropbox.com/s "oda.com"
+    site:box.com/s "oda.com"
+    site:docs.google.com inurl:"/d/" "oda.com"
+
+    JFrog Artifactory
+    site:jfrog.io "oda.com"
+
+    Firebase
+    site:firebaseio.com "oda.com"
+    site:*/security.txt "bounty"
+
+Additional Resources
+
+    Google Dorks For Bug Bounty
+    5 Google Dorks Every Hacker Needs to Know
+    Uncover Hidden Gems in the Cloud with Google Dorks
+    10 Google Dorks for Sensitive Data
+
+
+
+General Dorks:
+1. `intitle:”Index of”`
+2. `intitle:”Index of” site:example.com`
+3. `filetype:log inurl:”access.log”`
+4. `filetype:sql inurl:wp-content/backup-*`
+5. `intext:”Welcome to phpMyAdmin”`
+6. `intitle:”Login — WordPress”`
+7. `intext:”Powered by WordPress”`
+
+Database-Related Dorks:
+8. `inurl:/phpmyadmin/index.php`
+9. `intext:”phpMyAdmin MySQL-Dump” filetype:sql`
+10. `inurl:/db/websql/`
+11. `inurl:/phpPgAdmin/index.php`
+12. `intext:”phpPgAdmin — Login”`
+
+Search for Vulnerabilities:
+13. `intext:”Error Message” intext:”MySQL server” intext:”on * using password:”`
+14. `intext:”Warning: mysql_connect()” intext:”on line” filetype:php`
+
+Exposed Documents and Files:
+15. ``
+15. `filetype:pdf intitle: "confidential"`
+16. `filetype:doc intitle: "confidential"`
+17. `filetype:xls intitle: "confidential"`
+18. `filetype:ppt intitle: "confidential"`
+
+Directory Listing:
+
+19. `intitle:"index of" inurl:/parent-director`
+20. `intitle:"index of" inurl:/admin`
+21. `intitle:"index of" inurl:/backup`
+22. `intitle:"index of" inurl:/logs`
+23. `intitle:"index of" inurl:/config`
+
+Exposed webcams and cameras:
+
+24. `intitle:"view/index.shtml"`
+25. `intitle:"Live View / -Axis"`
+26. `intitle:"Network camera Network camera"`
+
+
+
+Authentication-Related Dorks:
+27. `intitle:”Login” inurl:/admin`
+28. `intitle:”Login” inurl:/login`
+29. `inurl:”/admin/login.php”`
+
+Exposed Control Panels:
+30. `intitle:”Control Panel” inurl:/admin`
+31. `intitle:”Control Panel” inurl:/cpanel`
+
+Exposed IoT Devices:
+32. `intitle:”Smart TV” inurl:/cgi-bin/login`
+33. `intitle:”Router Login” inurl:/login`
+
+Finding PHP Info Pages:
+34. `intitle:”PHP Version” intext:”PHP Version”`
+
+Exposing Sensitive Files on Government Sites:
+35. `site:gov inurl:*.doc | inurl:*.pdf | inurl:*.xls | inurl:*.ppt | inurl:*.rtf | inurl:*.ps`
+
+Exposed Network Devices:
+36. `intitle:”Brother” intext:”View Configuration”`
+37. `intitle:”Network Print Server” filetype:html`
+38. `intitle:”HP LaserJet” inurl:SSI/index.htm`
+
+File Upload Vulnerabilities:
+39. `inurl:/uploadfile/ filetype:php`
+40. `intext:”File Upload” inurl:/php/`
+
+
+
+inurl:admin
+intitle:"index of"
+filetype:sql
+inurl:login
+intext:"username"
+inurl:register
+inurl:reset
+inurl:admin/login
+iurl:Dashboard
+filetype:log
+intitle:"Error"
+filetype:xml
+inurl:wp-content
+inurl:config
+intext:"Api key"
+
+
+
+
+connectie.nl
+
+
+all dorks
+
+site:"*.connectie.nl" intitle:”Index of”
+site:"*.connectie.nl" intitle:”Index of” site:connectie.nl
+site:"*.connectie.nl" filetype:log inurl:”access.log”
+site:"*.connectie.nl" filetype:sql inurl:wp-content/backup-*
+site:"*.connectie.nl" intext:”Welcome to phpMyAdmin”
+site:"*.connectie.nl" intitle:”Login — WordPress”
+site:"*.connectie.nl" intext:”Powered by WordPress”
+site:"*.connectie.nl" inurl:/phpmyadmin/index.php
+site:"*.connectie.nl" intext:”phpMyAdmin MySQL-Dump” 
+site:"*.connectie.nl" filetype:sql
+site:"*.connectie.nl" inurl:/db/websql/
+site:"*.connectie.nl" inurl:/phpPgAdmin/index.php
+site:"*.connectie.nl" intext:”phpPgAdmin — Login”
+site:"*.connectie.nl" intext:”Error Message” intext:”MySQL server” intext:”on * using password:”
+site:"*.connectie.nl" intext:”Warning: mysql_connect()” intext:”on line”  filetype:php
+site:"*.connectie.nl" filetype:pdf  intitle: "confidential"
+site:"*.connectie.nl" filetype:doc  intitle: "confidential"
+site:"*.connectie.nl" filetype:xls  intitle: "confidential"
+site:"*.connectie.nl" filetype:ppt  intitle: "confidential"
+site:"*.connectie.nl" intitle:"index of" inurl:/parent-director
+site:"*.connectie.nl" intitle:"index of" inurl:/admin
+site:"*.connectie.nl" intitle:"index of" inurl:/backup
+site:"*.connectie.nl" intitle:"index of" inurl:/logs
+site:"*.connectie.nl" intitle:"index of" inurl:/config
+site:"*.connectie.nl" intitle:"view/index.shtml"
+site:"*.connectie.nl" intitle:"Live View / -Axis"
+site:"*.connectie.nl" intitle:"Network camera Network camera"
+site:"*.connectie.nl" intitle:”Login” inurl:/admin
+site:"*.connectie.nl" intitle:”Login” inurl:/login
+site:"*.connectie.nl" inurl:”/admin/login.php”
+site:"*.connectie.nl" intitle:”Control Panel” inurl:/admin
+site:"*.connectie.nl" intitle:”Control Panel” inurl:/cpanel
+site:"*.connectie.nl" intitle:”Smart TV” inurl:/cgi-bin/login
+site:"*.connectie.nl" intitle:”Router Login” inurl:/login
+site:"*.connectie.nl" intitle:”PHP Version” intext:”PHP Version”
+site:"*.connectie.nl" inurl:*.doc | inurl:*.pdf | inurl:*.xls | inurl:*.ppt | inurl:*.rtf | inurl:*.ps
+site:"*.connectie.nl" intitle:”Brother” intext:”View Configuration”
+site:"*.connectie.nl" intitle:”Network Print Server” filetype:html
+site:"*.connectie.nl" intitle:”HP LaserJet” inurl:SSI/index.htm
+site:"*.connectie.nl" inurl:/uploadfile/ site:"*.connectie.nl" filetype:php
+site:"*.connectie.nl" intext:”File Upload” inurl:/php/
+site:"*.connectie.nl" inurl:admin
+site:"*.connectie.nl" site:"*.connectie.nl" intitle:"index of"
+site:"*.connectie.nl" site:"*.connectie.nl" filetype:sql
+site:"*.connectie.nl" inurl:login
+site:"*.connectie.nl" intext:"username"
+site:"*.connectie.nl" inurl:register
+site:"*.connectie.nl" inurl:reset
+site:"*.connectie.nl" inurl:admin/login
+site:"*.connectie.nl" iurl:Dashboard
+site:"*.connectie.nl" site:"*.connectie.nl" filetype:log
+site:"*.connectie.nl" intitle:"Error"
+site:"*.connectie.nl" site:"*.connectie.nl" filetype:xml
+site:"*.connectie.nl" inurl:wp-content
+site:"*.connectie.nl" inurl:config
+site:"*.connectie.nl" intext:"Api key"
+site:"*.connectie.nl" intext:"index of/.git"
+site:"*.connectie.nl" inurl:*/xmlrpc.php?rsd"
+site:"*.connectie.nl" intile:"index of" inul:ftp intxt:admin
+site:"*.connectie.nl" intile:"index of" "system/config"
+site:"*.connectie.nl" intile:"index of" "admin/config"
+site:"*.connectie.nl" intile:"index of" "/config/sql"
+site:"*.connectie.nl" intile:"index of" "api/admin"
+site:"*.connectie.nl" intile:"index of" "tinyfilemanager.php"
+site:"*.connectie.nl" intile:"index of" "test/storage/framework/sessions/"
+site:"*.connectie.nl" intile:"index of" "symfony/config"
+site:"*.connectie.nl" intile:"index of" "graphql/subscription"
+site:"*.connectie.nl" intile:"index of" "/admin/backup"
+site:"*.connectie.nl" intile:"index of" "git-jira_backup"
+site:"*.connectie.nl" intile:"index of" "db_frm"
+site:"*.connectie.nl" intile:"index of" "/db_backup"
+site:"*.connectie.nl" intile:"index of" "common.crt"OR"ca.crt"
+site:"*.connectie.nl" intile:"index of" "global.asa"
+site:"*.connectie.nl" intile:"index of" "MySql-Router"
+site:"*.connectie.nl" intile:"index of" "owncloud/config/*"
+site:"*.connectie.nl" ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv
+site:"*.connectie.nl" intitle:"index of" "database.sql"
+site:"*.connectie.nl" intitle:"index of" "database.sql.zip"
+
+site:"*.connectie.nl" inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php 
+
+site:"*.connectie.nl" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
+
+site:"*.connectie.nl" inurl:Login | inurl:signin | intile:"sign in" | inurl:auth
+site:"*.connectie.nl" inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:.*."*.connectie.nl"
+
+site:"*.connectie.nl" | ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx
+
+site:"*.connectie.nl" intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” | intext:“do not distribute”
+
+site:"*.connectie.nl" inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure site:"*.connectie.nl"
+site:"*.connectie.nl" inurl:config | inurl:env | inurl:setting | inurl:backup | inurl:admin | inurl:php site:"*.connectie.nl"
+
+
+site:"*.connectie.nl" inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo
+
+Find hidden endpoints and sensitive data
+site:http://jsfiddle.net "connectie.nl"
+site:http://codebeautify.org "connectie.nl"
+site:http://codepen.io "connectie.nl"
+site:http://pastebin.com "connectie.nl"
+site:http://onedrive.live.com "connectie.nl"
+site:http://firebaseio.com "connectie.nl"
+site:http://jfrog.io "connectie.nl"
+site:http://s3.amazonaws.com "connectie.nl"
+site:http://blob.core.windows.net "connectie.nl"
+site:http://googleapis.com "connectie.nl"
+site:http://drive.google.com "connectie.nl"
+site:http://dropbox.com/s "connectie.nl"
+site:http://box.com/s "connectie.nl"
+site:http://docs.google.com inurl:"/d/" "connectie.nl"
+
+
+Find buckets and sensitive data
+
+
+PHP extension w/ parameters
+site:connectie.nl ext:php inurl:?
+
+API Endpoints
+site:connectie.nl inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
+
+Juicy Extensions
+site:"connectie.nl" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:json
+
+High % inurl keywords
+inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:connectie.nl
+
+Server Errors
+inurl:"error" | intitle:"exception" | intitle:"failure" | intitle:"server at" | inurl:exception | "database error" | "SQL syntax" | "undefined index" | "unhandled exception" | "stack trace" site:connectie.nl
+
+XSS prone parameters
+inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:connectie.nl
+
+Open Redirect prone parameters
+inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:connectie.nl
+
+SQLi Prone Parameters
+inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:connectie.nl
+
+SSRF Prone Parameters
+inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain= | inurl:page= inurl:& site:connectie.nl
+
+LFI Prone Parameters
+inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:connectie.nl
+
+RCE Prone Parameters
+inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read= | inurl:ping= inurl:& site:connectie.nl
+
+File upload endpoints
+site:connectie.nl ”choose file”
+
+API Docs
+inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:"connectie.nl"
+
+Login Pages
+inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure site:connectie.nl
+
+Sensitive Documents
+site:connectie.nl ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” | intext:“do not distribute”
+
+Sensitive Parameters
+inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:connectie.nl
+
+Adobe Experience Manager (AEM)
+inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de site:connectie.nl
+
+Disclosed XSS and Open Redirects
+site:openbugbounty.org inurl:reports intext:"connectie.nl"
+
+Google Groups
+site:groups.google.com "connectie.nl"
+
+Code Leaks
+site:pastebin.com "connectie.nl"
+site:jsfiddle.net "connectie.nl"
+site:codebeautify.org "connectie.nl"
+site:codepen.io "connectie.nl"
+
+Cloud Storage
+site:s3.amazonaws.com "connectie.nl"
+site:blob.core.windows.net "connectie.nl"
+site:googleapis.com "connectie.nl"
+site:drive.google.com "connectie.nl"
+site:dev.azure.com "connectie.nl"
+site:onedrive.live.com "connectie.nl"
+site:digitaloceanspaces.com "connectie.nl"
+site:sharepoint.com "connectie.nl"
+site:s3-external-1.amazonaws.com "connectie.nl"
+site:s3.dualstack.us-east-1.amazonaws.com "connectie.nl"
+site:dropbox.com/s "connectie.nl"
+site:box.com/s "connectie.nl"
+site:docs.google.com inurl:"/d/" "connectie.nl"
+
+JFrog Artifactory
+site:jfrog.io "connectie.nl"
+
+Firebase
+site:firebaseio.com "connectie.nl"
+site:*/security.txt "bounty"
+
+
+
+
+PII information dork 
+
+
+
+cut -d "/" -f4-    
+
+cat allurls.txt | grep -E "\.txt | \.log | \.cache | \.secret | \.db | \.backup | \.yml | \.json | \.gz | \.rar | \.zip | \.config" 
+
+
+
+site:companyinfo.nl ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | 
+
+cat allurls.txt | grep "info"  , search input  info , admin , email, name , user , number , token , api , redirect= , @ , logout , 
+
+
+google dorking 
+
+site:docs.google.com/spreadsheets"company name"
+
+site:groups.google.com "company name" 
+
+
+    Visit the Wayback Machine (https://archive.org/web/).
+    Enter “pay.domain.com” in the search bar and access historical versions of the website.
+    Navigate through the archived pages to find references to API endpoints.
+    Discover the exposed API endpoint: “pay.domain.com/api/PaymentInfobyID/ID”.
+    Alter the “ID” parameter in the API request to access different payment records.
+
+
+
+
