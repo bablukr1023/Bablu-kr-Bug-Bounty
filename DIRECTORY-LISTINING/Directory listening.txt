@@ -1,0 +1,113 @@
+Directory listening
+============
+
+
+word list website
+
+https://github.com/danielmiessler/SecLists 
+
+
+https://github.com/random-robbie
+
+http://wordlists.assetnote.io/
+
+
+
+  rood bug bouty  use wordlist  
+
+
+general wordlist:   https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
+
+for PHP:  https://wordlists-cdn.assetnote.io/data/automated/httparchive_php_2020_11_18.txt
+
+
+for asp, aspx:  https://wordlists-cdn.assetnote.io/data/automated/httparchive_aspx_asp_cfm_svc_ashx_asmx_2020_11_18.txt
+
+
+for java applictions: https://wordlists-cdn.assetnote.io/data/automated/httparchive_jsp_jspa_do_action_2022_08_28.txt
+
+
+
+sub domain 
+ wget https://wordlists-cdn.assetnote.io/data/automated/httparchive_subdomains_2024_05_28.txt  
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/DNS/subdomains-top1million-110000.txt
+
+
+
+directory
+
+https://wordlists-cdn.assetnote.io/data/automated/httparchive_directories_1m_2024_05_28.txt
+https://raw.githubusercontent.com/random-robbie/bruteforce-lists/refs/heads/master/wp-content.txt
+https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/Web-Content/directory-list-2.3-big.txt
+
+
+
+wget https://wordlists-cdn.assetnote.io/data/automated/httparchive_directories_1m_2024_05_28.txt && wget https://raw.githubusercontent.com/random-robbie/bruteforce-lists/refs/heads/master/wp-content.txt && wget https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/Web-Content/directory-list-2.3-big.txt && cat directory-list-2.3-big.txt httparchive_directories_1m_2024_05_28.txt wp-content.txt| sort | uniq | tee -a fuffwebwordlist
+
+
+tool   dirb gobuster dirbuster ffuf  
+
+
+https://github.com/daviddias/node-dirbuster/blob/master/lists/directory-list-2.3-big.txt   payload  
+
+https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/Web-Content/big.txt    web content
+
+
+dirb https://ccw.naturalis.nl/  -w /usr/share/wordlists/dirb/common.txt -f 
+
+
+gobuster dns -d google.com -w ~/wordlists/subdomains.txt
+
+
+
+
+https://raw.githubusercontent.com/orwagodfather/WordList/main/fuzz-php.php   web contnt
+
+https://raw.githubusercontent.com/orwagodfather/WordList/main/god.txt
+
+https://raw.githubusercontent.com/orwagodfather/My-WordLISTs/main/param.txt   parameter
+
+https://raw.githubusercontent.com/orwagodfather/bruteforce-lists/master/params.txt paramter
+
+
+https://raw.githubusercontent.com/orwagodfather/SQL-Wordlist/refs/heads/main/sql.txt   sql 
+
+
+https://raw.githubusercontent.com/orwagodfather/bruteforce-lists/master/php.txt   php
+
+https://raw.githubusercontent.com/orwagodfather/bruteforce-lists/master/phpmyadmin.txt
+
+https://raw.githubusercontent.com/orwagodfather/bruteforce-lists/master/reallysafe-not.txt
+
+
+https://raw.githubusercontent.com/orwagodfather/bruteforce-lists/master/zip.txt   Zip
+
+
+https://gist.githubusercontent.com/DaveYesland/e1d42489334049daf59d1c26543faa8b/raw/53d1a16b5a273337db93bf6b49b0616e8ef619ad/dirbrute.txt  directry brutfoce
+
+https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/raft-medium-directories.txt
+
+
+
+ffuf -u https://example.com/FUZZ -w <some_wordlist> -mc 200,204,301,302,307,401,403,405,500 -fr "<h1>Please Login</h1>"
+
+ffuf -u https://csd.contentsquare.com/FUZZ -w <some_wordlist> -mc 200,204,301,302,307,401,403,405,500 -fr "<h1>Please Login</h1>"
+
+
+https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt   use web cntect
+
+                                                               Dirsearch 
+
+
+ wget https://raw.githubusercontent.com/maurosoria/dirsearch/refs/heads/master/db/dicc.txt    directory
+
+dirsearch -l urls.txt -e conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,sql.zip,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip,log,xml,js,json --deep-recursive --force-recursive --exclude-sizes=0B --random-agent --full-url -o output.txt
+
+dirsearch -u https://mett.nl -e conf, bak, config, backup, swp, old, db, sql, asp, aspx, aspx~,py , py~, rb, rb~, php, php~, bak, bak~, bkp, cache, cgi, conf, csv, html, inc, jar, js, json, jsp, jsp~, lock, rar, old, sql, sql~, gz, http://sql, zip, tar, gz, sql~, swp, swp~, tar, tar~, bz2, tar, gz, wadl, zip, log, xml, .js, .json --deep-recursive --force-recursive --exclude-size=0B --random-agent --full-url -o diroutput.txt
+
+gobuster dir -u https://info.coindcx.com/wp-admin/admin-ajax.php/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
+
+dirsearch -u https://expeditieonline.naturalis.nl/nl/kaart/.config  -x 300,301,400,403 -r -R 6
+
+
+https://raw.githubusercontent.com/orwagodfather/My-Cool-WordList-For-Fuzz-and-Bugs/main/fuzz.txt         disearch wordlist  good father
