@@ -1,0 +1,31 @@
+Csrf
+===
+
+
+  targeg = xyz.com   in funsinolity
+
+
+  profile update 
+   
+  password change
+  
+  emil change
+
+  usearnam change+
+
+  any change funsiniolty
+
+
+ 
+
+both two account 
+
+1, attacker@gmail.com
+
+2, test@gmai.com
+
+
+attackr loging our profile and change email funcniolty intercept burpsuite and generate csrf poc this csrf poc html file 
+
+
+and send to victim and change email victim then report it
