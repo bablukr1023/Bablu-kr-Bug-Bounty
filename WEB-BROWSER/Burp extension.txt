@@ -1,0 +1,16 @@
+ Burp extension
+===========
+
+true	Python	403 Bypasser
+true	Java	Bypass WAF
+true	Python	CSP-Bypass
+true	Java	CSRF Scanner
+true	Java	CSRF Token Tracker
+true	Java	Hunt Scanner
+true	Python	JS Link Finder
+true	Python	IP Rotate
+true	Java	JS Miner
+true	Java	Param Miner
+true	Java	Token Extractor
+true	Java	XSS Validator
+https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.4/
