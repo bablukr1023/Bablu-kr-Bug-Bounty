@@ -1,0 +1,330 @@
+Find subdomain
+==========
+
+
+1. https://www.crunchbase.com/  find accujestion domain dpgmedia
+
+2. find asn number https://bgp.he.net/  AS399566  
+amass intel --asn 14898   
+
+3. find ip range
+
+https://www.whoxy.com  find loot of domain
+
+relation domain 
+
+echo "uber.com" | python3 getrelationship.py
+ GitHub getrelationship.py
+
+4. find site open last page down
+
+"by Office Depot, LLC. All rights reserved" -www.officedepot.com paste on google 
+
+5. shodan
+
+6. find domain
+ shosubgo   go run main.go -d xyz.com -s
+shuffle DNS 
+
+
+
+
+
+verticle & Horizontal Correlation  domain find  
+
+verticle  exy.com , a.exy.com , b.exy.co	
+
+Horizontal exy.com  avc.in  alf.com  lag.com
+
+
+cidr & ip blocks (arin who is,bgp.he & mxtoolbox asn)
+
+
+asn , whois-Reverse & chart gpt acquisition listing 
+
+
+Nsloookup (nslookup -type=a facebook.com
+
+find   target xyz.com
+
+Horizontal subdomain
+
+verticle 
+ip blocks
+Acquisitions
+
+
+
+find all ip pool
+
+1. xyz.com  domin
+2.find asn number tool use  https://bgp.he.net, https://whois.arin.net,,ping xyz.com and copy ip paste bgp.he.net
+3.find cidr range use  https://mxtoolbox.com  24940 asn lookup search
+4.find cidr to ip range use   https://www.ipaddressguide.com
+5.angry ip scanner and nmap fist ip range and last ip range
+
+
+
+find all horizontal subdomain
+https://viewdns.info 
+
+Reverse Whois Lookup use  search xyz.com ya emailed find email whoxy.com
+
+
+find all acquisitions
+1.use chatgpt 
+
+hey i want a list of all acquisitions by Meta or Facebook till now
+
+
+verticle domail all tool use amass, subfinder 
+
+
+amass intel -asn 24940
+
+https://github.com/topics/subdomain-scanner   all subdomain list
+
+
+
+
+1..   
+ crt.sh mett.nl | tee -a crtacc.txt
+
+ subfinder -d mett.nl -all -recursive -o subdom.txt
+
+ subfinder -dL subdom.txt  -all -recursive | anew  subdom.txt
+
+
+ oam_subs -names  -d mett.nl -o oan.txt
+
+ assetfinder -subs-only mett.nl | tee -a assetacc.txt
+
+findomain -t mett.nl -u findacce.txt
+
+python3 sublist3r.py -d tachyonsecurity.eu -o /home/rajeev/sublistacc.txt
+
+git clone https://github.com/nsonaniya2010/SubDomainizer.git && cd SubDomainizer && pip3 install -r requirements.txt
+
+python3 SubDomainizer.py -u https://www.domain.com   
+
+https://github.com/Cyber-Guy1/Subdomainer  domain find
+
+https://github.com/Cyber-Guy1/domainCollector
+
+https://github.com/iamthefrogy/frogy
+
+https://github.com/yogeshojha/rengine
+
+https://github.com/six2dez/reconftw
+subdomainer-flask , oneforall  knock 
+
+https://github.com/Cyber-Guy1/Subdomainer  domain find
+git clone https://github.com/Cyber-Guy1/Subdomainer.git
+cd Subdomainer
+chmod +x install.sh && ./install.sh
+chmod +x subdomainer.sh
+cp subdomainer.sh /usr/bin
+cd /home/rajeev/
+subdomainer.sh -t contentsquare.com
+
+
+
+https://github.com/Cyber-Guy1/domainCollector
+
+https://github.com/iamthefrogy/frogy
+git clone https://github.com/iamthefrogy/frogy.git
+cd frogy
+bash install.sh
+./frogy.sh
+contentsquare
+contentsquare.com
+
+https://github.com/yogeshojha/rengine    dhasu tooo;
+sudo apt update
+apt install -y docker.io
+
+https://github.com/six2dez/reconftw
+
+git clone https://github.com/six2dez/reconftw
+cd reconftw/
+./install.sh
+./reconftw.sh -d contentsquare.com -r
+
+use first command - amass enum -passive -norecursive  -d mett.nl
+
+second command -    oam_subs -names -d mett.nl
+
+
+amass enum -passive -norecursive  -d teams.gg  -o amas.txt
+
+cat amass.txt |   awk '{print $1}' | grep ".gg" | tee -a  oan.txt
+
+Pentest Tools Subdomain Finder
+
+https://www.shodan.io/domain/vimla.se
+
+https://www.virustotal.com/gui/home/upload    subdomain find 
+
+https://subdomainfinder.c99.nl/scans/2024-07-25/mett.nl
+
+https://crt.sh/?q=companyinfo.nl
+
+https://www.virustotal.com/gui/home/upload
+
+
+knockpy lexzur.com --no-local -no-http-code 404, 403, 500
+
+git clone https://github.com/guelfoweb/knock.git
+cd knock
+pip install .
+
+
+amass Enum -d  glia.com | grep -Eo "([a-zA-Z0-9.-]+\.)*glia.com\.com"  -o sub.txt
+
+
+method all subdomain find
+
+cat output.txt | sed 's/\x1b\[[0-9;]*m//g' | grep -oP '(?<=\s)[a-zA-Z0-9.-]*\.(com)' > cleaned_subdomains.txt   use
+
+  step1 = amass enum -passive -norecursive  -d lexzur.com | grep -Eo "([a-zA-Z0-9.-]+\.)*glia.com\.com" -o subdomain.txt
+
+  step2 = amass enum -passive -norecursive  -df oan.txt | grep -Eo "([a-zA-Z0-9.-]+\.)*companyinfo.nl\.nl" -o subdomain.txt
+
+
+  step1 =   subfinder -d aholddelhaize.com -all -recursive -o subdom.txt
+
+  step2 =   subfinder -dL subdomain.txt -all -recursive -o subdom.txt
+
+  subdomain list deledt 50000 and run
+
+  ffuf -u http://FUZZ.mett.nl/ -w /usr/share/wordlists/amass/subdomains-top1mil-110000.txt  -ac -acc -mc 200 -o fufsubdomain.txt
+
+
+
+use burp suite  find domain host header subdomain
+
+
+
+
+
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/subdomains-top1million-110000.txt   fuff subdomain fuzzing   114441
+
+
+
+ffuf -u http://FUZZ.lexzur.com/ -w /home/Rajeev/subdomains-top1million-110000.txt  -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"-ac -acc /.htaccess -acc /web.config -acc /.gitdshjk -recursion-depth 40 -p '0.5-0.10' -t 100 -fc 404,500,501,502,402 -o file.txt
+
+
+
+
+ffuf -u http://www.lexzur.com/FUZZ -w /home/Rajeev/subdomains-top1million-110000.txt -e php,~,_bak,db -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"-ac -acc /.htaccess -acc /web.config -acc /.gitdshjk -recursion-depth 40 -p '0.5-0.10' -t 100 -fc 404,500,501,502,402 -o file.txt
+
+
+
+
+
+
+
+http://aibras.ibm-speed-analysis.app.contentsquare.com
+sud domain fuzzing  
+ wget https://raw.githubusercontent.com/netsecurity-as/subfuz/master/subdomain_megalist.txt
+
+admin-FUZZ.target.com E.G: admin-stg.target.com
+FUZZ-admin.target.com E.G: cert-admin.target.com
+adminFUZZ.target.com  E.G: admintest.target.com
+FUZZadmin.target.com  E.G  testadmin.target.com
+admin.FUZZ.target.com E.G: admin.dev.target.com
+
+ffuf -w /subdomain_megalist.txt -u 'https://adminFUZZ.Target.com' -c  -t 350 -mc all  -fs 0\
+
+
+Using Burp Match And Replace or using Burp intercept response by
+
+change 302 Moved Temporarily to 200 OK
+remove Location: /admin/Login.aspx?logout=y
+remove html redirect code 
+
+
+    The Command again
+
+ffuf -w /subdomain_megalist.txt -u 'https://adminFUZZ.Target.com' -c  -t 350 -mc all  -fs 0
+
+
+
+WAYBACK_URL = https://web.archive.org/cdx/search/cdx?url=*.send.duocircle.com&fl=original&collapse=urlkey
+
+https://web.archive.org/cdx/search/cdx?url=*.send.duocircle.com&fl=original&collapse=urlkey.7*   ex*  zi*  7z*
+
+https://urlscan.io/api/v1/search/?q=aholddelhaize.com  
+
+https://urlscan.io/api/v1/search/?q=aholddelhaize.* -aholddelhaize.com  
+
+https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4&domain=aholddelhaize.com
+
+https://otx.alienvault.com/api/v1/indicators/hostname/aholddelhaize.com/url_list?limit=500'
+
+https://otx.alienvault.com/api/v1/indicators/hostname/aholddelhaize.com/url_list?limit=500&page=2
+
+https://otx.alienvault.com/api/v1/indicators/domain/aholddelhaize.com/url_list?limit=500&page=3
+
+search zip exe, token
+
+
+https://web.archive.org/cdx/search/cdx?url=*.seonline.vfsevisa.com&fl=original&collapse=urlkey
+
+https://otx.alienvault.com/api/v1/indicators/hostname/seonline.vfsevisa.com/url_list?limit=500%27
+
+https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4&domain=seonline.vfsevisa.com
+
+
+
+cat crtacc.txt subdom.txt oan.txt assetacc.txt sublistacc.txt findacce.txt | sort | uniq | tee -a allsubdomin.txt
+
+
+cat allsubdomin.txt | httpx-toolkit -ports 80,443,8888,8080,8000  | tee -a livesubdomin.txt
+
+cat allsubdomin.txt | httpx-toolkit -sc -td -ip -ports 80,443,8888,8080,8000 
+
+cat allsubdomin.txt | httpx-toolkit -sc -td -favicon -server -tech-detect -cname -probe -fhr    tehnologoy detect
+
+cat livesubdomin.txt | httpx-toolkit -ports 80,443,8888,8080,8000 -sc -td -title -probe -fhr -location
+
+
+cat livesubdomin.txt 
+
+
+
+cat livesubdomin.txt | gau | tee -a gau.txt 
+
+cat livesubdomin.txt | waybackurls | tee -a waybackurls.txt
+
+cat livesubdomin.txt | hakrawler | tee -a hakrawler.txt  
+
+cat livesubdomin.txt | gauplus | tee -a gauplus.txt 
+
+katana -list livesubdomin.txt  -o katanaur.txt
+
+linkdinder use
+
+waymore -i duocircle.com 
+
+waymore -i companyinfo.nl -mode U --no-subs 
+
+
+
+
+output  /root/.config/waymore/results
+
+
+
+gospider
+
+pip install xnLinkFinder
+
+or tool way more when your internet fast
+
+
+cat gau.txt hakrawler.txt katanaur.txt waybackurls.txt gauplus.txt | sort | uniq |  tee -a allurls.txt
+
+cat gau.txt hakrawler.txt katanaur.txt waybackurls.txt gauplus.txt | anew allurls.txt
+
+cat katanaur.txt gau.txt gauplus.txt hakrawler.txt| anew waybackurls.txt      always try
