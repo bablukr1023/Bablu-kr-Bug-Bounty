@@ -1,0 +1,23 @@
+ subdomain account take over 
+==================
+
+
+https://httpstatus.io/
+
+subzy run --targets livesubdomin.txt  
+
+
+
+nuclei templete account take over 
+
+/root/nuclei-templates/subdomaintakeover
+mkdir subdomaintakeover 
+
+
+wget https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/8b2bc8ab8ef801d4342bb4ec4fedb5460296da29/subdomain-takeover/detect-all-takeovers.yaml
+
+nuclei -l livesubdomin.txt -t //root/nuclei-templates/subdomaintakeoverdetect-all-takeovers.yaml -c 30 -v
+
+
+
+subjack -w livesubdomin.txt -v 
