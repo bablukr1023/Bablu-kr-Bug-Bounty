@@ -1,0 +1,79 @@
+Report
+
+
+Dear Sir,
+
+
+Vulnerability :  
+
+
+Steps to Reproduce:
+
+## Steps
+
+    `As the attacker`
+
+    1. Sign into the application with ABC role user:
+    
+    > "https://com/"
+
+    2. click LOGIN buttom 
+     
+    > "https://h/login"
+
+    3. FILL  email and  Password
+  
+    4. Click  Login in Buttom
+  
+    >. "https:/6"
+
+    5. Left side  Upgrade plan Buttom 
+   
+    > "https://f/plans"
+
+    6. choose any plan   
+
+    7. click Go to secure checkout buttom
+    
+    > "https://coress"
+
+    8. fill data 
+
+    8.  click Next buttom and  open burpsuit
+
+    9. intercept request
+
+   10. send to response 
+
+   11.  search 1109.75  and replace 1.75
+
+  
+
+
+
+ Description:
+   
+   Parameter tampering is a form of web attack that involves manipulating or interfering with the application business logic that is exchanged between client and server to alter application data, such as user credentials, permissions, and price information. This subtle yet potent threat can have far-reaching consequences, from unauthorized data access to complete system compromise. Understanding the mechanics of parameter tampering is crucial for developers and security professionals in order to safeguard against unauthorized manipulations.
+
+
+
+
+IMPACT:
+
+The risks associated with parameter tampering can range from unauthorized access to user accounts to exposed confidential data. As an example, parameter tampering on an eCommerce site can result in price manipulation or the purchase of items without proper authorization.
+
+POC LINK ;-   h
+
+
+Screenshort :-    htt
+
+
+
+thanks
+
+
+
+Name : 
+
+Email :
+
