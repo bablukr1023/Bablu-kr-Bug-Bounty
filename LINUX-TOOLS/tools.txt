@@ -1,5 +1,9 @@
 tools
 =====
+# python3 -m venv myenv
+                                                                                                                    
+┌──(root㉿windows)-[/home/rajeev/ghauri]
+└─# source myenv/bin/activate
 
 
 https://github.com/vincentcox/bypass-firewalls-by-DNS-history.git
