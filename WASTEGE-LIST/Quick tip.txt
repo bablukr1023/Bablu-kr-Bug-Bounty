@@ -142,5 +142,64 @@ modiphy this
 
  25°26'25.49"N, 85°5'4.35"E
 
+Title:
+getting unauthorized access on 3rd party's/workspaces & and building your checklist for quickly locating bugs there via massive recon
 
+we know that its helpful to look for google 
+groups/docs/etc..
+
+Slack as well just like when the amazing 
+@h4x0r_dz
+ shared days ago ..
+
+Use google dork "site:http://join.slack.com"
+
+so I was not in a good mode the last months to doing Google Dorks, so what I did was build a checklist ready for me & very huge one 
+
+for EX:
+
+http://groups.google.com
+http://docs.google.com
+http://join.slack.com
+
+and here is just an example you can add more similar workspaces for your checklist 
+
+thin I extracted all internet endpoints and as example here join[.]slack[.]com
+
+http://otx.alienvault.com/api/v1/indicators/hostname/join.slack.com/url_list?limit=500&page=1
+
+http://virustotal.com/vtapi/v2/domain/report?apikey=your-api&domain=join.slack.com
+
+https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse=urlkey
+
+you can use the ready tools to do it such as waymore
+
+important note: you have to keep your checklist updated every week 
+
+and from here I just keep looking for the company name or domain name to see if there's anything connected
+
+and mostly the company name or domain name in the URL it self EX: tesla
+
+https://join.slack.com/t/Tesla-Internal/shared_invite/xxxxxxxxx
+
+Ex For Bugs found:
+
+1 unauthorized access to the workspaces
+(PII | Information disclose)
+2 account takeover as Ex: valid signup employee link
+3 account takeover as Ex: valid reset password employee link
+
+now about Slack, as an example if you found an invitation link for tesla 
+Tesla https://join.slack.com/t/Tesla-Internal/shared_invite/xxxxxxxxx and that link was not valid, don't stop here 
+it will redirect for Ex:
+tesla-internal[.]slack[.]com
+
+here back and start looking manually for endpoints of this subdomain as well EX:
+
+https://web.archive.org/cdx/search/cdx?url=*.tesla-internal.slack.com&fl=original&collapse=urlkey
+
+now there are a lot of 3rd party's/workspaces I just shared here 
+slack & Google Docs/groups 
+
+What I wrote is a bit long and annoying to some, so I apologize. I hope, as usual, that this will be useful to all who follow me here.
 
