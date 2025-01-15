@@ -1,6 +1,82 @@
 Xss
 ====
 
+@bxmbn
+
+I get a lot of questions on how I Find XSS, What is My “Methodology” , What Tools I use, etc.
+
+I want to start by saying that all my Hunting is 100% Manual, I don’t use Automated Tools or Anything of the Nature.
+
+If you are a Beginner, you probably want to start by Learning the Basics of HTML and JS
+
+Learn HTML and JS With CodeAcademy
+When I was In High School, I wanted to Learn Web Development, I Learned The Basics of HTML And JS using CodeAcademy, Little Did I know that Learning the basics of Web Development would help Finding XSSes Later In Life
+
+If you know the Basics Already, I would pretty much recommend you to start hunting right away, and the first Tool that you want to use is the Google Search Bar, So that you start looking for Possible Vulnerable Endpoints
+
+Google Dorking
+I Learned How to use google dorks later on my Hunting Career, I really wish i read this Blog way back when I was starting
+
+Google Dorking is pretty Easy
+
+If you search for
+
+site:*.google.com ext:php
+
+You will get all google.com subdomains that have .php extension
+
+If you see a parameter in the URL open it and start looking for any XSS
+
+Some People Don’t Know that you can also use the Tool Button in Google to Search for older results using the custom range options
+
+
+
+Dorks I always use
+
+site:*.host.com ext:asp
+
+site:*.host.com ext:jsp
+
+site:*.host.com ext:aspx
+
+site:*.host.com ext:jspx
+
+site:*.host.com ext:do
+
+site:*.host.com ext:action
+
+site:*.host.com ext:php
+
+Web Archive
+web.archive.org is one of the best tools for finding XSS
+
+Let’s say I want to search paths after google.com/api/* all you have to do is using this URL
+
+http://web.archive.org/cdx/search/cdx?url=google.com/api/*&output=text&fl=original&collapse=urlkey&from=
+
+
+This will get you more hidden endpoints that you may not find when Google Dorking.
+
+This is basically all I do, I try different extensions when google dorking and then use Web Archive for more hidden endpoints.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 site:*.*.parabol.co inurl:return= | inurl:return_to= | inurl:return_uri= | inurl:redirect= | inurl:redirect_to= | inurl:redirect_to= | inurl:redirect_uri= | inurl:prev= | inurl:prev_page= | inurl:next_page= | inurl:page=   | inurl:site= | inurl:next= | inurl:view= | inurl:back= | inurl:url= | inurl:to= | inurl:dest= | inurl:source= | inurl:from= | inurl:continue= | inurl:continue_to=  | inurl:go= | inurl:return_path= | inurl:checkout_url= | inurl:image= | inurl:http | inurl:image_url= | inurl:cgi_bin= | inurl:out= | inurl:windows= | inurl:show= | inurl:dir= | inurl:navigation= | inurl:file= | inurl:val= | inurl:validate= | inurl:domain= | inurl:feed= | inurl:port= | inurl:data= | inurl:host= | inurl:reference= | inurl:site= | inurl:html= | inurl:callback= 
 
