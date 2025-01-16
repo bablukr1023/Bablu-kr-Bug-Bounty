@@ -2,6 +2,67 @@ Directory listening
 ============
 
 
+
+
+└─# cat allu | grep -E '\.xls|\.xml|\.x|\.json|\.pdf|\.sql|\.doc|\.docx|\.pptx|\.txt|\.zip|\.tar|\.gz|\.tgz|\.bak|\.7z|\.rar|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.gz|\.config|\.csv|\.yaml|\.md|\.md5|\.exe|\.dll|\.bin|\.ini|\.bat|\.sh|\.tar|\.deb|\.rpm|\.iso|\.img|\.apk|\.msi|\.dmg|\.tmp|\.crt|\.key|\.pub|\.asc|\.pem'
+http://birdviewpsa.com/robots.txt
+http://s.birdviewpsa.com/robots.txt
+https://birdviewpsa.com/.well-known/ai-plugin.json
+https://birdviewpsa.com/.well-known/assetlinks.json
+https://birdviewpsa.com/.well-known/dnt-policy.txt
+https://birdviewpsa.com/.well-known/gpc.json
+https://birdviewpsa.com/.well-known/security.txt
+https://birdviewpsa.com/.well-known/trust.txt
+https://birdviewpsa.com/ads.txt
+https://birdviewpsa.com/app-ads.txt
+https://birdviewpsa.com/category-sitemap.xml
+https://birdviewpsa.com/dist/js/mainBV.db8396ee.bundle.js
+https://birdviewpsa.com/dist/js/mainBlogJS.db6ad901.bundle.js
+https://birdviewpsa.com/dist/js/pricingJs.dbd4273c.bundle.js
+https://birdviewpsa.com/downloads/executive_sponsorship_presentation_5_minute_summary_template.pptx
+https://birdviewpsa.com/downloads/pick_chart_template.pdf
+https://birdviewpsa.com/downloads/pl-casestudy.pdf
+https://birdviewpsa.com/page-sitemap.xml
+https://birdviewpsa.com/podcasts-sitemap.xml
+https://birdviewpsa.com/post-sitemap.xml
+https://birdviewpsa.com/resources_post_type-sitemap.xml
+https://birdviewpsa.com/robots.txt
+https://birdviewpsa.com/sitemap.xml
+https://birdviewpsa.com/sitemap_index.xml
+https://birdviewpsa.com/template_category-sitemap.xml
+https://birdviewpsa.com/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl
+https://birdviewpsa.com/wp-content/uploads/2019/07/Easy-Projects-ROI-Calculator.xlsx
+https://birdviewpsa.com/wp-content/uploads/2022/03/PepsiCo-case-study.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/03/advanced1-case-study.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/03/centurylink-easy-projects-case-study.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/03/new-york-engineers-easy-projects.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/04/healthcare-leader-increases-productivity-by-60.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/04/uoit-easy-projects-case-study.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/05/agriculture-non-profit-case-study.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/05/brooks-life-sciences.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/05/fb-casestudy.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/05/greenpeace-client-case-study.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/07/9-Best-Practices-for-Running-a-Project-Management-Software-Pilot_compressed-1.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/07/Practical-Guide-to-Painless-Business-Software-Implementations_compressed.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/07/The-Ultimate-Guide-to-Project-Finances.pdf
+https://birdviewpsa.com/wp-content/uploads/2022/07/Top-5-Mistakes-During-Project-Management-Software-Implementation-By-Enterprises-1.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/03/LTK.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/04/10-Examples-of-Resource-Management-Reports-for-Delivery-Project-and-Resource-Managers.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/04/5-Resource-Management-Strategies-to-Ride-Out-the-Economic-Downturn.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/04/C-P-Systems-_case-study.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/04/How-to-Gain-Executive-Sponsorship-for-New-Project-Management_compressed.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/04/How-to-run-a-project-management-software-pilot-within-a-small-business.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/04/How-to-run-a-project-management-software-pilot-within-enterprise-teams.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/04/How-tool-consolidation-can-reduce-inefficiencies-in-PS-organizations-1.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/05/Calculating-and-Managing-Resource-Utilization-in-Professional-Services-Firms.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/06/A-Strategic-Approach-for-Professional-Services-Firms.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/06/How-streamlining-the-quote-to-cash-process-can-save-300000-per-year.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/06/Polk-County_compressed-1.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/06/Ses-consulting_compressed-1.pdf
+https://birdviewpsa.com/wp-content/uploads/2023/06/Workplace-Solutions-Digital-Transformation-Services-_compressed.pdf
+https://lp.birdviewpsa.com/robots.txt
+
+
 word list website
 
 https://github.com/danielmiessler/SecLists 
