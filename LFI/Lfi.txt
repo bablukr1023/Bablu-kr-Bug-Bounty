@@ -54,3 +54,104 @@ weird case not a full #LFI
 subfinder -d xyz.com | httpx| gau | uro | gf lfi | tee -a subdo.txt
 
 nuclei -l sudo.txt -tags lfi
+
+
+
+
+
+
+
+A Journey of Limited Path Traversal To RCE With $40,000 Bounty!
+
+While conducting reconnaissance and port scanning on our favorite target, we discovered a subdomain with 8443, http://admin.target.com:8443 , Although the response was a 404, unfortunately, most hunters would ignore any subdomain returning a 404. But I don’t!.
+
+Fuzzing http://admin.target.com:8443/FUZZ, I discovered a path `/admin/` which redirected to the login page at `http://admin.target.com:8443/admin/faces/jsf/login.xhtml`. After testing this login endpoint and finding no vulnerabilities, I decided to continue fuzzing under the `admin` path like `http://admin.target.com:8443/admin/FUZZ`. I stumbled upon an endpoint `/download/` located at `/admin/Download` which returned a `200` status code but with an empty response.
+
+So, from the endpoint name, you can deduce its function! However, we are missing the correct parameters, and we need a 100% valid file and path. Since the endpoint is under /admin/, we should look for files that typically function in the admin directory. As I usually begin testing for LFI and Path Traversal using JavaScript files, I started my tests with a file named admin/js/main.js. This approach helps us determine the LFI and path traversal vulnerabilities we have and identify accessible paths. Additionally, since we need to identify the correct parameter that `/download` requires, we must use a known valid file, which is /admin/js/main.js. This ensures that when we fuzz for the right parameter, we don’t miss it. The fuzz command was structured like this:
+
+
+From this fuzzing, we now know that /admin/download accepts a parameter called filename. Thus, accessing http://admin.target.com:8443/admin/download?filename=/js/main.js displays the file at http://admin.target.com:8443/admin/js/main.js; The first thing I tried was to achieve full Path Traversal by attempting to read `/etc/passwd`. Unfortunately, the `/download` function only works for files within `/admin/*`; anything outside `/admin/` won’t work. However, this confirms that we do have a Limited Path Traversal vulnerability!
+
+Since we are working in a Java environment, I attempted to read /WEB-INF/web.xml because this file often contains a lot of useful information. By navigating to http://admin.target:8443/admin/download?fileName=/WEB-INF/web.xml, I was able to access some juicy information.!
+
+
+Notice that we found three URLs: /download/, /faces/ (which we already knew), and a new one: /incident-report. Visiting http://admin.target:8443/admin/incident-report triggered something unexpected: it started downloading a huge log file called incident-report-xxxxxx.zip. This file turned out to be a real-time log file!
+
+the log file was like
+
+
+Each time you visithttp://admin.target:8443/admin/incident-report, a new log file is downloaded because the logs are generated in real-time.
+
+Should I stop here and report it? A lot of hunters might end their exploration at this point!
+No!.
+#Escalating the impact:
+examining the logs file, I found a file that has admin passwords
+
+
+21232f297a57a5a743894a0e4a801fc3:admin (md5) it's not working as you can see on the file It is old password , the next one was 2a92e4f4ecc321db24c8f389a287d793:Glglgl123
+
+
+so I went again to the login,/admin/faces/jsf/login.xhtml,tried admin:Glglgl123 and it worked with full access to the panel as an admin!
+
+
+after login, I found a function called export_step2.xhtml which have groovy console , so I stopped here and I reported it , then I asked the program owner to try my luck with the RCE , the response was
+
+I made mention of a potential RCE,
+
+So asking me if I take this further and see if I’m able to exploit that
+
+Before diving in, let’s understand what the Groovy Console is
+
+The Groovy console is a development and debugging tool that provides an interface to execute Groovy scripts. Developers often use it to test code snippets, explore APIs, and prototype functionality directly within a controlled environment. It’s typically accessible only to trusted users on internal systems, as it allows arbitrary code execution.
+
+Security Issues if Accessible Without Proper Authentication:
+
+Arbitrary Code Execution:
+If an unauthorized person gains access to the Groovy console, they can run any Groovy or Java code on the server. This could lead to remote code execution (RCE), potentially allowing attackers to steal data, compromise other applications, or take full control of the server.
+
+Sensitive Information Exposure:
+An attacker could execute commands to read configuration files, environment variables, or even credentials stored on the server. This would provide further opportunities for exploitation and lateral movement.
+
+Privilege Escalation:
+If the Groovy console is running with elevated privileges, an attacker might perform operations that normal application users cannot. This could include creating or deleting files, modifying application logic, or installing malicious software.
+
+In short, unauthorized access to the Groovy console can effectively turn it into a backdoor for attackers, giving them a powerful tool to compromise the entire system.
+
+So Now,I Have green light ! time to gear up for what would be a wild ride!!
+#The RCE :
+back to export_step2.xhtml which have groovy console; I used this payload
+
+
+But as you can see, the Command Executed But without OutPut!
+
+I tried different commands
+
+print "id".execute().text
+print "sudo cat /etc/passwd".execute().text
+Unfortunately, the same issue persisted: the commands were executed, but no output was returned
+
+(For the reader): Any guesses on where this command output might be hiding?? If you guess it right, not only will you feel like a rockstar, but you’ll also be that much closer to scoring a massive bounty!
+#Chaining the vulnerabilities to achieve full RCE:
+wait, do you remember the function http://admin.target:8443/admin/incident-report?
+
+As mentioned earlier…
+
+Visiting http://admin.target:8443/admin/incident-report triggered something unexpected: it started downloading a huge log file called incident-report-xxxxxx.zip. This file turned out to be a real-time log file!
+
+Yes! This turned out to be the key to getting the RCE output. By visiting http://admin.target:8443/admin/incident-report, I could download fresh logs—and guess what I found in them? The RCE output!
+
+
+#The exploit now is simple :
+Log in with the credentials we discovered.
+Go to the Groovy console.
+Run a command like print "sudo cat /etc/passwd".execute().text (or try any other command).
+Now, navigate to the logs endpoint at http://admin.target:8443/admin/incident-report.
+Download the latest log file, and there it is — the RCE output!
+Why didn’t I attempt OOB-RCE or try creating a file on the server to bypass all these steps? I know that’s probably the question on your mind! The answer is simple :)
+
+Because of two reasons:
+
+OOB-RCE is impossible: There’s some form of WAF that blocks any outbound connections to my IP or any external IP .
+Lower payouts: OOB-RCE typically results in a smaller bounty compared to direct RCE. Trust me — I’ve been in this field long enough to know!
+the program requested that we submit two additional reports: one for the RCE and another for the credentials we discovered. Total bounty: $40,000.
+
