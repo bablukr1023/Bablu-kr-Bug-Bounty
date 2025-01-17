@@ -6,6 +6,9 @@ Open redirect
 site:*http://domain.com inurl:"link=" OR inurl:"redirect=" OR inurl:"redirecturl=" OR inurl:"redirect_uri=" OR inurl:"return=" OR inurl:"return_to=" OR inurl:"returnurl=" OR inurl:"go="
 
 
+in some cases you can have an Open Redirect using %0d%0a and two "/" directly on the main url:
+
+http://victim//%0d%0ahttp://google.com/
 
 
 
