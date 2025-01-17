@@ -2,6 +2,13 @@ Open redirect
 ==========
 
 
+
+site:*http://domain.com inurl:"link=" OR inurl:"redirect=" OR inurl:"redirecturl=" OR inurl:"redirect_uri=" OR inurl:"return=" OR inurl:"return_to=" OR inurl:"returnurl=" OR inurl:"go="
+
+
+
+
+
 https://xyz.com/bing.com
 https://xyz.com//bing.com
 https://xyz.com//https://bing.com/?evil.com
