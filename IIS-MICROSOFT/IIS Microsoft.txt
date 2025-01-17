@@ -110,6 +110,8 @@ ffuf -w iis.txt -u https://com./IIS/DESKTOP%20FUZZ.zip
 
 
 
+ffuf -w /home/Rajeev/wordlist.txt  -D -e asp,aspx,ashx,asmx -t 1000 -c -u http://xyz.com/lidsiFUZZ
+
 Example for criticl bug 
 
 
