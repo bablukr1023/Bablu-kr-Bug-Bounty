@@ -5,6 +5,20 @@ Open redirect
 
 site:*http://domain.com inurl:"link=" OR inurl:"redirect=" OR inurl:"redirecturl=" OR inurl:"redirect_uri=" OR inurl:"return=" OR inurl:"return_to=" OR inurl:"returnurl=" OR inurl:"go="
 
+http://view.info.lululemon.com/Error.aspx
+Already found one with this.
+I used to use %FF or %00 but this too seems to work fine
+
+I'm just using waymore to collect urls and pass it to dalfox i will write tweet tomorrow about this
+
+openredirex.py --url "http://xyz.com/?returlURL=FUZZ" --payloads payloads.txt
+
+Open Redirect Bypass
+?redirect=https://test.target.com > accepts any subdomain of target to redirect
+?redirect=https://google.comğ.target.com > "Ğ" is a Turkish character, server can't render it and changes it to "?"
+So it redirects to http://google.com/?target.com
+#bugbounty #bugbountytip
+
 
 in some cases you can have an Open Redirect using %0d%0a and two "/" directly on the main url:
 
