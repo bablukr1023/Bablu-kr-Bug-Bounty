@@ -1,5 +1,56 @@
 Find subdomain
 ==========
+find all ip pool and ip to domain find 
+
+1. https://bgp.he.net 
+https://whois.arin.net
+https://mxtoolbox.com
+
+find asn number AS1103
+
+
+2. https://mxtoolbox.com
+https://asnlookup.com
+tool go install github.com/projectdiscovery/asnmap/cmd/asnmap@latest
+
+asnmap -a AS1103 | tee -a cidr-range.txt
+
+find cidr to range
+
+
+3. go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
+
+mapcidr -cidr cidr-range.txt
+
+mapcidr -cidr 17.0.0.0/18
+ 
+echo 17.0.0.0/18 | mapcidr -silent 
+
+4. angry ip scaneer windows tool
+
+
+5. ip to domain name
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+
+echo 17.0.0.0/18 | mapcidr -silent | dnx -ptr
+-resp-only
+
+6. naabu  open ports 
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+
+naabu -host apple.com -tp 1000
+
+7. masscan ip port scanner
+https://github.com/robertdavidgraham/masscan.git
+
+masscan -p 80,443 17.0.0.0/18 --rate=1000
+
+8. rustscan moden port scaner
+============================================
+
+
+
+
 
 
 1. https://www.crunchbase.com/  find accujestion domain dpgmedia
