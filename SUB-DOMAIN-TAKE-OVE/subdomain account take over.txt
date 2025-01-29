@@ -1,6 +1,16 @@
  subdomain account take over 
 ==================
 
+cname check
+
+dig xyx.com
+
+nslookup xyz.com
+
+https://toolbox.googleapps.com/apps/dig/   dns lookup
+
+https://mxtoolbox.com/ 
+
 
 https://httpstatus.io/
 
