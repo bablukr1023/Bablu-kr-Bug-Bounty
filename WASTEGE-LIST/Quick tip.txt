@@ -1,6 +1,13 @@
 Quick tip
 ======
 
+https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/4-exercise-explore-learn-sandbox?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.azure-fundamentals-describe-azure-architecture-services
+
+
+
+https://portal.azure.com
+
+
 
 - /robots.txt -> 404 Not Found
 - /robots.txt.dist -> Downloaded
