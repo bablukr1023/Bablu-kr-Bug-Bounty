@@ -1,0 +1,41 @@
+Aws s3 Bucket 
+=============
+
+apt install awscli
+
+https://mytestbucket.s3.ap-south-1.amazonas.com/AWS+s3+bucket+dorks.txt
+
+aws s3 ls s3://awsbucketname command
+
+aws s3 ls s3://awsbucketname --no-sign-request
+
+copy bucket--  aws s3 ls s3://awsbucketname/AWSs3Buckername /home/rajeev --no-sign-request
+
+find s3 bucket tools 
+
+lazys3
+s3scanner
+
+https://github.com/nahamsec/lazys3.git
+apt install ruby
+ruby lazys3.rb tesla.com
+
+access bucket 
+
+tesla.s3.amazonaws.com  inurl
+
+
+2. https://github.com/sa7mon/S3Scanner.git
+
+apt install s3scanner
+
+
+s3canner -bucket mytestbucket9958  bucket detail
+
+marketing.s3.amazonaws.com
+
+
+site:http://s3.amazonaws.com "target[.]com"
+site:http://blob.core.windows.net "target[.]com"
+site:http://googleapis.com "target[.]com"
+site:http://drive.google.com "target[.]com"
