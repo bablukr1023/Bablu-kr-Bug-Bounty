@@ -1,7 +1,10 @@
 Open redirect
 ==========
 
-
+Just found Quick and easy open redirection on the main page 📄 
+This was so unexpected. 
+Example[.]com/evil[.]com = ❌
+Example[.]com//evil[.]com/ = ✅
 
 site:*http://domain.com inurl:"link=" OR inurl:"redirect=" OR inurl:"redirecturl=" OR inurl:"redirect_uri=" OR inurl:"return=" OR inurl:"return_to=" OR inurl:"returnurl=" OR inurl:"go="
 
