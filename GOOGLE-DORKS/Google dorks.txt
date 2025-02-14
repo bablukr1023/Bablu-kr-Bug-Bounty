@@ -15,6 +15,19 @@ List of the 10 best search engines in 2024, ranked by popularity.
     Aol.com
     Internet Archive
 
+site:*.<xyz.con>*
+site:<xyz.con>*
+site:*<xyz.con>*
+site:*.<*xyz.con>*
+site:<*xyz.con>.*
+site:*.<xyz.con.*>*
+site:*.<xyz.con*
+site:*.xyz.con>*
+site:*.<xyz.con>*
+ip:127.0.0.1
+
+
+
 
 #things I tried searching
 site:domain.com ext:pdf
