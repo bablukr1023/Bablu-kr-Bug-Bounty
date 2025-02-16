@@ -1,7 +1,7 @@
  Google dorks:
 =============
 
-
+title:"index of /" AND ".env" OR ".config" OR ".json" AND 
 List of the 10 best search engines in 2024, ranked by popularity.
 
     Google
