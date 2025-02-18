@@ -1,5 +1,80 @@
 tools
 =====
+
+
+Steps to Resolve the Issue
+1. Remove the Expired Key
+
+First, remove the expired or invalid GPG key:
+bash
+Copy
+
+sudo apt-key del ED444FF07D8D0BF6
+
+2. Download and Install the New GPG Key
+
+Next, download and install the updated GPG key for the Kali Linux repository:
+bash
+Copy
+
+wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add -
+
+3. Update the Package List
+
+After adding the new key, update the package list:
+bash
+Copy
+
+sudo apt update
+
+4. Upgrade the System (Optional)
+
+If the update succeeds, you can upgrade your system:
+bash
+Copy
+
+sudo apt upgrade
+
+Alternative Method: Use kali-archive-keyring Package
+
+If the above steps don't work, you can install the kali-archive-keyring package, which contains the official GPG keys for Kali Linux:
+
+    Download the Package:
+    bash
+    Copy
+
+    wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2023.3_all.deb
+
+    Install the Package:
+    bash
+    Copy
+
+    sudo dpkg -i kali-archive-keyring_2023.3_all.deb
+
+    Update the Package List:
+    bash
+    Copy
+
+    sudo apt update
+
+Verify the Fix
+
+After completing the steps, run:
+bash
+Copy
+
+sudo apt update
+
+If the error is resolved, you should see no GPG errors, and the package list will update successfully.
+Why This Happens
+
+    GPG keys have an expiration date for security reasons. When a key expires, apt refuses to trust the repository until the key is updated.
+
+    Kali Linux periodically updates its GPG keys, and users need to manually update them on their systems.
+
+Let me know if you need further assistance! 😊
+
+
 # python3 -m venv myenv
                                                                                                                     
 ┌──(root㉿windows)-[/home/rajeev/ghauri]
