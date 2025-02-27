@@ -1,6 +1,63 @@
 Aws s3 Bucket 
 =============
 
+
+AWS 
+
+%c0  
+check wapllazer amazon s3 amazon cloudfront  cdn
+
+check source code and check all java script file aws /s3  and GitHub dorks 
+
+
+
+
+
+google
+
+    site:s3.amazonaws.com "oda.com"
+    site:blob.core.windows.net "oda.com"
+    site:googleapis.com "oda.com"
+    site:drive.google.com "oda.com"
+    site:dev.azure.com "oda.com"
+    site:onedrive.live.com "oda.com"
+    site:digitaloceanspaces.com "oda.com"
+    site:sharepoint.com "oda.com"
+    site:s3-external-1.amazonaws.com "oda.com"
+    site:s3.dualstack.us-east-1.amazonaws.com "oda.com"
+    site:dropbox.com/s "oda.com"
+    site:box.com/s "oda.com"
+    site:docs.google.com inurl:"/d/" "oda.com"
+    site:s3.amazonaws.com "connectie.nl"
+    site:http://s3.amazonaws.com intitle:index.of.bucket
+    site:http://amazonaws.com inurl:".s3.amazonaws.com/"
+    site:.s3.amazonaws.com "Company"
+    intitle:index.of.bucket
+    site:http://s3.amazonaws.com intitle:Bucket loading
+    site:*.amazonaws.com inurl:index.html
+    Bucket Date Modified
+
+
+GitHub aws 
+
+
+"aws_access"
+"aws_access_key_id"
+"aws_key"
+"aws_secret"
+"aws_token"
+"AWSSecretKey"
+
+org:Target "AWS_ACCESS_KEY_ID"
+org:Target "list_aws_accounts"
+org:Target "aws_access_key"
+org:Target "aws_secret_key"
+org:Target "bucket_name"
+org:Target "S3_ACCESS_KEY_ID"
+org:Target "S3_BUCKET"
+org:Target "S3_ENDPOINT"
+org:Target "S3_SECRET_ACCESS_KEY"
+
 apt install awscli
 
 https://mytestbucket.s3.ap-south-1.amazonas.com/AWS+s3+bucket+dorks.txt
