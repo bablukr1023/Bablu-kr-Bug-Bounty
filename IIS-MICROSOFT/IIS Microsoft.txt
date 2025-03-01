@@ -2,6 +2,9 @@ IIS Microsoft
 ========
 
 
+ ffuf -u https://sub.redacted.com/FUZZ.zip -w content_discovery_all.txt -fc 404
+and http://sub.redacted.com/ws.zip gave 200 OK
+
 go install github.com/bitquark/shortscan/cmd/shortscan@latest
 
 discovering , tool ,wordlist for fuzzing , testing , tips 
