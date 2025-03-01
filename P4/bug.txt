@@ -1,0 +1,42 @@
+password reset 
+
+password reset link not expiring after changing email
+
+proff of concept
+
+send the password reset link to your email
+- don't open the password link jsut copy it and paste into any editor 
+- open your account 
+go to your senting 
+under account you will see account overview
+go to email and password option and change the email and verify it
+
+after change the email go to your password reset link which you xopied 
+
+change password
+boom password changed
+
+
+
+go to password reset link enter email 
+
+go to email check reset link 
+
+then go to website and change new email 
+
+after reset link change password set password to report it
+
+
+2.improper cahe control 
+
+login and logout press back button
+
+
+3. weak password 
+
+site login set password a  
+
+after login boom report it
+
+
+
