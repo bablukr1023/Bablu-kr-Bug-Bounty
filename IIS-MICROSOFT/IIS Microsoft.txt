@@ -2,6 +2,24 @@ IIS Microsoft
 ========
 
 
+
+
+Another P1 using 
+@GodfatherOrwa
+ tip:  
+- Found default IIS BLUE page
+- Run tool shortscan for iis
+- Found  endpoint like : target~.zip
+- run fuzz and found zip file with a web.config file leaking creds .Leads to Admin dashboard takeover.
+#bugbountytip
+
+No  the shortname found was like this test~.Zip and i fuzzed like this : 'http://testFUZZ.zip'
+
+word list use    raft-large-words
+
+
+
+
  ffuf -u https://sub.redacted.com/FUZZ.zip -w content_discovery_all.txt -fc 404
 and http://sub.redacted.com/ws.zip gave 200 OK
 
