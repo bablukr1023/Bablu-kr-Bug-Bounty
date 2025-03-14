@@ -2,3 +2,6 @@ Simple tip for port scan
 1) after enumerat your subdomains save in  subs.txt
 2) run this command 
 "cat subs.txt | dnsx -a -ro | naabu -silent  -top-ports 1000 -exclude-ports 80,443,21,22,25 -o ports.txt"
+
+
+nmap -sS -p- postracker.ctf.global.com
