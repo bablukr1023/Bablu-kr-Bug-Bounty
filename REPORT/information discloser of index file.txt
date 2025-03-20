@@ -1,0 +1,41 @@
+Dear Sir,
+
+
+Vulnerability :  Information disclosere / index file
+
+
+Steps to Reproduce:
+
+## Steps
+
+
+    1. GO to search engine
+   
+    > "https://postracker.ctf.global.com"
+
+    2. add /assets
+     
+    > "https://postracker.ctf.global.com/assets/"
+
+    3. find many directory
+ 
+     
+    POC- please find the below attached screenshot
+
+thanks
+
+
+
+Vulnerability description
+The web server is configured to display the list of files contained in this directory. This is not recommended because the directory may contain files that are not normally exposed through links on the web site.
+
+
+Impact
+Exposing the contents of a directory can lead to an attacker gaining access to source code or providing useful information for the attacker to devise exploits, such as creation times of files or any information that may be encoded in file names. The directory listing may also compromise private or confidential data.
+
+
+
+Name : Babluk kumar
+
+Email : bablukr102345@gmail.com
+
