@@ -1,0 +1,53 @@
+Dear Sir,
+
+
+Vulnerability :  No Spoofing Protection on Email Domain
+
+
+Steps to Reproduce:
+
+## Steps
+
+
+    1. Go to https://emkei.cz/
+
+    2. In From Name write the name of target company.
+
+    3. In From E-mail, write an email from your target domain, for eg: globalstore@eventmerch.com
+ 
+    4. In To Email , write your email
+
+    5. Now send the mail, and if you get the given mail in your inbox then it will be proved that it is sending spoofed email directly to inbox, hence no spoofing protection on email domain.
+
+
+
+
+In From E-mail, write an email from your target domain, for eg: globalstore@eventmerch.com
+In To Email , write your email
+Now send the mail, and if you get the given mail in your inbox then it will be proved that it is sending spoofed email directly to inbox, hence no spoofing protection on email domain.
+
+     
+    POC- please find the below attached screenshot
+
+
+
+thanks
+
+
+Vulnerability description:
+
+DMARC policy helps email receiver systems distinguish legitimate and 
+fraudulent emails. If an email doesn't come from an approved domain, the
+ DMARC alerts the receiver systems and tells them how to 
+respond—isolating any potential threats.
+
+
+Impact:
+
+The most simple impact is that if there is no spoofing protection on target website, attacker can impersonate as company and send emails to users from their email. Now this could lead to many bad things like account takeover, or in case of e-banking website, capturing funds of victims, etc like that, which will degrade the reputation of the company
+
+
+Name : Babluk kumar
+
+Email : bablukr102345@gmail.com
+
