@@ -1,0 +1,21 @@
+sed 's/^\///' list.txt > newlist.txt   
+
+
+/+CSCOE+/logon.html
++CSCOT+/oem
+/+CSCOT+/oem-customization?app=AnyConnect
+
+
+change 
+
++CSCOE+/logon.html
++CSCOT+/oem
++CSCOT+/oem-customization?app=AnyConnect
+
+
+
+sed 's|^|+/' list.txt > newlist.txt   wapis nane ke liye
+
+
+
+cat alll.txt | awk '{print $1}' | sort | uniq | tee -a aak.txt
