@@ -11,6 +11,8 @@ https://addons.mozilla.org/en-US/firefox/addon/DotGit
 
 https://addons.mozilla.org/en-US/firefox/addon/penetration-testing-kit/
 
+https://addons.mozilla.org/en-US/firefox/addon/findsomething/
+
 https://addons.mozilla.org/en-US/firefox/addon/knoxss-community-edition/
 
 https://addons.mozilla.org/en-US/firefox/addon/retire-js/
