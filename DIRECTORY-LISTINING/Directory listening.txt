@@ -1,6 +1,7 @@
 Directory listening
 ============
 
+ffuf -w /home/rajeev/Downloads/onelistforallshort-find-path-logi.parameter.txt   -u https://clublees-acc.vpro.nl/FUZZ   -ac -mc 200,301,302 -fs 352,356,357 
 
 
 
