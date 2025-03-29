@@ -2,6 +2,113 @@ Rate limit bypass
 ===========
 
 
+
+harris0ft
+@harris0ft
+·
+14h
+Is the Rate Limiting enforced per-username? or per-session or IP address ?
+harris0ft
+@harris0ft
+·
+13h
+You have to know how the rate limit is working first, if you know then its much easier to bypass it, don't hack   blindly, take your time, figure out what is being used to trigger the rate limiting, how are they identifying  and tracking request patterns???
+harris0ft
+@harris0ft
+·
+13h
+Finally, don't ask me HOW? figure it out, that's on you to do, you called yourself a hacker, hack by practicing and figuring things out for yourself, I am still trying to figure out how to bypass h1 ..... 😜😜😜
+harris0ft
+@harris0ft
+·
+13h
+Ok ok ok, little quiz:
+I tried harris0ft1 as username (after 429 with username harris0ft) and observed that I see the normal ``Invalid username or password`` message. IS THIS SYSTEM RATE LIMIT ENFORCED PER-USERNAME OR PER-SESSION?
+harris0ft
+@harris0ft
+·
+13h
+Simple, that's how you figure it out step by step. 
+Then hack accordingly.
+harris0ft
+@harris0ft
+·
+13h
+Happy weekend!!! 
+Tgif.
+harris0ft
+@harris0ft
+·
+2h
+@OX0DAYS
+ - endpoints where I have found rate limiting and attempt to bypass are:
+
+1- Account Registration/Signup
+2- Login - Account Lock - Backend
+3- Forgot-Password - email Sent
+4- Reset-Password  - CURRENT Password
+5- 2FA/MFA - code
+6- OTP
+7- Subscribe - email sent
+harris0ft
+@harris0ft
+·
+2h
+8- Sending messages in forums, Pin code, coupon codes, comments, etc.
+9- Sending Unlimited Invites
+10- View QR Code, Acct Secret key, etc
+11- Disabled 2FA, SMS, etc - CURRENT Password
+12- RECIEVING OTP
+13- RE-SEND/REGENERATE OTP code via SMS
+14- to RE-FRESH OTP
+harris0ft
+@harris0ft
+·
+2h
+I normally don't hurt for rate limiting bypass, I just hack and when am rate limited, I smile and bypassed it, submit bypass report and continue to hack.
+harris0ft
+@harris0ft
+·
+2h
+@0xabfe
+ 
+1- Case-Sensitive Attempt Counter
+2- Change Email font 
+3- Blank Characters or space to email address 
+4- add Null Byte (%00) at the end of the email and resend  
+5- add CRLF (%09,%0a, %0d) at the end of the email and resend
+6- add blank bytes like %00, %20,  %0d%0a
+harris0ft
+@harris0ft
+·
+29m
+7- add special characters to the email #, %0', /n, \n, %0C, 
+8- Change the email address 
+9- Try Encode Techniques 
+10- many many ways shall ask chatGPT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Rate Limit Bypass using HTTP Headers
 CACHE_INFO: 127.0.0.1
 CF_CONNECTING_IP: 127.0.0.1
