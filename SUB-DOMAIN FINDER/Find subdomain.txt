@@ -2,6 +2,146 @@ Find subdomain
 ==========
 find all ip pool and ip to domain find 
 
+
+Sub domain finder tool 
+
+
+https://crt.sh/
+
+https://subdomainfinder.c99.nl/
+
+https://securitytrails.com/app/account
+
+https://subdomainfinder.in/
+
+https://www.virustotal.com/gui/home/upload
+
+
+
+
+
+1. crt.sh
+
+git clone https://github.com/snwlol/crt.sh.git && cd crt.sh && chmod a+x crt.sh && cp crt.sh /usr/bin
+
+crt.sh appypie.com | tee -a crtacc.txt
+
+2. subfinder
+
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+
+ subfinder -d appypie.com -all -recursive -o subdom.txt
+
+ subfinder -dL subdom.txt  -all -recursive | anew  subdom.txt
+
+3. assetfinder
+
+go install github.com/tomnomnom/assetfinder@latest
+
+assetfinder -subs-only appypie.com | tee -a assetacc.txt
+
+4. findomain
+
+curl -LO https://github.com/findomain/findomain/releases/latest/download/findomain-linux-i386.zip && unzip findomain-linux-i386.zip && chmod +x findomain && cp findomain /usr/bin/
+
+findomain -t appypie.com -u findacce.txt
+
+5. sublist3r
+
+git clone https://github.com/aboul3la/Sublist3r.git &&  cd Sublist3r &&  pip install -r requirements.txt
+
+python3 install setup.py
+
+python3 sublist3r.py -d appypie.com -o /home/rajeev/sublistacc.txt
+
+6. amass
+
+apt install amass
+
+method all subdomain find
+
+cat output.txt | sed 's/\x1b\[[0-9;]*m//g' | grep -oP '(?<=\s)[a-zA-Z0-9.-]*\.(com)' > cleaned_subdomains.txt   use
+
+  step1 = amass enum -passive -norecursive  -d appypie.com | grep -Eo "([a-zA-Z0-9.-]+\.)*appypie.com\.com" -o subdomain.txt
+
+  step2 = amass enum -passive -norecursive  -df oan.txt | grep -Eo "([a-zA-Z0-9.-]+\.)*companyinfo.nl\.nl" -o subdomain.txt
+
+
+  step1 =   subfinder -d aholddelhaize.com -all -recursive -o subdom.txt
+
+  step2 =   subfinder -dL subdomain.txt -all -recursive -o subdom.txt
+
+7. Subdomainer
+git clone https://github.com/Cyber-Guy1/Subdomainer.git
+cd Subdomainer
+chmod +x install.sh && ./install.sh
+chmod +x subdomainer.sh
+cp subdomainer.sh /usr/bin
+cd /home/rajeev/
+./subdomainer.sh -t appypie.com
+
+
+
+8. frogy
+
+https://github.com/iamthefrogy/frogy
+git clone https://github.com/iamthefrogy/frogy.git
+cd frogy
+bash install.sh
+./frogy.sh
+appypie
+appypie.com
+
+9. Sudomy
+
+ git clone https://github.com/screetsec/Sudomy.git   
+
+--break-system-packages
+
+ ./sudomy -d appypie.com        
+
+
+
+10. Turbolist3r
+
+git clone https://github.com/fleetcaptain/Turbolist3r.git
+
+python3 turbolist3r.py -d appypie.com -o /home/rajeev/turbosub.txt
+
+
+11. bbot 
+
+pipx install bbot
+
+git clone https://github.com/blacklanternsecurity/bbot.git
+
+bbot -t appypie.com -p subdomain-enum
+
+# passive sources only
+bbot -t appypie.com -p subdomain-enum -rf passive
+
+
+
+
+12. onefor all
+
+git clone https://gitee.com/shmilylty/OneForAll.git
+
+cd OneForAll/
+python3 -m pip install -U pip setuptools wheel
+pip3 install -r requirements.txt
+python3 oneforall.py --help
+
+solve error with help grok 
+
+python3 oneforall.py --target appypie.com run
+
+
+
+
+
+
+
 1. https://bgp.he.net 
 https://whois.arin.net
 https://mxtoolbox.com
