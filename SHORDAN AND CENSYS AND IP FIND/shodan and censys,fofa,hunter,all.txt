@@ -277,6 +277,9 @@ domain: "acceptmission.com" AND NOT (domain: flatnuke.acceptmission.com)   negat
 https://www.criminalip.io/    3 page access 
  global.com status_code: 200 NOT ip:52.194.133.198   NOT negitive
 
+
+global.com status_code: 200 NOT ip:52.194.133.198 product: microsoft-iis NOT hostname:"jei.com" NOT -global.com   use domain negitive NOT -global.com
+
  port: 22
     service: SSH
     hostname: ec2
