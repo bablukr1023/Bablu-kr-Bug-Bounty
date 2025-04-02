@@ -275,6 +275,68 @@ domain: "acceptmission.com" AND NOT (domain: flatnuke.acceptmission.com)   negat
  
 
 https://www.criminalip.io/    3 page access 
+ global.com status_code: 200 NOT ip:52.194.133.198   NOT negitive
+
+ port: 22
+    service: SSH
+    hostname: ec2
+    product: OpenSSH
+    product_version: 7.9p1
+    cloud_provider: Azure
+    tag: https
+    rdp_target_name: WINDOWS
+    Domain
+    domain_from_banner: .com
+    Web
+    title: RouterOS
+    prefix: Finger
+    tech_stack: jQuery
+    favicon: 72b36155
+    html_meta_author: Splunk
+    html_meta_description: create-react-app
+    html_meta_keywords: System
+    html_meta_title: Marketplace
+    status_code: 200
+    Whois
+    as_name: Amazon.com, Inc.
+    city: Seoul
+    country: US
+    isp: Korea
+    org: Orange
+    Scanner
+    scanner_raw: cookie
+    scanner_port: 3389
+    Date
+    after: 2022-03-18
+    before: 2022-03-18
+    Vuln
+    cve_id: CVE-2019-12521
+    snort_rule: traffic
+    snort_classification: ciarmy
+    malcode_md5: fa259ed427a84bacc0011fc04f380427
+    SSL
+    jarm: 27d3ed3ed0003ed1dc42d43d00041d6183ff1bfae51ebd88d70384363d525c
+    ssl_subject_common_name: fortiGate
+    ssl_subject_organization: fortinet
+    ssl_issuer_organization: let's encrypt
+    ssl_subject_country: KR
+    ssl_expired: true
+    ssl_sha256: fa4328aecf7b07cb5bc855da3981c7f81bc8d92a
+    Etc
+    NOT: port: 22 NOT country: US
+    AND: port: 80 AND tag: admin
+    OR: port: 8080 OR port: 8091
+
+
+
+
+
+
+
+
+
+
+
 
 
 
