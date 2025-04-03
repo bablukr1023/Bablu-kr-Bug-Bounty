@@ -238,6 +238,12 @@ https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a853875
 
 c836766756496535fd900d9c7b2a73b1f2cc711c4bf8a9470c8988abc1514055  key virustotal
 
+sensitive data 
+
+domain="global.com" && title="index of" && (body=".env" || body=".xls" || body=".xml" || body=".x" || body=".json" || body=".pdf" || body=".sql" || body=".doc" || body=".docx" || body=".pptx" || body=".txt" || body=".zip" || body=".tar" || body=".gz" || body=".tgz" || body=".bak" || body=".7z" || body=".rar" || body=".log" || body=".cache" || body=".secret" || body=".db" || body=".backup" || body=".yml" || body=".gz" || body=".config" || body=".csv" || body=".yaml" || body=".md" || body=".md" || body=".exe" || body=".dll" || body=".bin" || body=".ini" || body=".bat" || body=".sh" || body=".tar" || body=".deb" || body=".rpm" || body=".iso" || body=".img" || body=".apk" || body=".msi" || body=".dmg" || body=".tmp" || body=".crt" || body=".key" || body=".pub" || body=".asc" || body=".pem")
+
+
+
 
 
 
