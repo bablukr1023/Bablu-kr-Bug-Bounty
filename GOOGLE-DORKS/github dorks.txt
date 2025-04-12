@@ -122,6 +122,8 @@ org:google "test"
 "x-api-key"
 "xoxb "
 "xoxp"
+"user"
+"username"
 [WFClient] Password= extension:ica
 "access_key"
 "bucket_password"
@@ -409,6 +411,36 @@ https://github.com/search?q=vfsevisa.com+%22access_key%22&type=code
 https://github.com/search?q=vfsevisa.com+%22bucket_password%22&type=code
 https://github.com/search?q=vfsevisa.com+%22dbpassword%22&type=code
 https://github.com/search?q=vfsevisa.com+%22dbuser%22&type=code
+https://github.com/search?q=vfsevisa.com+%22username%22&type=code
+https://github.com/search?q=vfsevisa.com+%22user%22&type=code
+
+
+https://github.com/search?q=vfsevisa.com+%22password%22&type=code
+https://github.com/search?q=vfsevisa.com+%22path:sites databases password%22&type=code
+https://github.com/search?q=vfsevisa.com+%22private -language:java%22&type=code
+https://github.com/search?q=vfsevisa.com+%22PT_TOKEN language:bash%22&type=code
+https://github.com/search?q=vfsevisa.com+%22redis_password%22&type=code
+https://github.com/search?q=vfsevisa.com+%22root_password%22&type=code
+https://github.com/search?q=vfsevisa.com+%22secret_access_key%22&type=code
+https://github.com/search?q=vfsevisa.com+%22SECRET_KEY_BASE=%22&type=code
+https://github.com/search?q=vfsevisa.com+%22shodan_api_key language:python%22&type=code
+https://github.com/search?q=vfsevisa.com+%22WORDPRESS_DB_PASSWORD=%22&type=code
+https://github.com/search?q=vfsevisa.com+%22xoxp OR xoxb OR xoxa%22&type=code
+https://github.com/search?q=vfsevisa.com+%22s3.yml%22&type=code
+https://github.com/search?q=vfsevisa.com+%22.exs%22&type=code
+https://github.com/search?q=vfsevisa.com+%22beanstalkd.yml%22&type=code
+https://github.com/search?q=vfsevisa.com+%22deploy.rake%22&type=code
+https://github.com/search?q=vfsevisa.com+%22.sls%22&type=code
+https://github.com/search?q=vfsevisa.com+%22AWS_SECRET_ACCESS_KEY%22&type=code
+https://github.com/search?q=vfsevisa.com+%22API KEY%22&type=code
+https://github.com/search?q=vfsevisa.com+%22API SECRET%22&type=code
+https://github.com/search?q=vfsevisa.com+%22API TOKEN%22&type=code
+https://github.com/search?q=vfsevisa.com+%22ROOT PASSWORD%22&type=code
+https://github.com/search?q=vfsevisa.com+%22ADMIN PASSWORD%22&type=code
+https://github.com/search?q=vfsevisa.com+%22GCP SECRET%22&type=code
+https://github.com/search?q=vfsevisa.com+%22AWS SECRET%22&type=code
+https://github.com/search?q=vfsevisa.com+%22private%22&type=code extension:pgp%22&type=code
+
 
 https://github.com/search?q=vfsevisa.com+%22extension:bat%22&type=code
 https://github.com/search?q=vfsevisa.com+%22extension:cfg%22&type=code
@@ -430,6 +462,8 @@ https://github.com/search?q=vfsevisa.com+%22extension:sql mysql dump%22&type=cod
 https://github.com/search?q=vfsevisa.com+%22extension:sql mysql dump password%22&type=code
 https://github.com/search?q=vfsevisa.com+%22extension:yaml mongolab.com%22&type=code
 https://github.com/search?q=vfsevisa.com+%22extension:zsh%22&type=code
+
+
 https://github.com/search?q=vfsevisa.com+%22filename:.bash_history%22&type=code
 https://github.com/search?q=vfsevisa.com+%22filename:.bash_history DOMAIN-NAME%22&type=code
 https://github.com/search?q=vfsevisa.com+%22filename:.bash_profile aws%22&type=code
@@ -533,36 +567,14 @@ https://github.com/search?q=vfsevisa.com+%22jsforce extension:js conn.login
 https://github.com/search?q=vfsevisa.com+%22language:yaml -filename:travis%22&type=code
 https://github.com/search?q=vfsevisa.com+%22msg nickserv identify filename:config
 https://github.com/search?q=vfsevisa.com+%22https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codeAWS_ACCESS_KEY_ID%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codelist_aws_accounts%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codeaws_access_key%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codeaws_secret_key%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codebucket_name%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codeS3_ACCESS_KEY_ID%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codeS3_BUCKET%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codeS3_ENDPOINT%22&type=code
-https://github.com/search?q=vfsevisa.com+%22org:Target %22&type=codeS3_SECRET_ACCESS_KEY%22&type=code
-https://github.com/search?q=vfsevisa.com+%22password%22&type=code
-https://github.com/search?q=vfsevisa.com+%22path:sites databases password%22&type=code
-https://github.com/search?q=vfsevisa.com+%22private -language:java%22&type=code
-https://github.com/search?q=vfsevisa.com+%22PT_TOKEN language:bash%22&type=code
-https://github.com/search?q=vfsevisa.com+%22redis_password%22&type=code
-https://github.com/search?q=vfsevisa.com+%22root_password%22&type=code
-https://github.com/search?q=vfsevisa.com+%22secret_access_key%22&type=code
-https://github.com/search?q=vfsevisa.com+%22SECRET_KEY_BASE=%22&type=code
-https://github.com/search?q=vfsevisa.com+%22shodan_api_key language:python%22&type=code
-https://github.com/search?q=vfsevisa.com+%22WORDPRESS_DB_PASSWORD=%22&type=code
-https://github.com/search?q=vfsevisa.com+%22xoxp OR xoxb OR xoxa%22&type=code
-https://github.com/search?q=vfsevisa.com+%22s3.yml%22&type=code
-https://github.com/search?q=vfsevisa.com+%22.exs%22&type=code
-https://github.com/search?q=vfsevisa.com+%22beanstalkd.yml%22&type=code
-https://github.com/search?q=vfsevisa.com+%22deploy.rake%22&type=code
-https://github.com/search?q=vfsevisa.com+%22.sls%22&type=code
-https://github.com/search?q=vfsevisa.com+%22AWS_SECRET_ACCESS_KEY%22&type=code
-https://github.com/search?q=vfsevisa.com+%22API KEY%22&type=code
-https://github.com/search?q=vfsevisa.com+%22API SECRET%22&type=code
-https://github.com/search?q=vfsevisa.com+%22API TOKEN%22&type=code
-https://github.com/search?q=vfsevisa.com+%22ROOT PASSWORD%22&type=code
-https://github.com/search?q=vfsevisa.com+%22ADMIN PASSWORD%22&type=code
-https://github.com/search?q=vfsevisa.com+%22GCP SECRET%22&type=code
-https://github.com/search?q=vfsevisa.com+%22AWS SECRET%22&type=code
-https://github.com/search?q=vfsevisa.com+%22private%22&type=code extension:pgp%22&type=code
+
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codelist_aws_accounts%22&type=code
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codeaws_access_key%22&type=code
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codeaws_secret_key%22&type=code
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codebucket_name%22&type=code
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_ACCESS_KEY_ID%22&type=code
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_BUCKET%22&type=code
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_ENDPOINT%22&type=code
+https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_SECRET_ACCESS_KEY%22&type=code
+
+
