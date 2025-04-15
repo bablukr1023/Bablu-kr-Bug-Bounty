@@ -1,0 +1,61 @@
+Dear Sir,
+
+
+Vulnerability :  HTML Injection
+
+
+Steps to Reproduce:
+
+## Steps
+
+    
+    1. GO to search engine
+    
+    > "https://word"
+
+    2. click Comment buttom 
+     
+    > "https://wordd/#comments"
+
+    3. FILL  comment, name ,email and website name
+
+    4. Fill comment payload
+  
+    >. "<a href="https://evil.com">hello</a>"
+
+    5. Click POST COMMENT  Buttom 
+   
+    6. click hello and see redirect to evil.com 
+
+    
+
+
+ Description:
+   
+   HTML injection is a web vulnerability where an attacker can insert malicious or unintended HTML code into a website’s input fields (e.g., forms, comments, or URL parameters) due to improper input sanitization. Unlike Cross-Site Scripting (XSS), which involves executing JavaScript, HTML injection primarily manipulates the structure and content of a webpage by injecting HTML tags, such as <div>, <h1>, or <img>. When the injected HTML is rendered by the browser, it alters the page’s appearance or behavior, potentially deceiving users or disrupting functionality.
+For example, if a comment form on a WordPress site doesn’t sanitize input, entering <h1>Warning!</h1> could render as a large heading on the page, indicating a vulnerability.
+
+
+
+
+IMPACT:
+
+The impact of HTML injection varies depending on the context but can include:
+Defacement: Attackers can alter the webpage’s appearance (e.g., adding fake messages, images, or styles), damaging the site’s credibility
+
+
+
+POC LINK ;-  please find the attached poc.
+
+
+
+
+
+
+thanks
+
+
+
+Name : Bablu kumar
+
+Email : bablukr102345@gmail.com
