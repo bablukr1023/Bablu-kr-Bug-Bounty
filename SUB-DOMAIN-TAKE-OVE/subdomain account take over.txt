@@ -31,3 +31,29 @@ nuclei -l livesubdomin.txt -t //root/nuclei-templates/subdomaintakeoverdetect-al
 
 
 subjack -w livesubdomin.txt -v 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subdomain Takeover PoC</title>
+</head>
+<body>
+    <h1>Proof of Concept for Subdomain Takeover</h1>
+    <p>This subdomain (actions.tooling.travix.com) was taken over by Bablu kumar for a bug bounty PoC.</p>
+    
+</body>
+</html>
