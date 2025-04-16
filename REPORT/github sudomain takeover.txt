@@ -1,0 +1,85 @@
+Dear Sir,
+
+
+Vulnerability :  Subdomain Takeover POC
+
+
+
+
+Steps to Reproduce:
+
+## Steps
+
+    1. go to search engine
+   
+    > "http://actions.too"
+
+    2. show page 404     
+
+    > "There isn't a GitHub Pages site here."
+
+    3. check cname, dig actio 
+
+    > "acti. 5   IN      CNAME   xi."
+ 
+    5. go to https://github.com  
+
+    6.  Create a new repository  
+
+    7.  fill repository name
+
+    8. Click,  create   repository
+
+    9. write html code poc
+
+    > "<html>
+<body>
+
+<h1>Subdomain Takeover by Bablu kumar. Poc</h1>
+
+</body>
+</html>"
+
+    10.  save file name index.html
+
+    11. go to setting
+
+    10.  click pages buttom
+
+    12. fill custom domain name.  action
+
+    13.  click save buttom
+
+    14. Refresh page
+
+
+
+ Description:
+   
+ The subdomain subdomain.example.com is vulnerable to a subdomain takeover due to a dangling CNAME record pointing to testing111111.azurewebsites.net, an unclaimed resource on Microsoft Azure. By registering the resource testing111111 on Azure, I was able to claim control of the subdomain and serve arbitrary content. A proof-of-concept (PoC) page was hosted at subdomain.example.com/poc-2bdg3erf2i6td.html, demonstrating full control over the subdomain without requiring ownership verification. This vulnerability arises because the DNS record was not removed after the associated third-party service was decommissioned.
+
+
+
+
+
+IMPACT:
+
+This subdomain takeover allows an attacker to:
+Host Malicious Content: Serve phishing pages, fake login forms, or malware, potentially tricking users into disclosing sensitive information (e.g., credentials, personal data).
+
+
+
+
+
+POC LINK ;-   Please find the below attached poc video.
+
+
+
+thanks
+
+
+
+Name : Bablu kumar
+
+Email : bablukr102345@gmail.com
+
