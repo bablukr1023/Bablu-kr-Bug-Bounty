@@ -1,1 +1,0 @@
-# Bablu-kr-Bug-Bounty
