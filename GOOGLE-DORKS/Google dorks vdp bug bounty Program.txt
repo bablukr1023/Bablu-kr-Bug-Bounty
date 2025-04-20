@@ -1,6 +1,7 @@
 Google dorks vdp bug bounty Program dorks
 ==============================
 
+inurl / responsible-disclosure/ reward -hackerone -bugcrowd -yeshwehack -intigriti -openbugbounty -synack
 site:*.nl inurl: / responsible disclosure/ero
 inurl: / responsible disclosure t-shirt
 inurl /bug bounty
