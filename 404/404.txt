@@ -1,0 +1,23 @@
+1. I found a 404 page
+
+2. Using ffuf:  
+   ffuf -w list.txt -u http://site.com/FUZZ -e .js -recursion  
+I found this: http://site.com/p/p/ww.js  
+
+3. After analyzing the content of 'ww.js', I identified three vulnerabilities on the same host!
+
+)After initial subdomain enumeration, I found a domain interesting *.*.bbc.com, which is giving 404 not found response
+2)I did directory fuzzing, and I got /profile --> 200 OK.
+
+I'm reporting my first RCE and it feels GREAT. even if I found it oos, I really liked this one as it just took so much time and I like things that take time xd 
+
+Shodan -> Fuzzing 404  and not finding anything -> nmap find port 8080 running Java RMI -> beanshooter
+
+
+
+
+
+
+
+
+
