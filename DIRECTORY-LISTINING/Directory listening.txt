@@ -4,6 +4,14 @@ Directory listening
 ffuf -w /home/rajeev/Downloads/onelistforallshort-find-path-logi.parameter.txt   -u https://clublees-acc.vpro.nl/FUZZ   -ac -mc 200,301,302 -fs 352,356,357 
 
 
+Bug - Information disclosure on restricted subdomain  
+
+Steps:   
+
+subfinder -d target | httpx -mc 403 -o 403_sub.txt  
+
+cat 403_sub.txt | dirsearch --stdin --exclude-status=401,404,403,429 -e conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bkp
+
 
 └─# cat allu | grep -E '\.xls|\.xml|\.x|\.json|\.pdf|\.sql|\.doc|\.docx|\.pptx|\.txt|\.zip|\.tar|\.gz|\.tgz|\.bak|\.7z|\.rar|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.gz|\.config|\.csv|\.yaml|\.md|\.md5|\.exe|\.dll|\.bin|\.ini|\.bat|\.sh|\.tar|\.deb|\.rpm|\.iso|\.img|\.apk|\.msi|\.dmg|\.tmp|\.crt|\.key|\.pub|\.asc|\.pem'
 http://birdviewpsa.com/robots.txt
