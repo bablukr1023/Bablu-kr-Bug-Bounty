@@ -6,6 +6,7 @@ Simple tip for port scan
 
 nmap -sS -p- postracker.ctf.global.com
 
+ naabu -p -  -host 167.89.118.83 
 
 
 
