@@ -1,4 +1,4 @@
-redirect/http://bing.com
+/%0d%0ahttp://google.com/
 ////evil%E3%80%82com
 //google.com/%2f..
 //www.whitelisteddomain.tld@google.com/%2f..
