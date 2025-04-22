@@ -1,6 +1,12 @@
 Open redirect
 ==========
 
+in some cases you can have an Open Redirect using %0d%0a and two "/" directly on the main url:
+
+http://victim//%0d%0ahttp://google.com/
+
+
+
 Just found Quick and easy open redirection on the main page 📄 
 This was so unexpected. 
 Example[.]com/evil[.]com = ❌
