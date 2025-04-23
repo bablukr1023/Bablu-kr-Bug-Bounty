@@ -3,6 +3,13 @@ Directory listening
 
 ffuf -w /home/rajeev/Downloads/onelistforallshort-find-path-logi.parameter.txt   -u https://clublees-acc.vpro.nl/FUZZ   -ac -mc 200,301,302 -fs 352,356,357 
 
+Juicy and spicy - Information Disclosure🍓
+
+dirsearch -u https://example[.]com -x 301,404,502,503,400,500
+
+dirsearch -u https://example[.]com/inspector/ -x 301,404,502,503,400,500
+
+People fail to do recursively.
 
 Bug - Information disclosure on restricted subdomain  
 
