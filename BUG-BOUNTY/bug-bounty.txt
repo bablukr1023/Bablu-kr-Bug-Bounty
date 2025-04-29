@@ -1,0 +1,39 @@
+                                                                 BUG Bounty
+
+
+
+
+   
+1. Select wild scope  program
+
+2. collect all subdomain 
+
+3. check 404 subdomain 
+
+4. check 401,403 subdomain  pages send it to repeater try to bypass it with ..; or ; etc 
+
+5. check 200 subdomain
+
+6. check 302 subdomain 
+
+7. select one domain 
+
+8. check all js file = GitHub dorks , all wayback , gau etc
+ 
+9. check GitHub dork
+
+10. check google ,bing.com  dork
+
+11. Fuzz parameter
+
+12.  Found PHP,asp,aspx,jsp,jspx, dirs FUZZ for more other dirs. Run param miner hire to finde somthing.asp?FUZZ=1 
+
+13. Try every URLs/pages with privileged Account and then with Low priv Account -> Broken Access Control Bug
+
+
+
+=====
+
+14. check open redirect
+
+15. check xss ,blind xss , store xss 
