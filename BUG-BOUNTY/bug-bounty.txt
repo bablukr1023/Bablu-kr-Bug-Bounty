@@ -37,3 +37,114 @@
 14. check open redirect
 
 15. check xss ,blind xss , store xss 
+
+
+
+1. Check the login process
+- Do they allow signup with email or Google etc
+- Do they allow you to signup with the 
+@company
+ email
+- what is the content-type of the signup/login page
+- when you enter valid cred, on which page you
+12:00 PM · 
+Who can reply?
+Accounts  mentioned can reply
+Mohsin Khan 🇮🇳
+
+·
+
+redirect like /dashboard
+- do they use 2FA. What happens if you enter the wrong OTP code, where you redirect to. What if you try to access /dashboard directly
+- Check the rate limit on the 2FA code feature
+- what if you send a 2FA request with the DELETE method?
+Mohsin Khan 🇮🇳
+
+·
+
+- Send blind XSS payload in singup page User-Agent
+Mohsin Khan 🇮🇳
+
+·
+
+2. What are roles
+- capture all requests as admin and now send each admin endpoint as low user
+3. Any file upload feature?
+- check stored XSS or RCE 
+4. Read docs
+- understand what are the things not allowed > try to bypass it.
+Mohsin Khan 🇮🇳
+
+·
+
+5. check the JS file
+- find all endpoints > check if there is any hidden API endpoint > can help you to find IDOR?
+- Check for DOM-based XSS
+
+
+·
+
+5. check the JS file
+- find all endpoints > check if there is any hidden API endpoint > can help you to find IDOR?
+- Check for DOM-based XSS
+
+
+·
+
+6. Check reflected XSS / template injection
+7. Check the reset password page for Host header injection 
+8. understand how to reset password token generate
+9. Check waybackurls to find old endpoints
+
+
+·
+
+10. Check CSRF on all endpoints
+11. Check key/token leak in JS files
+12. Check if JSONP allowed > leak users' data
+13. Change content-type from application/JSON to XML for XXE or stored XSS
+14. Check for reverse proxy-based attack
+
+
+·
+
+15. Check for payment bypassed > change value > response manipulation etc
+16. Check the JWT token properly (search JWT-based attack)
+17. Check for cache poisoning
+18 Check for request smuggling (see portswigger labs)
+19. Check for Webhooks > SSRF
+20. Check CORS
+21. Check XSSI
+
+
+·
+
+22. Check for mass assignment 
+23. FUZZ API endpoint > check error response page/stack trace > sometimes you will find leaks here
+24. Check low features like > unsubscribe email > capture the request > try IDOR/CSRF
+
+
+·
+
+25. Check for Race condition > if 10 API key/token generate allowed try for 20 using race condition (turbo intruder can be used)
+26. Check for Captcha bypass (easy P4)
+27. if graphQL is used > check for graphql based attack (watch insiderPHD videos to learn)
+
+
+·
+
+28. Check for AWS bugs like https://notsosecure.com/hacking-aws-cognito-misconfigurations
+29. Check if the android app is in scope > setup capture request > try same attack (specially IDORS)
+30. Check for open redirection
+notsosecure.com
+Hacking AWS Cognito Misconfigurations
+In this blog, Sunil Yadav, our lead trainer for “Advanced Web Hacking” training class, will discuss a case study of AWS account takeover via misconfigured AWS Cognito.  TL;DR The application under
+
+
+·
+
+31. Change false to true in the JSON request body > check if something changed> like getting access to the premium feature
+32. check CRLF
+33. Check Oauth bypass
+34. Now if you don't know about the topic > google > read > practice > find bug :)
+35 DONE
