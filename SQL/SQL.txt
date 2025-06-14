@@ -1,5 +1,7 @@
 SQL
 ====
+ git clone https://github.com/sqlmapproject/sqlmap.git     
+
 bug : P1 - SQLI 
 
 tip : well I got /api/v2/content?lang=payload .. here XOR payload worked and reported it .
