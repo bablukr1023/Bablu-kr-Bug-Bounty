@@ -1,0 +1,11 @@
+I know it's not a new idea but it got me some low hanging fruits : 
+1- Visit the website 
+2- check CMS 'Wappalyzer' 
+**sometimes blog,x,com is different than www,x,com also subdomains may be different
+3- FUZZ using CMS wordlist from Seclists
+and search for sensitive files & infos
+
+
+
+यह बताता है कि वेबसाइट कौन से CMS पर चल रही है, जैसे WordPress, Joomla, Drupal, या Magento।
+
