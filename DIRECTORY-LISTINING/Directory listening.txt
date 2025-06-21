@@ -18,6 +18,7 @@ Steps:
 subfinder -d target | httpx -mc 403 -o 403_sub.txt  
 
 cat 403_sub.txt | dirsearch --stdin --exclude-status=401,404,403,429 -e conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bkp
+cat u.txt| egrep -v '\.jpg|\.png|\.xls|\.xml|\.x|\.json|\.pdf|\.sql|\.doc|\.docx|\.pptx|\.txt|\.zip|\.tar|\.gz|\.tgz|\.bak|\.7z|\.rar|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.gz|\.config|\.csv|\.yaml|\.md|\.md5|\.exe|\.dll|\.bin|\.ini|\.bat|\.sh|\.tar|\.deb|\.rpm|\.iso|\.img|\.apk|\.msi|\.dmg|\.tmp|\.crt|\.key|\.pub|\.asc|\.pem|\.htm|\.svg|\.gif|\.css|\.js' |sort|uniq | tee -a au.txt
 
 
 └─# cat allu | grep -E '\.xls|\.xml|\.x|\.json|\.pdf|\.sql|\.doc|\.docx|\.pptx|\.txt|\.zip|\.tar|\.gz|\.tgz|\.bak|\.7z|\.rar|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.gz|\.config|\.csv|\.yaml|\.md|\.md5|\.exe|\.dll|\.bin|\.ini|\.bat|\.sh|\.tar|\.deb|\.rpm|\.iso|\.img|\.apk|\.msi|\.dmg|\.tmp|\.crt|\.key|\.pub|\.asc|\.pem'
