@@ -5,7 +5,7 @@ I know it's not a new idea but it got me some low hanging fruits :
 3- FUZZ using CMS wordlist from Seclists
 and search for sensitive files & infos
 
-
+https://github.com/danielmiessler/SecLists/tree/master/Discovery/Web-Content/CMS
 
 यह बताता है कि वेबसाइट कौन से CMS पर चल रही है, जैसे WordPress, Joomla, Drupal, या Magento।
 
