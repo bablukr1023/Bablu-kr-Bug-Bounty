@@ -1,3 +1,13 @@
+ cat *.txt  | cut -d '"' -f2 | sort | uniq | awk '{print $1}' | sort | uniq | sed 's|^|https://jupiter.mydukaan.io|' > output.txt
+
+https://jupiter.mydukaan.io/static/js/8206.cc6f9b63.chunk.js
+https://jupiter.mydukaan.io/static/js/8252.6b276efa.chunk.js
+https://jupiter.mydukaan.io/static/js/9786.ed84d71c.chunk.js
+
+
+
+
+
 js.txt
 while read -r url; do curl -s "$url" | grep -o '/[a-zA-Z0-9_-]\+\(/[a-zA-Z0-9_-]\+\)*'; done < js.txt | sort | uniq    
 /index.ts
