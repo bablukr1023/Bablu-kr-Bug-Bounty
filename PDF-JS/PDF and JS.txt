@@ -1,3 +1,67 @@
+js.txt
+while read -r url; do curl -s "$url" | grep -o '/[a-zA-Z0-9_-]\+\(/[a-zA-Z0-9_-]\+\)*'; done < js.txt | sort | uniq    
+/index.ts
+./src/mediaQuery.ts
+./src/toQuery.ts
+./src/useMediaQuery.ts
+
+
+
+single js
+curl -s https://jupiter.mydukaan.io/static/js/main.0c7c00ba.js | grep -o '/[a-zA-Z0-9_-]\+' | sort | uniq
+
+/index.ts
+./src/mediaQuery.ts
+./src/toQuery.ts
+./src/useMediaQuery.ts
+
+
+hello grok bhai pahle sahi se padh ke samaj uske baad me jaba diyo  jald bagi mat karna  me tujhe ak list de raha hu
+
+/index.ts
+./src/mediaQuery.ts
+./src/toQuery.ts
+./src/useMediaQuery.ts
+/$
+/*
+/404
+/accept-vendor-order/
+/accept/
+/acquisition-analytics
+
+
+
+in sabhi list ko is trah traya karna hai seje eg-
+
+
+
+https://jupiter.mydukaan.io/src/Component.ts
+https://jupiter.mydukaan.io/src/Context.ts
+https://jupiter.mydukaan.io/src/Component.ts
+https://jupiter.mydukaan.io/src/Context.ts
+https://jupiter.mydukaan.io/src/index.ts
+
+
+
+
+If you have the list of paths in a file called paths.txt, you can use the following command to prepend https://jupiter.mydukaan.io/ to each line:
+bash
+
+sed 's|^|https://jupiter.mydukaan.io|' paths.txt > output.txt
+
+Explanation:
+sed 's|^|https://jupiter.mydukaan.io|': This command uses sed to substitute the start of each line (^) with the base URL https://jupiter.mydukaan.io.
+
+paths.txt: The input file containing the list of paths.
+
+> output.txt: The output is redirected to a new file called output.txt.
+
+
+
+
+
+
+
 PDF and JS
 ==========
 
