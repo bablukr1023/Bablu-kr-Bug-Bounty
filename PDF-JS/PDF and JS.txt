@@ -1,7 +1,7 @@
  cat *.txt  | cut -d '"' -f2 | sort | uniq | awk '{print $1}' | sort | uniq | sed 's|^|https://jupiter.mydukaan.io|' > output.txt
 
 
-curl -s https://enterprise.web.mydukaan.io/static/js/main.94e57555.js| grep -o '/[a-zA-Z0-9_-]\+\(/[a-zA-Z0-9_-]\+\)*' |sed 's|^|https://enterprise.web.mydukaan.io|' > output.txt
+curl -s https://enterprise.web.mydukaan.io/static/js/main.94e57555.js| grep -o '/[a-zA-Z0-9_-]\+\(/[a-zA-Z0-9_-]\+\)*' |sed 's|^|https://enterprise.web.mydukaan.io|' | sort | uniq | tee -a output.txt
 
 https://jupiter.mydukaan.io/static/js/8206.cc6f9b63.chunk.js
 https://jupiter.mydukaan.io/static/js/8252.6b276efa.chunk.js
