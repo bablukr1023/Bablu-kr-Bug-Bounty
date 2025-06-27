@@ -1,0 +1,69 @@
+Steps to Reproduce:
+
+## Steps
+
+
+    1. GO to search engine
+   
+    > ""
+
+    2. create two account  
+     
+    > " user1 =  tasohes980@ofacer.com    Tasohes@12345"
+
+
+    > " user2=   saxon58897@coasah.com    Saxon@12345"
+
+
+    3. Login first account 
+ 
+
+    > " user1 =  tasohes980@ofacer.com    Tasohes@12345"
+
+     
+    4. open burpsuite ,    intersept request , click  Do intercept and send Response to request  
+
+
+    5. copy Response request
+
+    > "  "
+
+  6. click Forward buttom and of intercept is on 
+
+
+  7. and click setting buttom and check email id 
+
+
+  8. Click Sign out 
+
+
+  9. Enter your user2 email and password 
+
+  > " user2=   saxon58897@coasah.com    Saxon@12345"
+
+
+  10. open burpsuite ,    intersept on  , click  Do intercept and send Response to request  
+
+
+  11. change response to user1 request
+
+
+  12. click Forward buttom and of intercept is on
+
+
+  13.  click setting buttom and check email id  user1
+
+  
+  14.  account takeover.
+
+  
+
+  POC- please find the below Poc link 
+
+  > "  "
+
+
+  Severity: Critical
+
+
+  Thank you. 
