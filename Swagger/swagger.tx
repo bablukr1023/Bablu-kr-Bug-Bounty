@@ -36,6 +36,11 @@ http.title:"Swagger UI" hostname:"getsling.com"
 
 use shordan web browser download ip and domain f12 clonsone log paste
 
+var ipElements = document.querySelectorAll('strong'), ips = []; ipElements.forEach(function(e) {
+    var t = e.innerHTML.replace(/[\[\]g, '').trim(); /([d{1,3}.]{3}[d{1,3})/.test(t) && ips.push(t); /([a-zA-Z0-9.-]+[a-zA-Z]{2,}$)/.test(t) && domains.push(t)
+}); var dataString = 'IPs:\n' + ips.join('\n') + '\n\nDomains:\n' + domains.join('\n'), a = document.createElement('a'); a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(dataString); a.download = 'domains.txt'; document.body.appendChild(a); a.click();
+
+var ipElements = document.querySelectorAll('strong'); var ips = []; ipElements.forEach(function(e) { ips.push(e.innerHTML.replace(/[\[\]g, '')) }); var ipsString = ips.join('\n'); var a = document.createElement('a'); a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ipsString); a.download = 'ip.txt'; document.body.appendChild(a); a.click();
 
 
 
