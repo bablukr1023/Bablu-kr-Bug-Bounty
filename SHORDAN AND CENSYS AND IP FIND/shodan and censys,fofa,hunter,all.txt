@@ -2,7 +2,7 @@ shodan
 =====
 
 
-hostname:"*.naturalis.nl"
+hostname:"*.domain.com"
 Ssl:" "   find all domain and ip
 Ssl.cert.subject.CN:"mett.nl"
 Ssl.cert.subject.CN:"duocircle.com" -http.title:"403 Forbidden" -Ssl.cert.subject.CN:"duocircle.com.in"    remove item - singh and 
@@ -13,7 +13,7 @@ https://www.shodan.io/search?query=Ssl.cert.subject.CN%3A%22duocircle.com%22+403
  https://www.shodan.io/search/facet?query=hostname%3A%22attens.nl%22&facet=ip  search in toolbar find all ip
 some time dont waf ip and domain with waf show
 cat cdn.txt | grep "."  | sort | uniq | httpx -ports 80,443,8080,8888,8000 | tee -a ip.txt
- hostname:"uzleuven.be" 403
+ hostname:"domain.com" 403
 ssl:audimarin.com http.status:200
 1. http://ssl.cert.subject.CN:"*.lexzur.com" http.title:"index of/"
 2. http://ssl.cert.subject.CN:"*.target.com" http.title:"gitlab"
@@ -170,11 +170,11 @@ autonomous_system.organization:"<company>" AND services.software.vendor: jenkins
 hunter.io
 ======
 
-domain="aholddelhaize.com" and header.status_code=="200" and domain="working-at-aholddelhaize.com"
+domain="domain.com" and header.status_code=="200" and domain="working-at-domain.com"
 
-domain="aholddelhaize.com" and domain!=="working-at-aholddelhaize.com"   use negative   hunter.io
+domain="domain.com" and domain!=="working-at-domain.com"   use negative   hunter.io
 
-domain="aholddelhaize.com" and domain!=="working-at-aholddelhaize.com" and domain!=="communityroom-dev.aholddelhaize.com" and domain!=="yeswescan.external.dl.eu.aholddelhaize.com" and domain!=="www-staging-acc.aholddelhaize.com" and domain!=="www-staging-acc.aholddelhaize.com" and domain!=="dj4a-test-acc-portal.external.dl.eu.aholddelhaize.com" and domain!=="www-acc.aholddelhaize.com" and domain!=="www-acc.aholddelhaize.com" and domain!=="www-staging-acc.aholddelhaize.com" and domain!=="careers.aholddelhaize.com" and domain!==" apps-acc.aholddelhaize.com"
+domain="domain.com" and domain!=="working-at-domain.com" and domain!=="communityroom-dev.domain.com" and domain!=="yeswescan.external.dl.eu.domain.com" and domain!=="www-staging-acc.domain.com" and domain!=="www-staging-acc.domain.com" and domain!=="dj4a-test-acc-portal.external.dl.eu.domain.com" and domain!=="www-acc.domain.com" and domain!=="www-acc.domain.com" and domain!=="www-staging-acc.domain.com" and domain!=="careers.domain.com" and domain!==" apps-acc.domain.com"
 
 https://api.hunter.how/search?api-key=a46f3d726e86b5104605e865956f2924dbb1c2021d64c16f7396ad03d5b268b2&query=ZG9tYWluPSJjb250ZW50c3F1YXJlLmNvbSI=&page=1&page_size=1000&start_time=2024-01-01&end_time=2024-06-01  6 month intervel   and page change change state time and date query based 64
 
@@ -206,18 +206,18 @@ cloud_name*="Cloud*"
 domain="fofa.info" && port*="????" ppQWsKO.png
 
 
-domain="aholddelhaize.com" && protocol="https" && status_code="200" 
+domain="domain.com" && protocol="https" && status_code="200" 
   find hashes click website body
 body_hash="-2038262765"   body_hash="-2038262765" body_hash: -2038262765
 
-domain="aholddelhaize.com" && domain!="aholddelhaize.com"
+domain="domain.com" && domain!="domain.com"
 domain="contentsquare.com" && ip!="34.227.43.10"
 
 (domain="datacamp.com") && after="2021-12-01" && before="2022-01-03" && port="80"
 
 host="dpgmedia.nl" && after="2012-01-01" && before="2020-12-31"   always check all ip -----------------------------------------     
 
-domain="aholddelhaize.com" && host!="lunchbox-qa.aholddelhaize.com"     negative   6 page access    page 50 down senting   date change in stting  2024-10-03-2024-10-03
+domain="domain.com" && host!="lunchbox-qa.domain.com"     negative   6 page access    page 50 down senting   date change in stting  2024-10-03-2024-10-03
 
 
 use ALL select subdomain ad search shordan and copy and paste notepad.
@@ -252,10 +252,10 @@ zoome eye
 ======
 
 
-site:"aholddelhaize.com" -hostname:ahlp1639.aholddelhaize.com
+site:"domain.com" -hostname:ahlp1639.domain.com
 
 
-site:"aholddelhaize.com" -site:"ahlp1639.aholddelhaize.com"   both possible    page 50 down senting
+site:"domain.com" -site:"ahlp1639.domain.com"   both possible    page 50 down senting
 
 ssl:"deezer.com" -ip:"34.149.250.111" -ip:"72.21.92.57" -ip:"185.159.107.188"   negative
 
@@ -277,7 +277,7 @@ https://www.zoomeye.hk/searchResult?/vtapi/v2/domain/report?apikey=33C9580a-b0e1
 https://quake.360.net/
 ============
 
-domain: "acceptmission.com" AND NOT (domain: flatnuke.acceptmission.com)   negative seting me ip and domain next  select  all page selected
+domain: "domain.com" AND NOT (domain: flatnuke.domain.com)   negative seting me ip and domain next  select  all page selected
  
 
 https://www.criminalip.io/    3 page access 
