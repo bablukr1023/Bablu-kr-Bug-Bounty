@@ -9,10 +9,10 @@ Steps to Reproduce:
 
     2. create two account  
      
-    > " user1 =  tasohes980@ofacer.com    Tasohes@12345"
+    > " user1 =  tasohes980@ofacer.com    Tasohes5"
 
 
-    > " user2=   saxon58897@coasah.com    Saxon@12345"
+    > " user2=   saxon58897@coasah.com    Saxon"
 
 
     3. Login first account 
@@ -39,7 +39,7 @@ Steps to Reproduce:
 
   9. Enter your user2 email and password 
 
-  > " user2=   saxon58897@coasah.com    Saxon@12345"
+  > " user2=   saxon58897@coasah.com    "
 
 
   10. open burpsuite ,    intersept on  , click  Do intercept and send Response to request  
@@ -67,3 +67,20 @@ Steps to Reproduce:
 
 
   Thank you. 
+
+
+Vulnerability Description:
+A vulnerability exists in [specific component/feature, e.g., authentication mechanism, password reset flow, or session management] that allows an attacker to gain unauthorized access to a user’s account. Specifically, [describe the vulnerability concisely, e.g., "by manipulating the password reset token, an attacker can bypass authentication and reset any user’s password without their knowledge"]. The issue stems from [explain the root cause briefly, e.g., "lack of proper validation of the reset token" or "session cookie not being invalidated after a password change"].
+
+
+
+
+Impact:
+This vulnerability allows an attacker to fully compromise a user’s account, granting unauthorized access to sensitive information such as [list potential sensitive data, e.g., "personal details, private messages, payment information, or account settings"]. The attacker could perform actions on behalf of the user, including [list potential actions, e.g., "modifying account details, initiating transactions, or impersonating the user"]. In severe cases, this could lead to financial loss, data breaches, or reputational damage for both the user and the platform.
+
+
+
+
+Name : Babluk kumar
+
+Email : bablukr102345@gmail.com
