@@ -1,5 +1,24 @@
 Graphlql
 
+GraphQL endpoints
+/graphql/
+/graphql/console/
+/graphql.php
+/graphiql/
+/graphiql.php
+[…]
+
+
+
+
+
+
+
+
+
+
+
+
 
 1.
 
