@@ -47,7 +47,7 @@ Impact:
 The most simple impact is that if there is no spoofing protection on target website, attacker can impersonate as company and send emails to users from their email. Now this could lead to many bad things like account takeover, or in case of e-banking website, capturing funds of victims, etc like that, which will degrade the reputation of the company
 
 
-Name : Babluk kumar
+Name : Bablu kumar
 
 Email : bablukr102345@gmail.com
 
