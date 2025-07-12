@@ -11,11 +11,11 @@ Steps to Reproduce:
 
     1. GO to search engine
    
-    > "https://postracker.ctf.global.com"
+    > "https://postracker.ctf.l.com"
 
     2. add /assets
      
-    > "https://postracker.ctf.global.com/assets/"
+    > "https://postracker.ctf..com/assets/"
 
     3. find many directory
  
