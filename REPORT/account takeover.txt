@@ -81,6 +81,6 @@ This vulnerability allows an attacker to fully compromise a user’s account, gr
 
 
 
-Name : Babluk kumar
+Name : Bablu kumar
 
 Email : bablukr102345@gmail.com
