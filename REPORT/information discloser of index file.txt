@@ -35,7 +35,7 @@ Exposing the contents of a directory can lead to an attacker gaining access to s
 
 
 
-Name : Babluk kumar
+Name : Bablu kumar
 
 Email : bablukr102345@gmail.com
 
