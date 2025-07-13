@@ -1,0 +1,63 @@
+Dear Sir,
+
+
+Vulnerability :  Any Email update functionality
+
+
+Steps to Reproduce:
+
+## Steps
+
+
+    1. GO to search engine
+ 
+    > " https://looom/ "
+
+    2. Login  account
+ 
+    > " user1 =  rijif841014101@d&a1321 "
+
+
+    3. Click Account-setting  button
+ 
+
+    > " https://looka.ccount-settings "
+
+ 
+    4. Enter any email id
+
+    > " rijif841xbav.com "
+
+    5. Click update button
+
+
+    6. Logout account
+
+
+    7. Login new email id and password
+
+    > " rijif84101asdfd84101@d&a1321   "
+
+
+    8. you can see login account
+
+
+    POC- please find the below Poc link
+
+
+     > "  "
+
+
+  Severity: Critical
+
+
+ 
+
+
+ Thank you.
+
+
+
+Name : Bablu kumar
+
+Email : bablukr102345@gmail.com

@@ -1,0 +1,77 @@
+Dear Sir,
+
+
+Vulnerability :  No rate limit on Sign up Form leads to Mass Account Registration
+
+
+Steps to Reproduce:
+
+
+## Steps
+
+
+    1. GO to search engine
+ 
+    > " https://lokom/ "
+
+    2. Click Register  button
+ 
+
+    3. Enter Email id , Name and Password
+ 
+    > " yodew98912@l98912@l2134 "
+
+ 
+    4. open burp suite ,    intercept request , send to intuder
+
+
+    5. Select Email id and Number  payloads
+
+
+    6. click start attack
+ 
+
+    7. check response 200 Ok
+
+ 
+    8. Login new email and password
+
+    > "  "
+ 
+
+    POC- please find the below POC link
+
+    > "  "
+
+
+    Severity: High
+
+
+ 
+
+
+Vulnerability Description:
+
+The sign-up form lacks a rate-limiting mechanism, allowing unrestricted submission of registration requests. This enables automated scripts or bots to repeatedly submit the form, leading to mass account creation without any checks or delays.
+
+
+
+
+
+
+
+Impact:
+
+System Overload: Mass account registration can overload the server, causing performance degradation or potential downtime.
+
+
+
+
+
+ Thank you.
+
+
+
+Name : Bablu kumar
+
+Email : bablukr102345@gmail.com
