@@ -1,0 +1,53 @@
+Bhai, chalo sed 's|^/||' input_file command ko bilkul simple language mein samajhte hain, step-by-step:Command Breakdown:Yeh command sed tool ka use karta hai, jo text ko edit ya modify karta hai. Is case mein, hum isse har line ke shuruaat se / (forward slash) hatane ke liye use kar rahe hain.1. sed:sed ek text processing tool hai jo lines ko read karta hai aur unpe changes karta hai.
+Iska full form hai Stream Editor.
+
+2. s|^/||':Yeh part command ka core hai, jo batata hai ki kya change karna hai. Isko todenge:s: Yeh bolta hai "substitute" (replace karo). Yani kuch find karo aur usko replace karo.
+^/: Yeh ek pattern hai jo bolta hai:^: Line ke shuruaat ko point karta hai.
+/: Yeh woh character hai jo hum dhoondh rahe hain (forward slash).
+Combined: ^/ ka matlab hai "line ke shuruaat mein / dhoondho".
+
+||: Yeh do pipes ke beech ka part batata hai ki found pattern (/) ko kisse replace karna hai. Yahan par khali hai, matlab / ko hata do (replace with nothing).
+Single Quotes ('): Yeh pure pattern ko enclose karte hain taki shell command ko sahi se samajh sake.
+
+3. input_file:Yeh tumhara file hai jisme woh list hai (jaise _cat/health, _cat/indices, etc.).
+Agar file nahi hai, toh tum pipe (|) ka use karke direct input de sakte ho.
+
+Kaise Kaam Karta Hai:sed ek ek line ko padhta hai.
+Har line ke shuruaat mein agar / milta hai, toh usko hata deta hai.
+Baaki line jaisi hai waisi hi rehti hai.
+Output terminal pe dikhta hai (ya file mein save ho sakta hai).
+
+Example:Agar input.txt mein yeh hai:
+
+
+
+
+Bhai, agar tum leading / ko hata ke uski jagah hub likhna chahte ho, toh sed command ko thoda modify karenge. Bas substitute karte waqt khali string (||) ke bajaye hub daal denge. Yeh raha command:bash
+
+sed 's|^/|hub|' input_file
+
+Kaise Kaam Karta Hai:sed: Text editor tool, jo line by line process karta hai.
+s|^/|hub|':s: Substitute (replace) karo.
+^/: Line ke shuruaat mein / dhoondho.
+hub: Jo / mila, usko hub se replace karo.
+': Pattern ko enclose karta hai.
+
+input_file: Tumhara file jisme list hai.
+
+Example:Agar input.txt mein yeh hai:
+
+/_cat/health
+/_cat/indices
+/_cluster/health
+/abs/
+
+Command run karo:bash
+
+sed 's|^/|hub|' input.txt
+
+Output:
+
+hub_cat/health
+hub_cat/indices
+hub_cluster/health
+hubabs/
