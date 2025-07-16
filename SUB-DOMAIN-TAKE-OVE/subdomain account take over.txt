@@ -1,6 +1,21 @@
  subdomain account take over 
 ==================
 
+this mean subdomain takover possible
+
+Looks like there’s a problem with this site
+
+https://c.com/ sent back an error.
+
+Error code: 404 Not Found
+
+    Check to make sure you’ve typed the website address correctly.
+
+
+
+
+
+
 cname check
 
 dig xyx.com
