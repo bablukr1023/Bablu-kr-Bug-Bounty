@@ -12,7 +12,7 @@ Error code: 404 Not Found
     Check to make sure you’ve typed the website address correctly.
 
 
-
+always check 301,302 possibe subdomain takeover dig command
 
 
 
