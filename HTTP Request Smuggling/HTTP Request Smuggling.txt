@@ -1,0 +1,71 @@
+HTTP Request Smuggling
+
+
+
+Real-World ScenarioSuppose you are participating in a bug bounty program, and you get the opportunity to test an e-commerce website (e.g., example-store.com). Your goal is to investigate whether there is an HTTP request smuggling vulnerability that can cause a discrepancy between the front-end and back-end servers.Step 1: Set Up ToolsInstall Burp Suite and configure it as a proxy in your browser (e.g., Chrome).
+Enable "Intercept" in Burp so that every request and response is visible to you.
+Keep the "Repeater" tab ready to resend and test requests.
+
+Step 2: Intercept a Normal RequestVisit the website and perform a simple action, such as entering a username and password on the login page.
+The intercepted request in Burp might look like this:
+
+POST /login HTTP/1.1
+Host: example-store.com
+Content-Length: 29
+Content-Type: application/x-www-form-urlencoded
+Cookie: session=abc123
+
+username=test&password=123456
+
+Here, the Content-Length is 29 (the byte count of username=test&password=123456). The server responds correctly (e.g., a login failure message).
+
+Step 3: Modify the Request for SmugglingNow, you wonder if the front-end and back-end servers prioritize headers differently. You try the following request:
+
+POST /login HTTP/1.1
+Host: example-store.com
+Content-Length: 0
+Transfer-Encoding: chunked
+
+5
+username=test
+0
+
+GET /admin-panel HTTP/1.1
+Host: example-store.com
+[CRLF]
+
+What Are You Doing?Content-Length: 0 indicates that the body is empty, which might cause the front-end server to consider the request complete at this point.
+With Transfer-Encoding: chunked, you send 5 bytes (username=test) and then end the chunk with "0".
+Afterward, you add a second request (GET /admin-panel), leaving it for the back-end to process.
+
+Real-World Connection:Many websites use different servers for the front-end (e.g., Nginx or Cloudflare) and back-end (e.g., Apache), often with different HTTP protocols (HTTP/1.1 or HTTP/2). If the front-end prioritizes Content-Length and the back-end prioritizes Transfer-Encoding, a desync can occur.
+For example, in a real-world case in 2021 (shared on Bugcrowd), an attacker used a similar method to access an admin page on an e-commerce site.
+
+Step 4: Check the ResultsResend this request using Burp Repeater.
+If /admin-panel loads or an unexpected response appears (e.g., 200 OK or 403 Forbidden), it indicates a potential vulnerability.
+If the response contains the HTML code of /admin-panel, it’s clear evidence that smuggling has worked.
+
+Step 5: Further TestingNow, make a slight change by setting Content-Length to 5 and try again:
+
+POST /login HTTP/1.1
+Host: example-store.com
+Content-Length: 5
+Transfer-Encoding: chunked
+
+5
+username=test
+0
+
+GET /admin-panel HTTP/1.1
+Host: example-store.com
+[CRLF]
+
+If the front-end stops at 5 bytes and the back-end processes the remaining request, smuggling may still occur.
+
+Step 6: Observe Real ImpactIf /admin-panel reveals sensitive data (e.g., a user list), it’s a high-severity bug. Report it to the bug bounty program.
+Example: In 2023, a bug hunter exploited a similar vulnerability to access a company’s internal API and won a $10,000 reward (HackerOne case).
+
+Real-World TipsChoose Targets: Focus on pages with 3XX redirects (302, 301) or POST requests, as these are common for smuggling.
+Check Servers: Look at the website’s headers (e.g., "Server: Apache" or "Server: Nginx") to identify the servers in use. Different server priorities can create smuggling opportunities.
+
+
