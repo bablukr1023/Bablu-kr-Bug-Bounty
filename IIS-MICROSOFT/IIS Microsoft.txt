@@ -1,6 +1,18 @@
 IIS Microsoft 
 ========
 
+waymore tool very helpful to find this stuff 
+
+for ffuf lot of methods but as example with my IIS wordlist 
+x[.]a[.]com
+
+ffuf -w /iis.txt -u x.a[.]com/xFUZZ -e zip,7z,gz
+ffuf -w /iis.txt -u x.a[.]com/xFUZZ -e zip,7z,gz
+ffuf -w /iis.txt -u x.a[.]com/x.aFUZZ -e zip,7z,gz
+~/_ fuzz
+
+
+
 
 /test.aspx?file=../../web.config
 
