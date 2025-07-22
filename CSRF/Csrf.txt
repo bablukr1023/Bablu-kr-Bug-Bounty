@@ -2,6 +2,68 @@ Csrf
 ===
 
 
+CSRF Bypass Techniques  !
+
+1. Token Manipulation:  
+   - Remove the entire CSRF token parameter or just its value.  
+   - Replace the token with a random one of the same length.  
+   - Try using a token that is one character longer or shorter than expected.  
+   - Inject the attacker's CSRF token into the victim’s session.  
+
+2. Method & Header Tampering:  
+   - Change the HTTP method from POST to GET and remove the CSRF token.  
+   - If the request is PUT or DELETE, try using POST instead.  
+   - If the token is sent via a custom header, try removing the header.  
+
+3. Content-Type Based Bypasses:  
+   - Modify the `Content-Type` to:  
+     - `application/json`  
+     - `application/x-www-form-urlencoded`  
+     - `multipart/form-data`  
+     - `text/xml` or `application/xml`  
+
+4. Double Submit Token Exploits:  
+   - If a double submit token is used (sent via both cookies & headers), try CRLF injection to manipulate header parsing.  
+
+5. Referrer-Based Bypasses:  
+   - If the server only checks the Referrer header when it exists, add the following in your CSRF PoC:  
+     ```html
+     <meta name="referrer" content="never">
+     ```  
+   - If a regex-based Referrer check is implemented, try bypassing it with slight variations.  
+
+6. CSRF Token Stealing Methods:  
+   - Exploit XSS, HTML injection, or CORS misconfigurations to steal CSRF tokens.  
+
+7. JSON-Based CSRF Bypasses:  
+   - Change `Content-Type` to `text/plain`, `application/x-www-form-urlencoded`, or `multipart/form-data` and test if the server accepts it.  
+   - Use Flash + 307 redirect to bypass strict request validations.  
+
+8. Weak or Predictable Tokens:  
+   - Identify guessable CSRF tokens by analyzing multiple token generations and detecting static patterns.  
+
+9. Clickjacking-Assisted CSRF Bypasses:  
+   - Use Clickjacking techniques to trick users into submitting strong CSRF-protected requests.  
+
+10. Type Juggling Exploits:  
+    - If CSRF token validation is weak, try type juggling attacks (e.g., `==` vs. `===` comparisons in PHP).  
+
+11. Array Injection Attack:  
+    - Example:  
+      ```text
+      newemail=victim@gmail.com&csrftoken[]=bypass  
+      ```  
+
+12. Null Token Injection:  
+    - Set the CSRF token to "null" or add null bytes (`%00`) to break validation logic.  
+
+13. CSRF Over HTTP / 3rd Party Leak:  
+    - Check if the CSRF token is transmitted over HTTP or accidentally leaked to a third-party domain.  
+    - Example Report: https://hackerone.com/reports/15412  
+
+
+Tip: Try to send `csrftoken=null` or `csrftoken=%00`  just found this one.
+
   targeg = xyz.com   in funsinolity
 
 
