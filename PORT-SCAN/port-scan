@@ -1,3 +1,8 @@
+any page show in google browser always scan port  eg 
+
+85.17.150.52:80   nothing
+85.17.150.52:443   admin login page
+
 Simple tip for port scan 
 1) after enumerat your subdomains save in  subs.txt
 2) run this command 
