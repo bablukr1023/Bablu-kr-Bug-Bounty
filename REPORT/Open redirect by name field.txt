@@ -1,0 +1,69 @@
+Dear Sir,
+
+
+Vulnerability :  Open redirect by name field.
+
+
+Steps to Reproduce:
+
+## Steps
+
+
+    1. GO to search engine
+   
+    > " https://www.vidm "
+
+    2. Login account   
+     
+    3. Click Account details button
+     
+    4. Click Edit profile button   
+     
+    5. Fill Fist name and Last name and save button  
+     
+    > "  evil.com  and bing.com  "
+
+    3. Logout account
+
+    3. Click Forgot your password? button
+
+    4. Enter email id
+
+    > " rahuom "
+     
+    5. Open email check forgot your password reset link 
+
+
+    6. see HI evil.com 
+
+
+    7. click evil.com 
+
+
+    8. Redirect evil.com 
+
+
+
+
+  Thank you.
+
+
+Vulnerability Description:
+
+The website allows users to input a value (e.g., "evil.com") in the name field request.
+This input is reflected in the reset password email and link (e.g., the link redirects to "evil.com" instead of a legitimate domain).
+
+
+
+
+
+Impact:
+
+Security Risk: An attacker could manipulate the input to redirect users to malicious websites (e.g., phishing pages or sites hosting malware), potentially leading to credential theft or data compromise.
+User Trust: Unintended redirects can confuse or mislead users, damaging the website's credibility.
+
+
+
+Name : Bablu  Kumar
+
+Email : bablukr102345@gmail.com
