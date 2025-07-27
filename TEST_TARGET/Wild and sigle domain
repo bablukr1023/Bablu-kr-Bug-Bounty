@@ -1,0 +1,29 @@
+wild card scope
+
+*.fds.com
+
+1. Find all subdomain 
+
+= web page-- https://securitytrails.com/ , https://crt.sh/ , https://subdomainfinder.c99.nl/ , https://subdomainfinder.in/ , https://www.virustotal.com/gui/home/upload
+
+= tool-- subfinder , assetfinder , findomain , sublist3r , crt.sh
+
+= find ip and subdomain with help web browser-- - shodan.io , Censys , https://en.fofa.info/ , https://hunter.how/ , https://www.zoomeye.ai/ , https://app.netlas.io/host/ , https://www.criminalip.io/
+
+= google dorks
+
+site:"Organisation (O)	<Not part of certificate>"
+site:*.xyz.con
+site:*.<xyz.con>*
+site:<xyz.con>*
+site:*<xyz.con>*
+site:*.<*xyz.con>*
+site:<*xyz.con>.*
+site:*.<xyz.con.*>*
+site:*.<xyz.con*
+site:*.xyz.con>*
+site:*.<xyz.con>*
+
+2. Single Domain 
+
+=
