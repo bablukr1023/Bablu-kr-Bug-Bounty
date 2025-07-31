@@ -148,3 +148,276 @@ In this blog, Sunil Yadav, our lead trainer for “Advanced Web Hacking” train
 33. Check Oauth bypass
 34. Now if you don't know about the topic > google > read > practice > find bug :)
 35 DONE
+
+
+
+
+Thread about hunting on the main application 🧵
+
+   1. Check the login process
+
+    Do they allow signup with email or Google etc
+
+    Do they allow you to signup with the @company email
+
+    what is the content-type of the signup/login page
+
+    when you enter valid cred, on which page you
+
+
+
+
+
+
+redirect like /dashboard
+
+    do they use 2FA. What happens if you enter the wrong OTP code, where you redirect to. What if you try to access /dashboard directly.
+
+    Check the rate limit on the 2FA code feature
+
+    what if you send a 2FA request with the DELETE method?
+
+
+
+    Send blind XSS payload in singup page
+    User-Agent
+
+
+2. What are roles
+
+    capture all requests as admin and now send each admin endpoint as low user
+
+    Any file upload feature?
+
+    check stored XSS or RCE
+
+    Read docs
+
+    understand what are the things not allowed
+
+    try to bypass it.5. check the JS file
+
+    find all endpoints > check if there is any
+    hidden API endpoint > can help you to find
+    IDOR?
+
+    Check for DOM-based XSS
+    54
+    
+
+    Check reflected XSS / template injection
+
+    Check the reset password page for Host
+    header injection
+
+    understand how to reset password token
+    generate
+
+    Check waybackurls to find old endpoints
+    55
+    
+
+    Check CSRF on all endpoints
+
+    Check key/token leak in JS files
+
+    Check if JSONP allowed > leak users' data
+
+    Change content-type from application/
+    JSON to XML for XXE or stored XSS
+
+    Check for reverse proxy-based attack
+    62
+    
+
+    Check for payment bypassed > change
+    value > response manipulation etc
+
+    Check the JWT token properly (search
+    JWT-based attack)
+
+    Check for cache poisoning
+
+    Check for request smuggling (see
+    portswigger labs)
+
+    Check for Webhooks > SSRF
+
+
+6. Check reflected XSS / template injection
+7. Check the reset password page for Host
+header injection
+8. understand how to reset password token
+generate
+9. Check waybackurls to find old endpoints
+55
+
+10. Check CSRF on all endpoints
+11. Check key/token leak in JS files
+12. Check if JSONP allowed > leak users' data
+13. Change content-type from application/
+JSON to XML for XXE or stored XSS
+14. Check for reverse proxy-based attack
+62
+
+15. Check for payment bypassed > change
+value > response manipulation etc
+16. Check the JWT token properly (search
+JWT-based attack)
+17. Check for cache poisoning
+18. Check for request smuggling (see
+portswigger labs)
+19. Check for Webhooks > SSRF
+20. Check CORS
+21. Check XSSI
+
+22. Check for mass assignment
+23. FUZZ API endpoint > check error
+response page/stack trace > sometimes you
+will find leaks here
+24. Check low features like > unsubscribe
+email > capture the request > try IDOR/CSRF
+62
+
+25. Check for Race condition > if 10 API key/
+token generate allowed try for 20 using race
+condition (turbo intruder can be used)
+26. Check for Captcha bypass (easy P4)
+27. if graphQL is used > check for graphql
+based attack (watch insiderPHD videos to
+learn)
+66
+
+28. Check for AWS bugs like
+notsosocure.com/hacking-aws-co...
+
+29. Check if the android app is in scope >
+setup capture request > try same attack
+(specially IDORS)
+30. Check for open redirection
+Hacking AWS Cognito
+Misconfigurations
+https://www.google.com/search?q=notsosocure.com
+81
+
+31. Change false to true in the JSON request
+body > check if something changed> like
+getting access to the premium feature
+32. check CRLF
+33. Check Oauth bypass
+34. Now if you don't know about the topic >
+google > read > practice > find bug:)
+35 DONE
+12 134
+
+
+
+
+
+
+So many beginners ask what to do after finding subdomains 🧵
+1. Do directory search
+2. Do Github dork
+3. Do google dork
+4. FUZZ for params
+5. FUZZ for vhosts
+6. Find Wayback data (gau, waybackurl)
+7. Find javascript files
+1/n
+5:23 PM · 
+
+
+8. Do subdomain crawling (gospider, hakrawler)
+9. Send all crawl data to burp
+10. send all wayback, gau data to burp
+11. send all js files to burp
+12. check params for bug in burp repeater
+2/n
+
+
+·
+
+13. FUZZ with paraminer to find more params
+14. Found PHP,asp,aspx dirs FUZZ for more other dirs. Run param miner hire to finde somthing.asp?FUZZ=1 
+
+if found any param check for SQLi, XSS, cmd injection etc
+3/n
+
+
+·
+
+15. Found 401/403 pages send it to repeater try to bypass it with ..; or ; etc spend time on it
+16. Found params and tested everything and don't know what to do next: send the request to the intruder -> select param -> right click and select scan insertion point
+4/n
+
+
+·
+
+17. Run active scan with some extension like active scan++, etc to find some bugs
+18. Found directory in a subdomain but don't found much : Do google dork on that domain to find params, github dork etc
+19. Check JS files for secret, tokens, api keys etc
+5/n
+
+
+
+20. Try every URLs/pages with privileged Account and then with Low priv Account -> Broken Access Control Bug
+21. Automate with Authorize (Burp ext)
+
+
+
+
+
+
+
+b
+·
+
+1. Grep all https://chaos.projectdiscovery.io domains don't think about bounty
+From chaos.projectdiscovery.io
+
+
+·
+
+2. Use https://github.com/projectdiscovery/httpx (httpx -title -tech-detect -status-code -content-length)
+From github.com
+
+
+·
+
+3. Grep 200 status code domains and focus on high length domains (let say you got 1000 high lenght domains). Grep -vE "news|blog|whatever not intresting"
+
+
+·
+
+4. make new file with high lenght domains > send it to burp (cat file.txt | httpx -http-proxy http://127.0.0.1)
+
+
+·
+
+5. Select all and crawle. In your burp target tab select only parameter requests
+
+
+·
+
+6. Command line: use Gau, gospider on this new domains and grep parameters urls. > also send it to burp
+
+
+·
+
+7. Now you have hugh target list on burp
+
+
+·
+
+8. Spend next 3 months on burp only with this dataset and look for one bug type like XSS.
+
+
+·
+
+9. Than lean new bug type and look for them again.
+
+
+·
+
+10. Lol don't forget to save burp project😅
+
