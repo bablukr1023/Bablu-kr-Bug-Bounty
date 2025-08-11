@@ -102,3 +102,13 @@ https://competitionsmanager.global.com/swagger/ui/index?configUrl=https://github
 
 https://competitionsmanager.global.com/swagger/ui/index?configUrl=https://github.com/coffinxp/swagger/blob/main/xsstest.json
 
+Steps to Find XSS in Swagger UI
+
+
+Swagger UI Version Check Karo  Swagger UI ke purane versions (jaise >=3.14.1 aur <3.38.0) mein known XSS vulnerabilities hain, jo url ya configUrl query parameters ke through exploit ho sakti hain.
+
+URL mein ?version ya documentation check karke version pata karo. Ya phir browser ke developer tools (F12) mein source code dekho, swagger-ui.js ya swagger-ui-dist ka version number dhundne ke liye.
+Agar version vulnerable ran
+
+
+
