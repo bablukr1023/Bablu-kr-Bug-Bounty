@@ -85,3 +85,6 @@ go install github.com/jaeles-project/gospider@latest
 
 gospider -q -s "https://google.com/" -o output
 
+
+9. all urls find with katana then send linkfinder tool again find urls 
+
