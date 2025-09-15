@@ -79,3 +79,9 @@ git clone https://github.com/0xKayala/ParamSpider && cd ParamSpider && pip3 inst
 paramspider -d example.com
 
 
+8. Gospider  
+
+go install github.com/jaeles-project/gospider@latest
+
+gospider -q -s "https://google.com/" -o output
+
