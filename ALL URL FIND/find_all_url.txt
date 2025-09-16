@@ -1,12 +1,12 @@
 Find all url tool
 
-https://web.archive.org/cdx/search/cdx?url=*.send.duocircle.com&fl=original&collapse=urlkey
+https://web.archive.org/cdx/search/cdx?url=*.send.ducle.com&fl=original&collapse=urlkey
 
-https://urlscan.io/api/v1/search/?q=aholddelhaize.com
+https://urlscan.io/api/v1/search/?q=ahize.com
 
-https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4&domain=aholddelhaize.com
+https://www.virustotal.com/vtapi/v2/domain/report?apikey=70ec2568069b04f4a8538759ed19ef7410a341922743ada2ed9e539d0cbce0d4&domain=ahoelhaize.com
 
-https://otx.alienvault.com/api/v1/indicators/hostname/aholddelhaize.com/url_list?limit=500%27
+https://otx.alienvault.com/api/v1/indicators/hostname/ahoe.com/url_list?limit=500%27
 
 
 1. gau
@@ -16,7 +16,7 @@ go install github.com/lc/gau/v2/cmd/gau@latest
 
 cat livesubdomin.txt | gau | tee -a gau.txt 
 
-echo https://www.bmw.de | gau | tee -a gau.txt
+echo https://www.b.de | gau | tee -a gau.txt
 
 2. waybackurls
 
@@ -24,7 +24,7 @@ go install github.com/tomnomnom/waybackurls@latest
 
 cat livesubdomin.txt | waybackurls | tee -a waybackurls.txt
 
-echo https://www.bmw.de | waybackurls | tee -a waybackurls.txt
+echo https://www.b.de | waybackurls | tee -a waybackurls.txt
 
 3. hakrawler 
 
@@ -32,7 +32,7 @@ go install github.com/hakluke/hakrawler@latest
 
 cat livesubdomin.txt | hakrawler | tee -a hakrawler.txt  
 
-echo https://www.bmw.de | hakrawler | tee -a hakrawler.txt 
+echo https://www.b.de | hakrawler | tee -a hakrawler.txt 
 
 4. katana 
 
@@ -40,7 +40,7 @@ go install github.com/projectdiscovery/katana/cmd/katana@latest
 
 katana -list livesubdomin.txt  -o katanaur.txt
 
-katana -u https://www.bmw.de  -o katanaur.txt
+katana -u https://www.de  -o katanaur.txt
 
 
 
@@ -52,7 +52,7 @@ python setup.py install
 pip3 install -r requirements.txt
 
 
-python linkfinder.py -i https://www.bmw.de -d -o cli | tee -a linkfinder.txt
+python linkfinder.py -i https://www.de -d -o cli | tee -a linkfinder.txt
 
 
 
@@ -63,7 +63,7 @@ pip install xnLinkFinder
 
 xnLinkFinder -i target.com -sf https://target.com 
 
-xnLinkFinder -i redbull.com -sp https://redbull.com -sf rebbull.* -d 3 | unfurl keys | sort -u
+xnLinkFinder -i redbcom -sp https://r.com -sf rebbull.* -d 3 | unfurl keys | sort -u
 
 
 7. URLFinder
@@ -85,6 +85,10 @@ go install github.com/jaeles-project/gospider@latest
 
 gospider -q -s "https://google.com/" -o output
 
+
+cat *.txt |grep "www.b.de" | awk '{print $1}' |sed 's|https\?://||g'| sort | uniq | tee -a ddd
+
+ cat *.txt | sort | uniq | awk '{print $1}' | sort | uniq | sed 's|^|https://www.w.de|' > output.txt
 
 9. all urls find with katana then send linkfinder tool again find urls 
 
