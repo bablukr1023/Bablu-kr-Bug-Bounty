@@ -2,6 +2,13 @@ github dorks
  ========
 
 
+
+org:company path:*.yaml "token" OR "secret" OR "key"
+
+"http://company.com" path:*.yaml "token" OR "secret" OR "key"
+
+Also :- path:*.json, *.js, *.yml, *.go, *.py, *.env, *.conf ...etc
+
 google.com "test"
 
 org:google "test"
@@ -576,5 +583,6 @@ https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_ACCESS_KEY_I
 https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_BUCKET%22&type=code
 https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_ENDPOINT%22&type=code
 https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_SECRET_ACCESS_KEY%22&type=code
+
 
 
