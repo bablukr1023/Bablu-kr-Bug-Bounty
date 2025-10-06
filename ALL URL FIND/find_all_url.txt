@@ -1,3 +1,5 @@
+
+
 Find all url tool
 
 https://web.archive.org/cdx/search/cdx?url=*.send.ducle.com&fl=original&collapse=urlkey
@@ -16,7 +18,7 @@ go install github.com/lc/gau/v2/cmd/gau@latest
 
 cat livesubdomin.txt | gau | tee -a gau.txt 
 
-echo https://www.b.de | gau | tee -a gau.txt
+echo https://www.eat.com | gau | tee -a gau.txt
 
 2. waybackurls
 
@@ -24,7 +26,7 @@ go install github.com/tomnomnom/waybackurls@latest
 
 cat livesubdomin.txt | waybackurls | tee -a waybackurls.txt
 
-echo https://www.b.de | waybackurls | tee -a waybackurls.txt
+echo https://www.eat.com | waybackurls | tee -a waybackurls.txt
 
 3. hakrawler 
 
@@ -32,7 +34,7 @@ go install github.com/hakluke/hakrawler@latest
 
 cat livesubdomin.txt | hakrawler | tee -a hakrawler.txt  
 
-echo https://www.b.de | hakrawler | tee -a hakrawler.txt 
+echo https://www.eat.com | hakrawler | tee -a hakrawler.txt 
 
 4. katana 
 
@@ -40,7 +42,7 @@ go install github.com/projectdiscovery/katana/cmd/katana@latest
 
 katana -list livesubdomin.txt  -o katanaur.txt
 
-katana -u https://www.de  -o katanaur.txt
+katana -u https://www.eat.com  -o katanaur.txt
 
 
 
@@ -52,7 +54,7 @@ python setup.py install
 pip3 install -r requirements.txt
 
 
-python linkfinder.py -i https://www.de -d -o cli | tee -a linkfinder.txt
+python linkfinder.py -i https://www.eat.com -d -o cli | tee -a /home/rajeev/linkfinder.txt
 
 
 
@@ -61,7 +63,7 @@ python linkfinder.py -i https://www.de -d -o cli | tee -a linkfinder.txt
 
 pip install xnLinkFinder
 
-xnLinkFinder -i target.com -sf https://target.com 
+xnLinkFinder -i target.com -sf https://www.eat.com -o /home/rajeev/xnspider.txt
 
 xnLinkFinder -i redbcom -sp https://r.com -sf rebbull.* -d 3 | unfurl keys | sort -u
 
@@ -70,25 +72,30 @@ xnLinkFinder -i redbcom -sp https://r.com -sf rebbull.* -d 3 | unfurl keys | sor
 
 go install -v github.com/projectdiscovery/urlfinder/cmd/urlfinder@latest
 
-urlfinder -d tesla.com  -o urlfinder.txt
+urlfinder -d www.eat.com  -o /home/rajeev/url.txt
 
 8. ParamSpider
 
 git clone https://github.com/0xKayala/ParamSpider && cd ParamSpider && pip3 install -r requirements.txt && chmod +x paramspider.py
 
-paramspider -d example.com
+paramspider -d www.eat.com -o /home/rajeev/pramspider.txt
 
 
 8. Gospider  
 
 go install github.com/jaeles-project/gospider@latest
 
-gospider -q -s "https://google.com/" -o output
+gospider -q -s "https://www.eat.com" -o /home/rajeev/gospider.txt
 
 
-cat *.txt |grep "www.b.de" | awk '{print $1}' |sed 's|https\?://||g'| sort | uniq | tee -a ddd
+
+cat *.txt |grep "www.b.de" | awk '{print $1}' | sed 's/\[url\] - \[code-200\] - //g'| sort | uniq | tee -a ddd
+
+cat *.txt |grep "www.b.de" | awk '{print $1}' |sed 's|https\?://||g'| sed 's/\[url\] - \[code-200\] - //g'| sort | uniq | tee -a ddd
 
  cat *.txt | sort | uniq | awk '{print $1}' | sort | uniq | sed 's|^|https://www.w.de|' > output.txt
 
 9. all urls find with katana then send linkfinder tool again find urls 
 
+
+cat *.txt |grep "www.eat.com" | awk '{print $1}' | sed 's/\[url\] - \[code-200\] - //g'| sort | uniq | tee -a ddd
