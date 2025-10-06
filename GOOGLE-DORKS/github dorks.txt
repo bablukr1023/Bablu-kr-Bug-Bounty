@@ -2,6 +2,7 @@ github dorks
  ========
 
 
+/(?i)(password|passwd|pwd|secret|token|apikey|api_key|access_key|secret_key|access_token|api_secret|apiSecret|app_secret|application_key|app_key|appkey|auth_token|authsecret)\s*=\s*["'][^"']{4,}["']/ AND org:adobe AND NOT language:Markdown NOT is:archived
 
 org:company path:*.yaml "token" OR "secret" OR "key"
 
@@ -583,6 +584,7 @@ https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_ACCESS_KEY_I
 https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_BUCKET%22&type=code
 https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_ENDPOINT%22&type=code
 https://github.com/search?q=org%3Aglobal+%22password%22&type=codeS3_SECRET_ACCESS_KEY%22&type=code
+
 
 
 
