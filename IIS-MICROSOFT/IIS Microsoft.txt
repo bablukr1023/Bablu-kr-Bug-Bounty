@@ -1,6 +1,9 @@
 IIS Microsoft 
 ========
 
+ffuf -w /home/rajeev/Downloads/directory-list-2.3-medium.txt        -u  https://itassics.co/FUZZ  -e xml,txt,zip,7z,dll,ashx,asmx,svc,html,htm,js,json,xsl -ac  -mc 200 ,400,401 -fs 0,1285,19,16,1764 -t 200
+
+
 waymore tool very helpful to find this stuff 
 
 for ffuf lot of methods but as example with my IIS wordlist 
@@ -154,3 +157,4 @@ admin~1.zip  wih previous tips found admin_backup.zip
 
 
 what i go  - credentials in source file   machine key   valid unauth upload endpoint  upload a shall tp rce
+
